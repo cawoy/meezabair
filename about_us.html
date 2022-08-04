@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FS Bookings</title>
+    <meta name="description" content="" />
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="assets//plugins/bootstrap/css/bootstrap.css" />
+    
+    <!--Fav Icon-->
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.css" />
+    <!--jQuery UI-->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <!--Owl Carousel-->
+    <link
+      rel="stylesheet"
+      href="assets/plugins/owl-carousel/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/plugins/owl-carousel/dist/assets/owl.theme.default.min.css"
+    />
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="assets/style/style.css" />
+  </head>
+  <body class="loading">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <!--Preloader-->
+    <div class="preloader">
+      <div class="preloader-wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+    <!--End Preloader-->
+
+    <!--Topbar-->
+    <div id="topbar">
+      <div class="container">
+        <div class="row top-bar g-0">
+          <div class="col-md-6 d-flex align-items-center">
+            <ul class="icon-list d-flex">
+              <li>
+                <a href="#">
+                  <span>
+                    <i class="fa-solid fa-envelope"></i>
+                  </span>
+                  | info@website.com
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>
+                    <i class="fa-solid fa-phone"></i>
+                  </span>
+                  | +92 312 1234567
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 d-flex justify-content-end align-items-center">
+            <ul class="icon-list right d-flex justify-content-end">
+              <li>
+                <a href="#">
+                  English
+                  <span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  PKR
+                  <span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <ul class="social-media">
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Topbar-->
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/meezabair logo.png" alt="FS Bookings" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Our Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--End Navbar-->
+
+    <!--Herobox-->
+    <section class="general-herobox about-herobox mt-3">
+      <div class="container-fluid p-0">
+        <div class="row g-0 align-items-center">
+          <div class="col-md-12">
+            <div class="section-title text-center">
+              <h2>About Us</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Herobox-->
+
+    <!-- Main Content-->
+    <main class="g-0">
+      <!-- About Us Section -->
+      <section id="about-2" class="bg-primary-color">
+        <div class="container-fluid p-0">
+          <div class="row g-0 mb-0">
+            <div class="col-md-5 about-img2"></div>
+            <div class="col-md-7 about-text">
+              <div class="col-md-10 mx-auto section-title mb-4">
+                <h2>About Meezab Air</h2>
+              </div>
+              <div class="col-md-10 mx-auto">
+                <p>
+                  We are pleased to introduce ourselves to you as we are working
+                  in the field of designing since 1997 and later in 2009 seeing
+                  revolutionary changes in the market where all the business
+                  were involving IT in all respects we started a new branch for
+                  website development/designing.
+                </p>
+                <p>
+                  When we started our company our am was to be a successful
+                  company and our asset was our first client and now we are
+                  standing with more than 1700 clients all over Pakistan, we
+                  have some international clients as well. Still we have goals
+                  to achieve and our clients are always with us, we never left
+                  any of them behind as we care for them a lot
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Us Section -->
+      <!-- Our Services -->
+      <section
+        id="services-3"
+        class="bg-primary-color py-lg-5 py-md-2 px-md-0 px-4"
+      >
+        <div class="container py-5">
+          <div class="row g-0">
+            <div class="col-md-6 me-md-5 me-0 d-flex align-items-center">
+              <div class="text-md-start text-center">
+                <div class="section-title mb-4">
+                  <h2>Services We Offer</h2>
+                </div>
+                <p>
+                  When we started our company our am was to be a successful
+                  company and our asset was our first client and now we are
+                  standing with more than 1700 clients all over Pakistan, we
+                  have some international clients as well. Still we have goals
+                  to achieve and our clients are always with us, we never left
+                  any of them behind as we care for them a lot
+                </p>
+                <a
+                  href="#"
+                  class="btn fw-bold mustard-btn section-btn mt-3 mb-md-0 mb-3"
+                  >Explore More...</a
+                >
+              </div>
+            </div>
+            <div class="col-md-5 ms-lg-4 ms-md-0">
+              <div class="d-flex justify-content-evenly mb-3">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <img src="assets/img/icons/earth-globe.png" class="mb-3 img-white" />
+                    <p class="card-title fw-bold text-white">Travel Tour Services</p>
+                  </div>
+                </div>
+                <div class="card text-center">
+                  <div class="card-body">
+                    <img src="assets/img/icons/passport.png" class="mb-3 img-white" />
+                    <p class="card-title fw-bold text-white">Hajj & Umrah</p>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-evenly">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <img src="assets/img/icons/skyline2.png" class="mb-3 img-white" />
+                    <p class="card-title fw-bold text-white">Visa Processing Services</p>
+                  </div>
+                </div>
+                <div class="card text-center">
+                  <div class="card-body">
+                    <img src="assets/img/icons/home.png" class="mb-3 img-white" />
+                    <p class="card-title fw-bold text-white">Home Pick Services</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Our Services -->
+      <!-- Fun Facts -->
+      <section id="fun-facts">
+        <div class="container-fluid">
+          <div class="row g-0 py-lg-5 py-md-0 align-items-center">
+            <div class="col-md-12">
+              <div
+                class="d-flex flex-md-row flex-column justify-content-evenly"
+              >
+                <div class="card text-center p-lg-3 p-md-2 m-md-0 m-3">
+                  <div class="card-body">
+                    <h2>500+</h2>
+                    <p class="card-title fw-bold">Visas Processed</p>
+                  </div>
+                </div>
+                <div class="card text-center p-lg-3 p-md-2 m-md-0 m-3">
+                  <div class="card-body">
+                    <h2>400+</h2>
+                    <p class="card-title fw-bold">Happy Clients</p>
+                  </div>
+                </div>
+                <div class="card text-center p-lg-3 p-md-2 m-md-0 m-3">
+                  <div class="card-body">
+                    <h2>150+</h2>
+                    <p class="card-title fw-bold">Urmahs</p>
+                  </div>
+                </div>
+                <div class="card text-center p-lg-3 p-md-2 m-md-0 m-3">
+                  <div class="card-body">
+                    <h2>700+</h2>
+                    <p class="card-title fw-bold">Pickups</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Fun Facts -->
+      <!-- Testimonials -->
+      <section id="testimonials" class="py-lg-4 py-md-2">
+        <div class="container py-5">
+          <div class="row g-0">
+            <div class="col-md-12">
+              <div class="section-title text-center mb-4">
+                <h2>Testimonials</h2>
+              </div>
+              <div class="owl-carousel testimonial-carousel owl-theme mx-auto">
+                <div class="ms-2 me-2">
+                  <div class="card pt-4 text-center bg-dark-grey">
+                    <div class="card-body">
+                      <p class="card-text">
+                        "With a strong and widespread international network
+                        coupled with an unmatched local experience and knowledge
+                        of the region."
+                      </p>
+                      <img
+                        src="assets/img/testimonee.jpg"
+                        alt=""
+                        class="mb-2 mt-4 mx-auto"
+                      />
+                      <p class="card-title fw-bold">Mr. Ali</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-2 me-2">
+                  <div class="card pt-4 text-center bg-dark-grey">
+                    <div class="card-body">
+                      <p class="card-text">
+                        "With a strong and widespread international network
+                        coupled with an unmatched local experience and knowledge
+                        of the region."
+                      </p>
+                      <img
+                        src="assets/img/testimonee.jpg"
+                        alt=""
+                        class="mb-2 mt-4 mx-auto"
+                      />
+                      <p class="card-title fw-bold">Mr. Ali</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-2 me-2">
+                  <div class="card pt-4 text-center bg-dark-grey">
+                    <div class="card-body">
+                      <p class="card-text">
+                        "With a strong and widespread international network
+                        coupled with an unmatched local experience and knowledge
+                        of the region."
+                      </p>
+                      <img
+                        src="assets/img/testimonee.jpg"
+                        alt=""
+                        class="mb-2 mt-4 mx-auto"
+                      />
+                      <p class="card-title fw-bold">Mr. Ali</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Testimonials -->
+    </main>
+    <!--End Main Content-->
+
+    <!--Footer-->
+    <footer class="footer-2">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2">
+              <h2>Meezab Air</h2>
+              <ul class="menu-list">
+                <li>
+                  <a href="#">Mobile App</a>
+                </li>
+                <li>
+                  <a href="#">Customer</a>
+                </li>
+                <li>
+                  <a href="#">Support</a>
+                </li>
+                <li>
+                  <a href="#">Advertising</a>
+                </li>
+                <li>
+                  <a href="#">Jobs</a>
+                </li>
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#">Terms of Use</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              <h2>Explore</h2>
+              <ul class="menu-list">
+                <li>
+                  <a href="#">Countries</a>
+                </li>
+                <li>
+                  <a href="#">Regions</a>
+                </li>
+                <li>
+                  <a href="#">Cities</a>
+                </li>
+                <li>
+                  <a href="#">Districs</a>
+                </li>
+                <li>
+                  <a href="#">Airports</a>
+                </li>
+                <li>
+                  <a href="#">Hotels</a>
+                </li>
+                <li>
+                  <a href="#">Places of Interest</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-2 px-md-0">
+              <h2>Book</h2>
+              <ul class="menu-list">
+                <li>
+                  <a href="#">Apartments</a>
+                </li>
+                <li>
+                  <a href="#">Resorts</a>
+                </li>
+                <li>
+                  <a href="#">Villas</a>
+                </li>
+                <li>
+                  <a href="#">Hostels</a>
+                </li>
+                <li>
+                  <a href="#">B&amp;Bs</a>
+                </li>
+                <li>
+                  <a href="#">Guest houses</a>
+                </li>
+                <li>
+                  <a href="#">Hostel Chains</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-5 text-md-end px-md-0">
+              <h2>Contact Us</h2>
+              <ul class="menu-list">
+                <li>
+                  <a href="#">info@website.com</a>
+                </li>
+                <li>
+                  <a href="#">0344-2322-424</a>
+                </li>
+                <li>
+                  <a href="#">invoice@website.com</a>
+                </li>
+                <li>
+                  <a href="#">0335-2322-424</a>
+                </li>
+              </ul>
+              <ul class="social-media">
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom py-md-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 mx-auto text-center">
+              Copyrights 2020 &copy; Designed and Developed by Brandsup
+              Solutions
+              <br />
+              All Rights Reserved
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--End Footer-->
+
+    <!--Scripts-->
+    <!--Bootstrap Script-->
+    <script
+      src="assets/plugins/bootstrap/js/bootstrap.min.js"
+      async
+      defer
+    ></script>
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--jQuery UI-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!--Owl Carousel-->
+    <script src="assets/plugins/owl-carousel/dist/owl.carousel.min.js"></script>
+
+    <!--Custom Script-->
+    <script src="assets/script/script.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".testimonial-carousel").owlCarousel({
+          autoplay: true,
+          autoplayhoverpause: true,
+          autoplaytimeout: 200,
+          items: 1,
+          loop: true,
+        });
+      });
+    </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/628cb1c37b967b117990f255/1g3qpcpp5";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
+  </body>
+</html>

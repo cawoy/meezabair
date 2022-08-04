@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FS Bookings</title>
+        <meta name="description" content="">
+        
+        <!--Bootstrap CSS-->
+        <link rel="stylesheet" href="assets//plugins/bootstrap/css/bootstrap.css">
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+        <!--Fav Icon-->
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+        <!--FontAwesome-->
+        <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.css">
+        <!--Select 2 Dropdown CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <!--jQuery UI-->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <!--jQuery Bar Rating-->
+        <link rel="stylesheet" href="assets/plugins/jquery-bar-rating-master/dist/themes/bars-square.css">
+
+        <!--Custom CSS-->
+        <link rel="stylesheet" href="assets/style/style.css">
+    </head>
+    <body class="bg-dark-grey loading">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!--Preloader-->
+        <div class="preloader">
+            <div class="preloader-wrapper">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="shadow"></div>
+                <div class="shadow"></div>
+                <div class="shadow"></div>
+                <span>Loading...</span>
+            </div>
+        </div>
+        <!--End Preloader-->
+
+        <!--Topbar-->
+        <div id="topbar" class="bg-primary">
+            <div class="container">
+                <div class="row top-bar g-0">
+                    <div class="col-md-6 d-flex align-items-center">
+                        <ul class="icon-list d-flex">
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                     | info@website.com
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <i class="fa-solid fa-phone"></i>
+                                    </span>
+                                     | +92 312 1234567
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-end align-items-center">
+                        <ul class="icon-list right d-flex justify-content-end">
+                            <li>
+                                <a href="#">
+                                    English
+                                    <span>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    PKR
+                                    <span>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="social-media">
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Topbar-->
+
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                  <img src="assets/img/logo.png" alt="FS Bookings">
+              </a>
+              <ul class="navbar-nav mb-2 mb-lg-0 mobile-menu">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="#">
+                        <i class="fa-solid fa-message"></i>
+                        <span class="count">10</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="#">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="count">10</span>
+                    </a>
+                  </li>
+            </ul>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Our Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Testimonials</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Careers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact us</a>
+                  </li>
+                </ul>
+                <div class="d-flex">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item msg-item">
+                            <a class="nav-link " aria-current="page" href="#">
+                                <i class="fa-solid fa-message"></i>
+                                <span class="count">10</span>
+                            </a>
+                          </li>
+                          <li class="nav-item notif-item">
+                            <a class="nav-link " aria-current="page" href="#">
+                                <i class="fa-solid fa-bell"></i>
+                                <span class="count">10</span>
+                            </a>
+                          </li>
+                        <li class="nav-item">
+                          <a class="nav-link " aria-current="page" href="#">PKR 14,000</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-user"></i> Username
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li>
+                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i> Profile</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-lock"></i> Change Password</a>
+                              </li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li>
+                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                              </li>
+                            </ul>
+                          </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+        </nav>
+        <!--End Navbar-->
+
+        <!--Herobox-->
+        <section id="herobox" class="herobox-4 pt-4 pb-4">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="#">Home</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Cars</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Herobox-->
+        
+        <!-- Main Content-->
+        <main class="mt-3 mb-5">
+            <!--Cars Listing-->
+            <section id="hotel-listings">
+                <div class="container">
+                    <div class="row g-0">
+                        <div class="col-md-12">
+                            <div class="listings px-lg-4 px-0">
+                                <h6 class="fw-bold recommend-text">Recommended for you</h6>
+                                <div class="card hotel-box mb-3">
+                                    <div class="card hotel-card flex-lg-row">
+                                        <div class="cars-img m-3" style="background-image: url(assets/img/Cars/economy.png)"></div>
+                                        <div class="card-body">
+                                          <div class="row g-0">
+                                              <div class="col-lg-8 col-md-12 pe-lg-3 pe-md-0">
+                                                <div class="d-flex flex-wrap" style="position: relative;">
+                                                    <div class="d-flex flex-wrap">
+                                                        <a href="#" class="card-title fw-bold fs-4">Economy+</a>
+                                                        <p class="hotel-badge py-1 px-2 fw-bold ms-5">Car</p>
+                                                    </div>
+                                                  </div>
+                                                  <div class="hotel-features mt-3 facilities">
+                                                    <p class="fw-bold features-heading m-0">Example Cars</p>
+                                                    <div class="features d-flex flex-wrap my-2 justify-content-start">
+                                                        <div class="item d-flex me-4">
+                                                          <i class="fas fa-car me-2"></i>
+                                                          <p class="m-0">Toyota Prius</p>
+                                                        </div>
+                                                        <div class="item d-flex">
+                                                            <i class="fas fa-car me-2"></i>
+                                                            <p class="m-0">Audi A4</p>
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="hotel-features">
+                                                    <p class="fw-bold features-heading m-0">Features</p>
+                                                    <div class="features d-flex flex-wrap justify-content-between">
+                                                        <div class="item d-flex me-4">
+                                                          <div class="blue-circle rounded-circle mt-2 ms-2 me-1"></div>
+                                                          <p class="mt-1 mb-0">Meet & Greet</p>
+                                                        </div>
+                                                        <div class="item d-flex me-4">
+                                                          <div class="blue-circle rounded-circle mt-2 ms-2 me-1"></div>
+                                                          <p class="mt-1 mb-0">15 minutes waiting time</p>
+                                                        </div>
+                                                        <div class="item d-flex me-4">
+                                                          <div class="blue-circle rounded-circle mt-2 ms-2 me-1"></div>
+                                                          <p class="mt-1 mb-0">Fixed price - no traffic charges</p>
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-3 col-md-12 ps-lg-3 ps-md-0 border-start right-col">
+                                                  <div class="right-col-center">
+                                                    <div class="hotel-price">
+                                                        <h4 class="fw-bold">PKR. 681.05</h4>
+                                                      </div>
+                                                      <div class="mt-3">
+                                                        <a href="#" class="btn section-btn btn-secondary mb-2">Book Now</a>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card hotel-box mb-3">
+                                    <div class="card hotel-card flex-lg-row">
+                                        <div class="cars-img m-3" style="background-image: url(assets/img/Cars/first.png)"></div>
+                                        <div class="card-body">
+                                          <div class="row g-0">
+                                              <div class="col-lg-8 col-md-12 pe-lg-3 pe-md-0">
+                                                <div class="d-flex flex-wrap" style="position: relative;">
+                                                    <div class="d-flex flex-wrap">
+                                                        <a href="#" class="card-title fw-bold fs-4">First Class</a>
+                                                        <p class="hotel-badge py-1 px-2 fw-bold ms-5">Car</p>
+                                                    </div>
+                                                  </div>
+                                                  <div class="hotel-features mt-3 facilities">
+                                                    <p class="fw-bold features-heading m-0">Example Cars</p>
+                                                    <div class="features d-flex flex-wrap my-2 justify-content-start">
+                                                        <div class="item d-flex me-4">
+                                                          <i class="fas fa-car me-2"></i>
+                                                          <p class="m-0">Mercedes S-Class</p>
+                                                        </div>
+                                                        <div class="item d-flex me-4">
+                                                            <i class="fas fa-car me-2"></i>
+                                                            <p class="m-0">Audi A8</p>
+                                                        </div>
+                                                        <div class="item d-flex me-4">
+                                                            <i class="fas fa-car me-2"></i>
+                                                            <p class="m-0">BMW 7</p>
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="hotel-features">
+                                                    <p class="fw-bold features-heading m-0">Features</p>
+                                                    <div class="features d-flex flex-wrap justify-content-between">
+                                                        <div class="item d-flex me-4">
+                                                          <div class="blue-circle rounded-circle mt-2 ms-2 me-1"></div>
+                                                          <p class="mt-1 mb-0">Black luxury limousine</p>
+                                                        </div>
+                                                        <div class="item d-flex me-4">
+                                                          <div class="blue-circle rounded-circle mt-2 ms-2 me-1"></div>
+                                                          <p class="mt-1 mb-0">Meet & Greet</p>
+                                                        </div>
+                                                        <div class="item d-flex me-4">
+                                                          <div class="blue-circle rounded-circle mt-2 ms-2 me-1"></div>
+                                                          <p class="mt-1 mb-0">30 minutes waiting time</p>
+                                                        </div>
+                                                        <div class="item d-flex me-4">
+                                                            <div class="blue-circle rounded-circle mt-2 ms-2 me-1"></div>
+                                                            <p class="mt-1 mb-0">Bottled water</p>
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-3 col-md-12 ps-lg-3 ps-md-0 border-start right-col">
+                                                  <div class="right-col-center">
+                                                    <div class="hotel-price">
+                                                        <h4 class="fw-bold">PKR. 681.05</h4>
+                                                      </div>
+                                                      <div class="mt-3">
+                                                        <a href="#" class="btn section-btn btn-secondary mb-2">Book Now</a>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--End Cars Listing-->
+        </main>
+        <!--End Main Content-->
+
+        <!--Footer-->
+        <footer class="footer-3">
+            <div class="footer-top pt-5">
+                <div class="container">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="#" class="brand-logo">
+                                <img src="assets/img/logo-white-text.png" alt="FS Bookings">
+                            </a>
+                            <p class="mt-5">Curabitur vitae sodales ligula. Sed dictum metus et dolor
+                                malesuada ornare. Aliquam congue, lacus ultrices
+                                moles</p>
+                        </div>
+                        <div class="col-md-2">
+                            <h2>Quick Links</h2>
+                            <ul class="menu-list">
+                                <li>
+                                    <a href="#">Countries</a>
+                                </li>
+                                <li>
+                                    <a href="#">Regions</a>
+                                </li>
+                                <li>
+                                    <a href="#">Cities</a>
+                                </li>
+                                <li>
+                                    <a href="#">Districs</a>
+                                </li>
+                                <li>
+                                    <a href="#">Airports</a>
+                                </li>
+                                <li>
+                                    <a href="#">Hotels</a>
+                                </li>
+                                <li>
+                                    <a href="#">Places of Interest</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                            <h2>Customer Care</h2>
+                            <ul class="menu-list">
+                                <li>
+                                    <a href="#">Apartments</a>
+                                </li>
+                                <li>
+                                    <a href="#">Resorts</a>
+                                </li>
+                                <li>
+                                    <a href="#">Villas</a>
+                                </li>
+                                <li>
+                                    <a href="#">Hostels</a>
+                                </li>
+                                <li>
+                                    <a href="#">B&amp;Bs</a>
+                                </li>
+                                <li>
+                                    <a href="#">Guest houses</a>
+                                </li>
+                                <li>
+                                    <a href="#">Hostel Chains</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h2>Contact</h2>
+                            <ul class="menu-list">
+                                <li>
+                                    <a href="mailto:info@website.com">
+                                        <div class="d-flex">
+                                            <span class="icon">
+                                                <i class="fa fa-phone"></i>
+                                            </span>
+                                            <span class="text">
+                                                info@website.com
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:0344-2322-424">
+                                        <div class="d-flex">
+                                            <span class="icon">
+                                                <i class="fa fa-envelope"></i>
+                                            </span>
+                                            <span class="text">
+                                                0344-2322-424
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="d-flex">
+                                            <span class="icon">
+                                                <i class="fa fa-house"></i>
+                                            </span>
+                                            <span class="text">
+                                                23-7, Arcidium spectrum near Cluj arena, CFR Road,
+                                                Cluj Napoca,Romania
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <h2 class="mt-5">Follow us on</h2>
+                            <ul class="social-media">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom py-md-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 mx-auto text-center">
+                            FS Bookings &copy; | All Rights Reserved | Powered by Brandsup
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Footer-->
+
+        <!--Scripts-->
+        <!--Bootstrap Script-->
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js" async defer></script>
+        <!--jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--jQuery UI-->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+        <!--Custom Script-->
+        <script src="assets/script/script.js"></script>
+
+        <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/628cb1c37b967b117990f255/1g3qpcpp5';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();
+        </script>
+        <!--End of Tawk.to Script-->
+
+    </body>
+</html>

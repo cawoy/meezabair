@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Flat Slider Demos</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src="slider.js"></script>
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="style.css">
+
+<body>
+<div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="http://www.jqueryscript.net/slider/Flat-Style-Slider-Control-Plugin-For-jQuery-Flat-Slider.html">Download This Plugin</a></li>
+<li><a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<h1 style="margin-top:150px;">jQuery Flat Slider Demos</h1>
+
+<h2>Single Slider</h2>
+
+<input type="hidden" id="slider_single" class="flat-slider" />
+<script>
+	jQuery(function() {
+		jQuery( "#slider_single" ).flatslider({
+			min: 10000, max: 500000,
+			step: 1000,
+			value: 150000,
+			range: "min",
+			einheit: '&euro;'
+		});
+	});
+</script>
+<br/><br/>
+
+<h2>Range Slider</h2>
+
+<input type="hidden" id="slider_range" class="flat-slider" />
+<script>
+	jQuery(function() {
+		jQuery( "#slider_range" ).flatslider({
+			min: 10000, max: 500000,
+			step: 1000,
+			values: [45000, 130000],
+			range: true,
+			einheit: '&euro;'
+		});
+	});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

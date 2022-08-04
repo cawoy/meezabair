@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FS Bookings</title>
+        <meta name="description" content="">
+        
+        <!--Bootstrap CSS-->
+        <link rel="stylesheet" href="assets//plugins/bootstrap/css/bootstrap.css">
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+        <!--Fav Icon-->
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+        <!--FontAwesome-->
+        <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.css">
+        <!--Select 2 Dropdown CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <!--jQuery UI-->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <!--Custom CSS-->
+        <link rel="stylesheet" href="assets/style/style.css">
+    </head>
+    <body class="loading">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!--Preloader-->
+        <div class="preloader">
+            <div class="preloader-wrapper">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="shadow"></div>
+                <div class="shadow"></div>
+                <div class="shadow"></div>
+                <span>Loading...</span>
+            </div>
+        </div>
+        <!--End Preloader-->
+
+        <!--Topbar-->
+    <div id="topbar" class="bg-primary">
+        <div class="container">
+            <div class="row top-bar g-0">
+                <div class="col-md-6 d-flex align-items-center">
+                    <ul class="icon-list d-flex">
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <i class="fa-solid fa-envelope"></i>
+                                </span>
+                                | info@website.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <i class="fa-solid fa-phone"></i>
+                                </span>
+                                | +92 312 1234567
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end align-items-center">
+                    <ul class="icon-list right d-flex justify-content-end">
+                        <li>
+                            <a href="#">
+                                English
+                                <span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                PKR
+                                <span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="social-media">
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Topbar-->
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo.png" alt="FS Bookings">
+            </a>
+            <ul class="navbar-nav mb-2 mb-lg-0 mobile-menu">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="#">
+                        <i class="fa-solid fa-message"></i>
+                        <span class="count">10</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="#">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="count">10</span>
+                    </a>
+                </li>
+            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item msg-item">
+                            <a class="nav-link " aria-current="page" href="#">
+                                <i class="fa-solid fa-message"></i>
+                                <span class="count">10</span>
+                            </a>
+                        </li>
+                        <li class="nav-item notif-item">
+                            <a class="nav-link " aria-current="page" href="#">
+                                <i class="fa-solid fa-bell"></i>
+                                <span class="count">10</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="#">PKR 14,000</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-user"></i> Username
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i> Profile</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"><i class="fa-solid fa-lock"></i> Change
+                                        Password</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"><i
+                                            class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--End Navbar-->
+
+        <!--Hotel Voucher Head-->
+        <div class="mt-5 mb-3 hotel-voucher-head">
+            <div class="container">
+                <div class="row g-0 mb-4">
+                    <div class="col-md-12 text-center">
+                        <img src="assets/img/logo.png" alt="" class="logo-bar">
+                        <h3 class="section-title fw-bold mt-3">Prepaid Accomodation Voucher</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Hotel Voucher Head-->
+        
+        <!--Accomodation Details-->
+        <div class="voucher-accomodation-details mb-3">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card shadow-sm print-card">
+                            <div class="card-header fw-bold fs-5">
+                              Accomodation Details
+                            </div>
+                            <div class="card-body p-0 table-responsive">
+                                <table class="table mb-0 table-borderless">
+                                    <thead>
+                                      <tr class="row-bg">
+                                        <th scope="col">Hotel</th>
+                                        <th scope="col">Address</th>
+                                        <th scope="col">Phone</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Ramada Deira Hotel</td>
+                                        <td>Salahuddin Street Dubai</td>
+                                        <td>+97142740444</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Accomodation Details-->
+
+        <!--Service Details-->
+        <div class="voucher-service-details mb-3">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card shadow-sm print-card">
+                            <div class="card-header fw-bold fs-5">
+                              Service Details
+                            </div>
+                            <div class="card-body p-0 table-responsive">
+                                <div class="d-flex flex-wrap justify-content-between px-3 pt-3">
+                                    <div class="d-flex flex-wrap">
+                                        <h6 class="fw-bold me-2">Booking Reference:</h6>
+                                        <p>46234031</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap">
+                                        <h6 class="fw-bold me-2">Secondary Reference:</h6>
+                                        <p>210278935</p>
+                                    </div>
+                                </div>
+                                <table class="table mb-0 table-borderless">
+                                    <thead>
+                                      <tr class="row-bg">
+                                        <th scope="col">Check-in Date</th>
+                                        <th scope="col">Check-out Date</th>
+                                        <th scope="col">Rooms</th>
+                                        <th scope="col">Clients</th>
+                                        <th scope="col">Board Type</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>10 March 2018</td>
+                                        <td>17 March 2018</td>
+                                        <td>Standard Double or Twin</td>
+                                        <td>Mr. Malik Javed Hussain</td>
+                                        <td>Breakfast</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Service Details-->
+
+        <!--Payment Details-->
+        <div class="voucher-payment-details mb-3">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card shadow-sm print-card">
+                            <div class="card-header fw-bold fs-5">
+                                Payment Details
+                            </div>
+                            <div class="card-body table-responsive">
+                                <p>PAYMENT BY BOOKING OFFICE</p>
+                                <p>This voucher is valid as payment only for the above mentioned services. Any extra cost will be paid directly by the client.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Payment Details-->
+
+        <!--Important Information-->
+        <div class="voucher-important-info mb-3">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card shadow-sm print-card">
+                            <div class="card-header fw-bold fs-5">
+                                Important Information
+                            </div>
+                            <div class="card-body table-responsive">
+                                <p>
+                                    Should be paid to the hotel directly: Tourism Dirham Fee - 28.56 USD<br>
+                                    Infants 0-2 year(s) stay for free if using existing bedding. Note, if you need a cot there may be an extra charge. Children 3-6 year(s)
+                                    stay for free if using existing bedding. Guests 7 years and older are considered adults.<br>
+                                    A tourism tax will be charged directly at the property.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Important Information-->
+
+        <!--Additional Information-->
+        <div class="voucher-additional-info mb-3">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card shadow-sm print-card">
+                            <div class="card-header fw-bold fs-5">
+                                Additional Information
+                            </div>
+                            <div class="card-body table-responsive">
+                                <p>
+                                    <span class="fw-bold">Late Check-in: </span>If late arrival is expected please inform the booking office as some hotels have limited reception services after 21:00
+                                    hours. Failing to inform the hotel of a late arrival can result in the space being released.
+                                </p>
+                                <p>
+                                    <span class="fw-bold">Requests: </span>Specific room types, smoking preferences and bedding types cannot be guaranteed and are subject to availability at the
+                                    time of check-in. It is always guaranteed that the room provided by the hotel will accommodate the number of guests booked.
+                                </p>
+                                <p>
+                                    <span class="fw-bold">Hotel Charges: </span>Additional hotel services, resort fees and city taxes must be paid to the hotel directly. Dreams is not responsible for
+                                    hidden hotel fees and have no control over their implementation.
+                                </p>
+                                <p>
+                                    <span class="fw-bold">Early Check-out: </span>Any early check-out is liable to full charges. In the event of an early check-out please obtain an early check-out
+                                    slip from the hotel.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Additional Information-->
+
+        <!--Booking Office Contact Numbers-->
+        <div class="voucher-office-contact mb-5">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card shadow-sm print-card">
+                            <div class="card-header fw-bold fs-5">
+                                Booking Office Contact Numbers
+                            </div>
+                            <div class="card-body table-responsive">
+                                <p>
+                                    In the case of an issue or emergency with your booking, when your agency is not reachable, 
+                                    please call Dreams on phone: <span class="fw-bold">+92 314 9526088</span>.
+                                </p>
+                                <p>
+                                    Please take note we will NOT CONSIDER any complaint/refund if you do not call the number above 
+                                    in case of problems with our services.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Booking Office Contact Numbers-->
+
+    <!--Footer-->
+    <footer class="footer-3">
+        <div class="footer-top pt-5">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <a href="#" class="brand-logo">
+                            <img src="assets/img/logo-white-text.png" alt="FS Bookings">
+                        </a>
+                        <p class="mt-5">Curabitur vitae sodales ligula. Sed dictum metus et dolor
+                            malesuada ornare. Aliquam congue, lacus ultrices
+                            moles</p>
+                    </div>
+                    <div class="col-md-2">
+                        <h2>Quick Links</h2>
+                        <ul class="menu-list">
+                            <li>
+                                <a href="#">Countries</a>
+                            </li>
+                            <li>
+                                <a href="#">Regions</a>
+                            </li>
+                            <li>
+                                <a href="#">Cities</a>
+                            </li>
+                            <li>
+                                <a href="#">Districs</a>
+                            </li>
+                            <li>
+                                <a href="#">Airports</a>
+                            </li>
+                            <li>
+                                <a href="#">Hotels</a>
+                            </li>
+                            <li>
+                                <a href="#">Places of Interest</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h2>Customer Care</h2>
+                        <ul class="menu-list">
+                            <li>
+                                <a href="#">Apartments</a>
+                            </li>
+                            <li>
+                                <a href="#">Resorts</a>
+                            </li>
+                            <li>
+                                <a href="#">Villas</a>
+                            </li>
+                            <li>
+                                <a href="#">Hostels</a>
+                            </li>
+                            <li>
+                                <a href="#">B&amp;Bs</a>
+                            </li>
+                            <li>
+                                <a href="#">Guest houses</a>
+                            </li>
+                            <li>
+                                <a href="#">Hostel Chains</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Contact</h2>
+                        <ul class="menu-list">
+                            <li>
+                                <a href="mailto:info@website.com">
+                                    <div class="d-flex">
+                                        <span class="icon">
+                                            <i class="fa fa-phone"></i>
+                                        </span>
+                                        <span class="text">
+                                            info@website.com
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:0344-2322-424">
+                                    <div class="d-flex">
+                                        <span class="icon">
+                                            <i class="fa fa-envelope"></i>
+                                        </span>
+                                        <span class="text">
+                                            0344-2322-424
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="d-flex">
+                                        <span class="icon">
+                                            <i class="fa fa-house"></i>
+                                        </span>
+                                        <span class="text">
+                                            23-7, Arcidium spectrum near Cluj arena, CFR Road,
+                                            Cluj Napoca,Romania
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <h2 class="mt-5">Follow us on</h2>
+                        <ul class="social-media">
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-md-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mx-auto text-center">
+                        FS Bookings &copy; | All Rights Reserved | Powered by Brandsup
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End Footer-->
+
+        <!--Scripts-->
+        <!--Bootstrap Script-->
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js" async defer></script>
+        <!--jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--jQuery UI-->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <!--Select 2-->
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        
+        <!--Custom Script-->
+        <script src="assets/script/script.js"></script>
+
+        <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/628cb1c37b967b117990f255/1g3qpcpp5';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();
+        </script>
+        <!--End of Tawk.to Script-->
+
+    </body>
+</html>

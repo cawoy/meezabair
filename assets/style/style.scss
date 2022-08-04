@@ -1,0 +1,3130 @@
+$primary-color: #28377d;
+$secondary-color: #e55f25;
+$grey-heading: #5b5b5b;
+
+$primary-text-color: #fff;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$primary_font: 'Nunito', sans-serif;
+$secondary_font: 'Nunito', sans-serif;
+
+
+@mixin breakpoint($class) {
+  @if $class==xs {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $class==sm {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $class==md {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if $class==lg {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}
+@mixin btnstyle($class) {
+  @if $class==mustard-btn {
+    background-color: $secondary-color;
+    color: $primary-text-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+    }
+  } @else if $class==white-btn {
+    background-color: #fff;
+    color: $primary-color;
+    &:hover {
+      background-color: #000;
+      color: $secondary-color;
+    }
+  } @else if $class==black-btn {
+    background-color: #000;
+    color: #fff;
+    &:hover {
+      background-color: #fff;
+      color: $secondary-color;
+    }
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family: $primary_font;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Preloader */
+.loading {
+  overflow: hidden;
+  height: 100vh;
+}
+.preloader {
+  position: fixed;
+  z-index: 99999;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  .preloader-wrapper {
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    .circle {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      border-radius: 50%;
+      background-color: $secondary-color;
+      left: 15%;
+      transform-origin: 50%;
+      animation: circle 0.5s alternate infinite ease;
+      &:nth-child(2) {
+        left: 45%;
+        animation-delay: 0.2s;
+      }
+      &:nth-child(3) {
+        left: auto;
+        right: 15%;
+        animation-delay: 0.3s;
+      }
+    }
+    .shadow {
+      width: 20px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 62px;
+      transform-origin: 50%;
+      z-index: -1;
+      left: 15%;
+      filter: blur(1px);
+      animation: shadow 0.5s alternate infinite ease;
+      &:nth-child(4) {
+        left: 45%;
+        animation-delay: 0.2s;
+      }
+      &:nth-child(5) {
+        left: auto;
+        right: 15%;
+        animation-delay: 0.3s;
+      }
+    }
+    span {
+      position: absolute;
+      top: 80px;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      color: $primary-color;
+      left: 15%;
+    }
+  }
+  @keyframes circle {
+    0% {
+      top: 60px;
+      height: 5px;
+      border-radius: 50px 50px 25px 25px;
+      transform: scaleX(1.7);
+    }
+    40% {
+      height: 20px;
+      border-radius: 50%;
+      transform: scaleX(1);
+    }
+    100% {
+      top: 0%;
+    }
+  }
+  @keyframes shadow {
+    0% {
+      transform: scaleX(1.5);
+    }
+    40% {
+      transform: scaleX(1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scaleX(0.2);
+      opacity: 0.4;
+    }
+  }
+}
+/*
+### Headings ###
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #14183e;
+}
+/*
+### Backgrounds ###
+*/
+.bg-dark-grey {
+  background: #f5f5f5;
+}
+.bg-primary-color {
+  background-color: $primary-color;
+}
+.bg-secondary-color {
+  background-color: $secondary-color;
+}
+.row-bg {
+  background-color: #f8f8f8;
+}
+/*
+##### List #####
+*/
+ul.inline-list {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    margin-right: 2rem;
+    @include breakpoint(sm) {
+      margin: 0.5rem;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+}
+ul.social-icons {
+  li {
+    a {
+      background-color: #fff;
+      width: 40px;
+      height: 40px;
+      display: block;
+      line-height: 40px;
+      text-align: center;
+      font-size: 1.5rem;
+      border-radius: 45px;
+      color: $secondary-color;
+      &:hover {
+        background-color: $secondary-color;
+        color: #fff;
+      }
+    }
+  }
+}
+ul.social-media {
+  margin-top: 10px;
+  li {
+    display: inline;
+    margin-left: 10px;
+    a {
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: #fff;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+ul.black {
+  li {
+    color: #000;
+    a {
+      color: #000;
+    }
+  }
+}
+/*
+####### IMAGE WHITE FILTER #######
+*/
+.img-white{
+  filter: brightness(0) invert(1) !important;
+}
+/*
+### Buttons ###
+*/
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  color: #fff;
+  &:hover {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+}
+.btn-secondary {
+  background-color: $secondary-color;
+  color: #fff;
+  border-color: $secondary-color;
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+.btn-round {
+  border-radius: 15px;
+}
+.mustard-btn {
+  @include btnstyle(mustard-btn);
+}
+.white-btn {
+  @include btnstyle(white-btn);
+}
+.black-btn {
+  @include btnstyle(black-btn);
+}
+.section-btn {
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 8px 25px;
+}
+
+.remove-location {
+  background-color: #fff;
+  border: none;
+  padding-left: 20px;
+  i {
+    font-size: 20px;
+  }
+}
+.remove-room {
+  background-color: #fff;
+  border: none;
+  color: red;
+  font-size: 13px;
+}
+
+/*##################################################
+###################### Header ######################
+####################################################*/
+/* ### Topbar ### */
+#topbar {
+  @include breakpoint(sm) {
+    display: none;
+  }
+  .top-bar {
+    padding: 0;
+    border-bottom: 2px dotted grey;
+    .icon-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin-right: 10px;
+        a {
+          text-decoration: none;
+          color: #000;
+          font-size: 0.7rem;
+          span {
+            color: $secondary-color;
+          }
+        }
+      }
+      &.right {
+        li {
+          a {
+            span {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+  ul.social-media {
+    margin: 0;
+    padding: 0;
+    li {
+      a {
+        color: #000;
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+  &.bg-primary {
+    background-color: $primary-color !important;
+    color: #fff;
+    .top-bar {
+      border-bottom: 2px dotted grey;
+      .icon-list {
+        li {
+          a {
+            color: #fff;
+            span {
+              color: $secondary-color;
+            }
+          }
+        }
+        &.right {
+          li {
+            a {
+              span {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+    ul.social-media {
+      li {
+        a {
+          color: #fff;
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}
+/* ### Navbar ### */
+.navbar-brand {
+  img {
+    width: 150px;
+    @include breakpoint(sm) {
+      width: 100px;
+    }
+  }
+}
+.navbar-nav {
+  &.mobile-menu {
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 20px;
+    display: none;
+    @include breakpoint(sm) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .nav-link {
+    border-bottom: 4px solid transparent;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #000 !important;
+    font-family: $secondary_font;
+    font-weight: 400;
+    .count {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: $secondary-color;
+      border-radius: 15px;
+      top: 0;
+      left: 60%;
+      text-align: center;
+      line-height: 20px;
+      font-size: 0.7rem;
+      color: #fff;
+    }
+    &:hover {
+      border-bottom-color: $secondary-color;
+    }
+    &.active {
+      border-bottom-color: $secondary-color;
+    }
+  }
+  .msg-item,
+  .notif-item {
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+}
+nav {
+  &.transparent {
+    background-color: transparent !important;
+    position: absolute;
+    width: 100%;
+  }
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-left: 0;
+  padding-right: 0;
+}
+.navbar-nav .dropdown-menu {
+  overflow: hidden;
+}
+/*
+### Common ###
+*/
+section {
+  .section-title {
+    h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      @include breakpoint(sm) {
+        font-size: 1.5rem;
+      }
+      &.small-title {
+        font-size: 1rem;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+.sm-col {
+  @include breakpoint(sm) {
+    flex-direction: column;
+  }
+}
+/*
+##### Custom Components #####
+*/
+.custom-dropdown-menu {
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+.hero-box {
+  padding: 90px 0;
+  padding-top: 200px;
+  background-image: url("../img/bg-mountain-01.jpg"),
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1 {
+    font-size: 4.8rem;
+    font-weight: bold;
+    @include breakpoint(sm) {
+      font-size: 1.5rem;
+    }
+  }
+  p {
+    font-weight: bold;
+    color: $secondary-color;
+  }
+  @include breakpoint(sm) {
+    padding: 20px;
+    padding-top: 200px;
+  }
+}
+.herobox-1 {
+  background-color: $primary-color;
+  height: 280px;
+  @include breakpoint(sm) {
+    height: unset;
+    padding: 10px;
+  }
+  h1 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    @include breakpoint(sm) {
+      font-size: 2rem;
+    }
+  }
+  nav {
+    button {
+      @include breakpoint(sm) {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+    @include breakpoint(sm) {
+      position: absolute;
+    }
+    .navbar-collapse {
+      @include breakpoint(sm) {
+        background-color: #fff;
+      }
+    }
+    .navbar-toggler {
+      @include breakpoint(sm) {
+        border-color: #fff;
+      }
+    }
+  }
+  .nav {
+    .nav-link {
+      border-bottom: 4px solid transparent;
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0 10px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: #fff !important;
+      &.text-white {
+        color: #fff !important;
+      }
+      @include breakpoint(sm) {
+        color: #000 !important;
+      }
+      &:hover {
+        border-bottom-color: #fff;
+        @include breakpoint(sm) {
+          color: #000;
+        }
+      }
+      &.active {
+        border-bottom-color: #fff;
+        @include breakpoint(sm) {
+          color: #000;
+        }
+      }
+    }
+    &.nav-settings {
+      .icon {
+        color: $secondary-color;
+      }
+    }
+  }
+  .items {
+    color: #fff;
+    @include breakpoint(sm) {
+      flex-wrap: wrap;
+      flex-direction: unset;
+    }
+    .item {
+      @include breakpoint(sm) {
+        background-color: #ef9116;
+        color: #fff;
+        margin: 2px;
+        margin-top: 10px;
+        padding: 2px;
+        border-radius: 10px;
+      }
+      .currency {
+        color: #fff;
+      }
+      p {
+        margin-bottom: 0;
+      }
+      .number {
+        color: $secondary-color;
+        @include breakpoint(sm) {
+          color: #fff;
+        }
+        font-weight: bold;
+        font-size: 3rem;
+        font-family: $secondary_font;
+      }
+      .amount {
+        color: $secondary-color;
+        @include breakpoint(sm) {
+          color: #fff;
+        }
+        font-size: 3rem;
+        font-weight: bold;
+        font-family: $secondary_font;
+      }
+      .d-flex {
+        .item {
+          margin-right: 10px;
+        }
+        .text-muted {
+          color: #fff !important;
+          font-weight: bold;
+          font-size: 0.9rem;
+          line-height: 1rem;
+        }
+      }
+    }
+  }
+}
+.herobox-2 {
+  background-color: $primary-color;
+  background: url("../img/herobox-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  min-height: 400px;
+  padding-bottom: 10px;
+  .moving-text {
+    background-color: $secondary-color;
+    color: #fff;
+  }
+}
+.herobox-3 {
+  .hero-heading {
+    color: #fff;
+    font-size: 60px;
+  }
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  .container {
+    @include breakpoint(xs) {
+      width: auto;
+    }
+  }
+  .banner {
+    min-height: 520px;
+    background-size: cover;
+    @include breakpoint(xs) {
+      min-height: 400px;
+    }
+    border-radius: 10px;
+    .banner-text {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  .card {
+    background-color: $primary-color;
+    border-radius: 10px;
+    color: #fff;
+    label {
+      color: #fff;
+      text-transform: uppercase;
+    }
+    input {
+      width: 90%;
+      height: 40px;
+      @include breakpoint(sm) {
+        width: 90%;
+        font-size: 1rem;
+      }
+      &:focus {
+        border-color: $secondary-color;
+        box-shadow: 0 0 0 0.25rem rgba(252, 157, 33, 0.25);
+      }
+    }
+    .login-form-title {
+      color: #fff;
+      text-transform: uppercase;
+    }
+    .login-btn {
+      background-color: $secondary-color;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 15px 25px;
+      width: 83%;
+      @include breakpoint(sm) {
+        width: 81%;
+      }
+    }
+    .form-bottom {
+      font-size: 15px;
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+}
+.herobox-4 {
+  background-color: #f5f5f5;
+  @include breakpoint(xs) {
+    .container {
+      width: auto;
+    }
+  }
+  .breadcrumb-item {
+    color: $primary-color;
+    font-size: 15px;
+    &::before {
+      color: $primary-color;
+    }
+    a {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+}
+.general-herobox {
+  .row {
+    background-color: rgba(1, 10, 71, 0.5);
+    min-height: 400px;
+    @include breakpoint(sm) {
+      min-height: 250px;
+    }
+    h2 {
+      color: #fff;
+      font-size: 60px;
+      @include breakpoint(sm) {
+        font-size: 40px;
+      }
+    }
+  }
+}
+.contact-herobox {
+  background-image: url("../img/contact.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.about-herobox {
+  background-image: url("../img/aboutHero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.service-card {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  img {
+    width: 70px;
+  }
+  .card-title {
+    font-size: 1rem;
+  }
+  .card-text {
+    font-size: 0.9rem;
+  }
+  &:hover {
+    background-color: $secondary-color;
+    .card-title,
+    .card-text {
+      color: #fff;
+    }
+  }
+}
+.close-btn-div {
+  display: none;
+  @include breakpoint(md) {
+    display: block;
+  }
+}
+.f-search-form-1 {
+  margin: 90px 0;
+  .container {
+    @include breakpoint(xs) {
+      width: auto;
+    }
+  }
+  @include breakpoint(sm) {
+    margin: 20px 0;
+  }
+  .formContainer {
+    @include breakpoint(sm) {
+      padding: 0;
+    }
+  }
+  .nav-items-card {
+    margin-bottom: -30px;
+    z-index: 9999;
+    border-radius: 10px;
+    border: 0;
+    -webkit-box-shadow: 4px 2px 11px 0px #000000;
+    box-shadow: 4px 2px 11px 0px #000000;
+    @include breakpoint(md) {
+      margin-bottom: 0;
+      margin: 20px;
+    }
+    .card-body {
+      .d-flex {
+        @include breakpoint(md) {
+          flex-wrap: wrap;
+        }
+      }
+    }
+    a {
+      width: 120px;
+      text-align: center;
+      border-bottom: 4px solid transparent;
+      padding: 10px;
+      margin: 2px;
+      text-decoration: none;
+      color: $primary-color;
+      @include breakpoint(md) {
+        width: 100px;
+        padding: 10px 0;
+      }
+      i {
+        display: block;
+        font-size: 1.5rem;
+        color: #7e7e7e;
+      }
+      .text {
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
+        color: #7e7e7e;
+      }
+      &.active,
+      &:hover {
+        border-bottom-color: $primary-color;
+        i {
+          color: $primary-color;
+        }
+        .text {
+          color: #000;
+        }
+      }
+    }
+  }
+  .main-content-card {
+    border-radius: 10px;
+    border: 0;
+    -webkit-box-shadow: 4px 2px 11px 0px #000000;
+    box-shadow: 4px 2px 11px 0px #000000;
+    @include breakpoint(md) {
+      position: unset;
+    }
+    .card-body {
+      &.form {
+        display: none;
+      }
+    }
+  }
+  .trip-types {
+    .badge {
+      color: $primary-color;
+      cursor: pointer;
+      i.circle {
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+        border-radius: 20px;
+        background-color: $primary-color;
+        color: #fff;
+      }
+      &.active,
+      &:hover {
+        color: $secondary-color;
+        i.circle {
+          background-color: $secondary-color;
+        }
+      }
+      &.deactive {
+        i.circle {
+          &::before {
+            content: "/";
+            visibility: hidden;
+          }
+        }
+      }
+    }
+  }
+  .flight-form-card {
+    @include breakpoint(md) {
+      position: unset;
+    }
+  }
+  .flight-form {
+    .d-flex {
+      @include breakpoint(md) {
+        flex-wrap: wrap;
+      }
+    }
+    .input-box {
+      border-right: solid 1px #e7e7e7;
+      &:last-child {
+        border-right: 0;
+        @include breakpoint(md) {
+          border-right: 1px solid rgba(97, 95, 95, 0.507);
+        }
+      }
+
+      width: 300px;
+      overflow: hidden;
+      padding: 5px;
+      @include breakpoint(md) {
+        border: 1px solid rgba(97, 95, 95, 0.507);
+        padding: 10px;
+        border-radius: 0px;
+        margin: 5px 0;
+      }
+      p {
+        display: inline-block;
+        margin: 0;
+      }
+      input {
+        &.datepicker {
+          font-size: 1.5rem !important;
+        }
+        &.readonly {
+          font-size: 2rem;
+          font-weight: bold;
+          border: 0;
+          outline: 0;
+          cursor: pointer;
+          &:focus,
+          &:focus-visible {
+            border: 0;
+          }
+          @include breakpoint(md) {
+            font-size: 1rem !important;
+          }
+        }
+      }
+      .airport-name {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @include breakpoint(md) {
+          display: none;
+        }
+      }
+      .date,
+      .day {
+        @include breakpoint(md) {
+          display: none;
+        }
+      }
+      .custom-dropdown-menu {
+        width: 280px;
+        padding: 10px;
+        margin-top: -20px;
+        @include breakpoint(md) {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 100vh;
+          z-index: 99999;
+          width: unset;
+          margin-top: 0;
+        }
+        .form-control {
+          width: 100%;
+          padding: 5px 2px;
+        }
+        ul {
+          li {
+            cursor: pointer;
+          }
+        }
+        &.others,
+        &.passengers {
+          h3.heading {
+            font-size: 1rem;
+          }
+          .actionButtons,
+          .adult-actionButtons {
+            .minus,
+            .plus {
+              cursor: pointer;
+            }
+            .minus,
+            .number,
+            .plus {
+              border: 1px solid $primary-color;
+              width: 20px;
+              height: 20px;
+              line-height: 20px;
+              text-align: center;
+              margin-right: 5px;
+            }
+          }
+          .badge {
+            max-width: 100px;
+            width: 100px;
+            border-radius: 15px;
+            padding: 10px 10px;
+            margin: 5px;
+            font-size: 0.6rem;
+            background-color: #d3d3d3;
+            cursor: pointer;
+          }
+        }
+        &.rooms {
+          width: 400px;
+          right: 0;
+          @include breakpoint(md) {
+            width: auto;
+          }
+          .room-heading {
+            cursor: pointer;
+          }
+          ul {
+            li {
+              font-size: 13px;
+              padding: 5px 10px;
+              &.active {
+                background-color: $primary-color;
+                border-color: $primary-color;
+                color: #fff;
+              }
+              &:hover:not(.active) {
+                background-color: rgba(185, 185, 185, 0.5);
+              }
+            }
+          }
+          .child-dropdown {
+            select {
+              margin: 10px 0px 0px 10px;
+              width: 70px;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+      .no-margin-dropdown {
+        margin-top: 0;
+      }
+      ul.autocomplete {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          margin: 5px;
+          padding: 10px;
+          .icon {
+            width: 40px;
+          }
+          .country-ariport {
+            .country {
+            }
+            .airportname {
+              font-size: 0.8rem;
+            }
+          }
+          .shortname {
+            font-weight: bold;
+          }
+          &:hover {
+            background: rgba(185, 185, 185, 0.5);
+          }
+        }
+      }
+    }
+    .return-date {
+      p,
+      input {
+        color: #7d7d7e;
+      }
+    }
+    .swap-locations {
+      margin-left: -30px;
+      margin-top: 40px;
+      @include breakpoint(xs) {
+        margin-top: -30px !important;
+        margin-bottom: -20px !important;
+        padding: auto;
+        margin-left: auto;
+      }
+      @include breakpoint(md) {
+        margin-bottom: -20px;
+        margin-top: 15px;
+      }
+      a {
+        background-color: #f8f6f6;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        padding: 0;
+        border-radius: 15px;
+        @include breakpoint(md) {
+          transform: rotate(90deg);
+          margin: 0;
+        }
+      }
+    }
+    #moreLocations {
+      .another-location {
+        @include breakpoint(md) {
+          padding-top: 20px;
+          .remove-location {
+            position: absolute;
+            right: 10%;
+            margin-top: -20px;
+          }
+        }
+      }
+    }
+  }
+  .recent-searches {
+    font-size: 1rem;
+    .item {
+      margin: 10px 5px;
+    }
+    @include breakpoint(md) {
+      margin: 10px 0;
+      flex-wrap: wrap;
+      display: none !important;
+    }
+    .d-flex {
+      .item {
+        margin-right: 30px;
+      }
+    }
+    .bg-search {
+      cursor: pointer;
+      background-color: #f5f5f5;
+      color: $primary-color;
+      line-height: unset;
+      padding: 5px 10px;
+      i {
+        color: $primary-color;
+      }
+      &:hover {
+        background-color: $secondary-color;
+        color: #fff;
+        i {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+#ads,
+#recent-searches,
+#charts {
+  .container {
+    @include breakpoint(xs) {
+      width: auto;
+    }
+  }
+}
+#flight-search-row {
+  margin: 0;
+  .input-box {
+    width: 200px;
+    @include breakpoint(xs) {
+      width: 100%;
+    }
+  }
+  .heading,
+  .airport-name,
+  .date,
+  .day {
+    font-size: 13px;
+  }
+  input,
+  .datepicker,
+  .row-field {
+    font-size: 1.2rem;
+  }
+  .custom-dropdown-menu {
+    input {
+      font-size: 1rem !important;
+    }
+  }
+  .f-search-form-1 {
+    display: none;
+    margin: 30px 0;
+    .main-content-card {
+      box-shadow: none;
+    }
+  }
+}
+.card {
+  //border-radius: 20px;
+  //border-color: #f6f6f6;
+  .card-header {
+    //border-radius: 20px;
+    //border-bottom-left-radius: 0;
+    //border-bottom-right-radius: 0;
+    //background-color: #f6f6f6;
+    //border-color: #f6f6f6;
+    color: $primary-color;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $primary-color;
+    }
+  }
+}
+#logos {
+  .d-flex {
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+    }
+  }
+}
+.package-card {
+  background-color: #f9f9f9;
+  border: 4px solid $primary-color;
+  border-radius: 5px;
+  .item {
+    .text {
+      color: #07104b;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+    h2 {
+      &.heading {
+        font-size: 3rem;
+        color: #6f7176;
+        margin-bottom: 0;
+        font-weight: bold;
+      }
+    }
+    .time {
+      color: #6f7176;
+    }
+    .text-muted {
+      margin-bottom: 0;
+    }
+  }
+  &:hover {
+    background-color: #fff;
+    border-color: $secondary-color;
+    .btn {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+    }
+    h2 {
+      color: $secondary-color;
+    }
+  }
+  .price {
+    font-weight: bold;
+    font-size: 2rem;
+    .currency,
+    .days {
+      font-weight: normal;
+      font-size: 1rem;
+    }
+  }
+  .flight-meta {
+    @include breakpoint(xs) {
+      flex-direction: column;
+    }
+    a {
+      text-decoration: none;
+      .icon {
+        color: $secondary-color;
+        font-size: 1rem;
+      }
+      .content {
+        color: #b0b1b3;
+      }
+    }
+    .item {
+      margin-right: 20px;
+    }
+  }
+}
+.card-advertisement {
+  .card-body {
+    img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+}
+.card-stats {
+  h3 {
+    font-size: 1rem;
+    padding-left: 10px;
+    color: #000;
+    i {
+      color: $primary-color;
+    }
+  }
+  .stats {
+    padding: 10px;
+  }
+}
+.filter-heading {
+  color: $primary-color;
+}
+.trip-type {
+  margin: 10px 0;
+}
+.mt-m-20 {
+  margin-top: -20px;
+  @include breakpoint(sm) {
+    margin-top: 0;
+  }
+}
+.badge-trip-type {
+  background-color: $primary-color;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 15px;
+  padding: 5px 10px;
+  cursor: pointer;
+  &.active {
+    background-color: $secondary-color;
+  }
+  &:hover {
+    color: #fff;
+    background-color: $secondary-color;
+  }
+}
+.filter-badges {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    @include breakpoint(sm) {
+      margin: 4px;
+    }
+    a {
+      background-color: $primary-color;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 15px;
+      padding: 10px;
+      &.active {
+        background-color: $secondary-color;
+      }
+      &:hover {
+        color: #fff;
+        background-color: $secondary-color;
+      }
+    }
+  }
+}
+.login-card {
+  margin: 3rem;
+  .login-form {
+    .icon-input {
+      position: relative;
+      input {
+        padding: 15px 30px;
+        padding-left: 60px;
+        width: 80%;
+        border-radius: 15px;
+        @include breakpoint(sm) {
+          width: 60%;
+          font-size: 1rem;
+        }
+        &:focus {
+          border-color: $secondary-color;
+          box-shadow: 0 0 0 0.25rem rgba(252, 157, 33, 0.25);
+        }
+      }
+      .icon {
+        position: absolute;
+        top: 30%;
+        left: 30px;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: #131212;
+    }
+  }
+  @include breakpoint(sm) {
+    margin: 1rem;
+  }
+}
+.destination-carousel {
+  .card {
+    border-radius: 0;
+    border: 0;
+    width: 300px;
+    .card-body {
+      position: relative;
+      padding: 0;
+      overflow: hidden;
+      .img {
+        height: 450px;
+        width: 300px;
+        background-position: center;
+        background-size: cover;
+      }
+      .overlay-content {
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        right: 0%;
+        color: #fff;
+        padding: 20px 20px;
+        h3 {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+/* ### Booking Form ### */
+#bookingForm {
+  margin-top: -90px;
+  @include breakpoint(sm) {
+    margin-top: 20px;
+  }
+  .form-card {
+    border-radius: 15px;
+    button {
+      background-color: $primary-color;
+      padding: 10px 70px;
+      border-radius: 45px;
+      border-color: $primary-color;
+      margin-bottom: -45px;
+      font-family: $secondary_font;
+      font-weight: bold;
+      font-size: 1rem;
+      &:hover {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+      }
+    }
+    .d-flex {
+      width: 100%;
+      .item {
+        margin-right: 5px;
+        input {
+          width: 60%;
+          border-color: #e5e5e5;
+          @include breakpoint(sm) {
+            width: 70%;
+          }
+        }
+      }
+      .item:nth-child(1),
+      .item:nth-child(2) {
+        width: 30%;
+        @include breakpoint(sm) {
+          width: 90%;
+        }
+      }
+    }
+    .custom-control {
+      position: relative;
+      input,
+      select {
+        padding-left: 30px;
+      }
+      input {
+        padding: 10px 40px 16px 40px;
+        border-radius: 0;
+      }
+      .select2-container {
+        width: 100% !important;
+      }
+      .select2-container--default .select2-selection--single {
+        padding: 10px 0px 40px 40px;
+        width: 100%;
+        border-radius: 0;
+        border-color: #e5e5e5;
+      }
+    }
+    .icon {
+      position: absolute;
+      color: #e5e5e5;
+      top: 20%;
+      left: 20px;
+      z-index: 999;
+    }
+  }
+}
+/*
+### Footer ###
+*/
+footer {
+  .container {
+    @include breakpoint(xs) {
+      width: auto;
+    }
+  }
+  .heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .content {
+    margin-top: 30px;
+  }
+  ul {
+    margin-top: 30px;
+    list-style: none;
+    padding: 0;
+    li {
+      margin-top: 10px;
+      a {
+        text-decoration: none;
+        color: #7c7f99;
+        font-weight: 500;
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+  &.footer-1 {
+    color: #7c7f99;
+    .footer-top {
+      .logo {
+        width: 50%;
+      }
+      ul.contact-list {
+        li {
+          a {
+            i {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+      ul.social-icons {
+        li {
+          margin-right: 1rem;
+          a {
+            i {
+              margin-right: auto;
+            }
+          }
+        }
+      }
+    }
+    .footer-bottom {
+      .copyright-text {
+      }
+    }
+  }
+  &.footer-2 {
+    .footer-top {
+      background-color: $primary-color;
+      padding: 30px 0;
+      h2 {
+        color: $secondary-color;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      ul.menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @include breakpoint(sm) {
+          margin-bottom: 10px;
+        }
+        li {
+          a {
+            text-decoration: none;
+            color: #fff;
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+      ul.social-media {
+        @include breakpoint(sm) {
+          padding-left: 0;
+        }
+        li {
+          @include breakpoint(sm) {
+            margin-left: 0;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .footer-bottom {
+      background-color: $secondary-color;
+      padding: 10px 40px 10px 0px;
+      font-size: 0.8rem;
+    }
+  }
+  &.footer-3 {
+    .footer-top {
+      background-color: $primary-color;
+      padding: 30px 0;
+      color: #fff;
+      .brand-logo {
+        img {
+          width: 150px;
+        }
+      }
+      h2 {
+        color: $secondary-color;
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+      ul.menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @include breakpoint(sm) {
+          margin-bottom: 10px;
+        }
+        li {
+          a {
+            text-decoration: none;
+            color: #fff;
+            .icon {
+              margin-right: 10px;
+            }
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+      ul.social-media {
+        @include breakpoint(sm) {
+          padding-left: 0;
+        }
+        li {
+          @include breakpoint(sm) {
+            margin-left: 0;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .footer-bottom {
+      background-color: $secondary-color;
+      padding: 10px 0;
+      font-size: 0.8rem;
+    }
+  }
+}
+#ads {
+  .carousel {
+    img {
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+}
+.flight-booking-form {
+  .card {
+    .card-header {
+      background-color: #fff;
+      border-bottom-color: rgb(250, 250, 250);
+    }
+    border-color: rgb(250, 250, 250);
+    .card-body {
+      .select2 {
+        .select2-selection {
+          &.select2-selection--single {
+            border-radius: 0;
+            height: unset;
+            padding: 0.212rem 0.75rem;
+            display: block;
+            border-color: #ced4da;
+          }
+        }
+      }
+    }
+  }
+}
+/*
+### Input Addon ###
+*/
+.form-control {
+  width: 90%;
+  border-radius: 0;
+  &:focus {
+    border-color: $secondary-color;
+    box-shadow: 0 0 0 0.25rem rgba(252, 157, 33, 0.25);
+  }
+}
+.custom-form-control {
+  padding-right: 30px;
+}
+
+.custom-form-control + .icon {
+  position: absolute;
+  right: 0;
+  padding: 8px 27px;
+}
+/*
+### About Section ###
+*/
+#about-2 {
+  color: black;
+  background-color: #fff;
+  .section-title {
+    @include breakpoint(xs) {
+      text-align: center;
+    }
+    h2 {
+      color: black;
+      text-transform: capitalize;
+    }
+  }
+  .about-img {
+    background-image: url(../img/build.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include breakpoint(xs) {
+      height: 200px;
+    }
+  }
+  .about-img2 {
+    background-image: url(../img/about2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include breakpoint(xs) {
+      height: 200px;
+    }
+  }
+  .about-text {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @include breakpoint(xs) {
+      padding: 30px 0px;
+      text-align: center;
+    }
+    p {
+      @include breakpoint(xs) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+  .about-btn {
+    @include breakpoint(xs) {
+      text-align: center !important;
+    }
+  }
+}
+#services-2 {
+  .container {
+    @include breakpoint(xs) {
+      width: auto;
+    }
+  }
+  .card {
+    background-color: $secondary-color;
+    border-width: 0px;
+    border-radius: 10px;
+    background-image: linear-gradient(
+      180deg,
+      $secondary-color 40%,
+      #f5f5f5 40%
+    );
+  }
+  .card-img-top {
+    width: 80px;
+  }
+}
+#destinations-2 {
+  .container {
+    @include breakpoint(xs) {
+      width: auto;
+    }
+  }
+  .section-title {
+    h2 {
+      &:first-child {
+        color: #fff;
+        text-transform: capitalize;
+      }
+    }
+  }
+  .card {
+    border: 1px solid $primary-color;
+    .card-img-top {
+      border-radius: 15px;
+    }
+    .card-body {
+      .card-title {
+        color: #fff;
+        font-weight: bold;
+      }
+    }
+  }
+}
+#call-to-action {
+  .container {
+    @include breakpoint(xs) {
+      width: auto;
+      width: 100px;
+    }
+  }
+  .section-title {
+    h2 {
+      color: #000;
+      &:first-child {
+        font-size: 30px;
+        text-transform: capitalize;
+      }
+    }
+    .small-title {
+      font-size: 20px;
+    }
+  }
+  .bg-secondary-color {
+    border-radius: 20px;
+  }
+  .cta-btn-pos {
+    @include breakpoint(xs) {
+      text-align: center !important;
+      padding-top: 10px;
+    }
+  }
+}
+.logo-bar {
+  width: 200px;
+}
+.eticket-head {
+  .section-title {
+    color: $grey-heading;
+  }
+  .eticket-qrcode {
+    p {
+      font-size: 10px;
+    }
+  }
+  .head-col-1,
+  .head-col-2 {
+    @include breakpoint(xs) {
+      width: 50%;
+    }
+  }
+}
+.eticket-departure-flight {
+  .flight-logo {
+    width: 150px;
+  }
+  .flight-code {
+    font-size: 14px;
+  }
+  .refundable-btn {
+    color: #fff;
+    background-image: linear-gradient(
+      108deg,
+      rgba(86, 213, 71, 1) 50%,
+      rgba(52, 186, 7, 1) 100%
+    );
+    border-width: 0px;
+    border-radius: 20px;
+    padding: 5px 20px;
+  }
+}
+.eticket-passenger-details {
+  th,
+  td {
+    font-size: 13px;
+  }
+}
+.print-card {
+  border-radius: 4px;
+  .card-header {
+    color: $grey-heading;
+    background-color: #ededed;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  .card-body {
+    font-size: 13px;
+    overflow: hidden;
+    @include breakpoint(sm) {
+      overflow: auto;
+    }
+  }
+}
+.eticket-foot {
+  .section-title {
+    color: $grey-heading;
+    margin-top: -15px;
+  }
+  i {
+    color: $grey-heading;
+  }
+  a {
+    text-decoration: none;
+  }
+  .email {
+    border-left: 1px solid $grey-heading;
+    @include breakpoint(xs) {
+      border-width: 0px;
+    }
+  }
+  .foot-col-1,
+  .foot-col-2 {
+    @include breakpoint(xs) {
+      width: 50%;
+    }
+  }
+}
+.eticket-fare-breakup,
+.eticket-date-change,
+.eticket-cancellation {
+  table {
+    td,
+    th {
+      border-left: 1px solid #ededed;
+      padding-left: 25px;
+    }
+    tr {
+      border-bottom: 1px solid #ededed;
+    }
+    caption {
+      padding-left: 25px;
+    }
+  }
+}
+.eticket-date-change {
+  .grey-circle {
+    width: 35px;
+    height: 35px;
+    background-color: #cdcdcd;
+  }
+}
+.eticket-departure-flight {
+  .blue-circle {
+    width: 25px;
+    height: 25px;
+    background-color: darkblue;
+  }
+  .orange-circle {
+    width: 25px;
+    height: 25px;
+    background-color: darkorange;
+  }
+  table {
+    td {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .flight-airport {
+      margin-top: -10px;
+    }
+    .connector {
+      height: 70px;
+    }
+  }
+}
+
+.eticket-head,
+.eticket-foot,
+.eticket-fare-breakup,
+.eticket-date-change,
+.eticket-cancellation,
+.eticket-passenger-details,
+.eticket-departure-flight {
+  .container {
+    @include breakpoint(xs) {
+      width: auto;
+    }
+  }
+}
+/*
+###### Common Hotel listing/single page items ######
+*/
+.availibility {
+  .green-circle {
+    width: 10px;
+    height: 10px;
+    background-color: greenyellow;
+  }
+  p {
+    font-size: 13px;
+  }
+}
+.hotel-badge {
+  background-color: lightgray;
+  border-radius: 5px;
+  font-size: 13px;
+}
+.hotel-stars {
+  color: darkblue;
+}
+.facilities {
+  .item {
+    i {
+      color: darkblue;
+    }
+    p {
+      font-size: 13px;
+    }
+  }
+}
+.hotel-features {
+  .features-heading {
+    font-size: 14px;
+    color: darkblue;
+  }
+  .features {
+    .item {
+      .blue-circle {
+        width: 10px;
+        height: 10px;
+        background-color: darkblue;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+}
+/*
+###### Buttons ######
+*/
+.hotel-btn {
+  font-size: 13px;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 15px;
+}
+/*
+###### End Common Hotel items ######
+*/
+#hotel-listings {
+  .container {
+    @include breakpoint(xs) {
+      width: auto;
+    }
+  }
+  .sidebar {
+    background-color: #fff;
+  }
+  .listings {
+    .hotel-box {
+      .hotel-rooms {
+        display: none;
+        .room-card {
+          border-bottom: 1px solid #ededed;
+        }
+      }
+      .hotel-card {
+        border: none;
+      }
+      .hotel-card,
+      .hotel-rooms {
+        .hotel-img {
+          width: 300px;
+          height: 250px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 5px;
+          @include breakpoint(sm) {
+            width: 95%;
+            height: 200px;
+          }
+          @include breakpoint(xs) {
+            width: 90%;
+            height: 200px;
+          }
+        }
+        // For cars listings image
+        .cars-img {
+          width: 300px;
+          height: 200px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          border-radius: 5px;
+          @include breakpoint(sm) {
+            width: 95%;
+            height: 200px;
+          }
+          @include breakpoint(xs) {
+            width: 90%;
+            height: 200px;
+          }
+        }
+        // End cars lastings image
+        .card-body,
+        .room-card {
+          .card-title {
+            font-size: 16px;
+            color: $primary-color;
+            text-decoration: none;
+          }
+          .card-text {
+            font-size: 14px;
+          }
+          .hotel-price,
+          .hotel-review {
+            h6 {
+              font-size: 16px;
+              color: darkblue;
+            }
+            p {
+              font-size: 13px;
+            }
+            // For cars listings
+            h4 {
+              color: darkblue;
+            }
+          }
+
+          .hotel-button {
+            position: absolute;
+            bottom: 0;
+            @include breakpoint(sm) {
+              position: inherit;
+            }
+            .btn-primary {
+              padding: 5px 50px;
+            }
+          }
+          //For cars listings
+          .right-col {
+            height: auto;
+            position: relative;
+            .right-col-center {
+              position: absolute;
+              top: 30%;
+              left: 30%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#single-hotel {
+  .container {
+    @include breakpoint(xs) {
+      width: auto;
+    }
+  }
+  .sidebar {
+    background-color: #fff;
+    .sidebar-heading {
+      color: darkblue;
+    }
+    .progress-bar {
+      background-color: darkblue;
+    }
+  }
+  .hotel-price {
+    h6 {
+      font-size: 30px;
+      color: darkblue;
+    }
+  }
+  .hotel-details {
+    background-color: #fff;
+  }
+  .carousel {
+    .carousel-item {
+      img {
+        border-radius: 5px;
+      }
+    }
+  }
+  .room-card {
+    .room-img {
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+}
+.hotel-voucher-head {
+  .section-title {
+    color: $grey-heading;
+  }
+}
+.voucher-accomodation-details,
+.voucher-service-details {
+  h6 {
+    font-size: 13px;
+  }
+  table {
+    td,
+    th {
+      border-left: 1px solid #ededed;
+      padding-left: 25px;
+    }
+    tr {
+      border-bottom: 1px solid #ededed;
+      border-top: 1px solid #ededed;
+    }
+  }
+}
+.hotel-voucher-head,
+.voucher-accomodation-details,
+.voucher-service-details,
+.voucher-payment-details,
+.voucher-important-info,
+.voucher-additional-info,
+.voucher-office-contact {
+  .container {
+    @include breakpoint(xs) {
+      width: auto;
+    }
+  }
+}
+.booking-card {
+  border-radius: 4px;
+  .card-header {
+    color: #fff;
+    background-color: $primary-color;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  .card-body {
+    font-size: 13px;
+  }
+  .table-row-border {
+    tr {
+      border-bottom: 1px solid #ededed;
+    }
+  }
+}
+.flight-details {
+  .flight-logo {
+    width: 150px;
+  }
+  .arrow-img {
+    width: 300px;
+    @include breakpoint(sm) {
+      width: 200px;
+    }
+    @include breakpoint(xs) {
+      width: 100px;
+    }
+  }
+}
+.flight-from-to {
+  @include breakpoint(xs) {
+    font-size: 15px;
+  }
+}
+.passenger-details,
+.baggage-details {
+  .pax-btn {
+    font-size: 13px;
+    font-weight: normal;
+  }
+  .inner-table {
+    thead {
+      background-color: $primary-color;
+      color: #fff;
+    }
+  }
+}
+.trip-details,
+.booking-info,
+.flight-details,
+.passenger-details,
+.baggage-details {
+  .container {
+    width: auto;
+  }
+}
+/*
+##### Price Range Slider ######
+*/
+.flat-slider {
+  .ui-corner-all {
+    border-radius: 10px;
+  }
+  .ui-widget-content {
+    background-color: #ededed;
+    background-image: none;
+    border-width: 0;
+  }
+  .ui-widget-header {
+    background-color: royalblue;
+    border-color: royalblue;
+    background-image: none;
+  }
+  .ui-slider-horizontal {
+    height: 0.3rem;
+  }
+  .ui-slider-handle {
+    cursor: pointer;
+    background-color: $primary-color;
+    background-image: none;
+    border-color: $primary-color;
+    border-radius: 20px;
+    height: 0.8rem;
+    width: 0.8rem;
+  }
+  .min_value {
+    //float:left;
+    margin-top: 0.5em;
+    font-size: 0.8rem;
+  }
+  .max_value {
+    float: right;
+    margin-top: -1.5em;
+    font-size: 0.8rem;
+  }
+  .min,
+  .max {
+    display: none;
+  }
+}
+/*
+##### End Price Range Slider ########
+*/
+/*
+##### Star Rating #####
+*/
+.star-rating {
+  > {
+    input {
+      display: none;
+    }
+
+    label {
+      position: relative;
+      width: 1em;
+      font-size: 30px;
+      color: #ffd600;
+      cursor: pointer;
+
+      &::before {
+        content: "\2605";
+        position: absolute;
+        opacity: 0;
+      }
+
+      &:hover {
+        &:before,
+        ~ label:before {
+          opacity: 1 !important;
+        }
+      }
+    }
+
+    input:checked ~ label:before {
+      opacity: 1;
+    }
+  }
+
+  &:hover > input:checked ~ label:before {
+    opacity: 0.4;
+  }
+}
+/*
+##### End Star Rating #####
+*/
+.listing-wrapper {
+  .container {
+    @include breakpoint(sm) {
+      width: auto;
+    }
+    .sidebar {
+      .card {
+        border-radius: 5px;
+        -webkit-box-shadow: 4px 2px 11px 0px #000000;
+        box-shadow: 4px 2px 11px 0px #000000;
+        .card-body {
+          padding: 0;
+          .card-title {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+    .content {
+      padding: 10px;
+      .price-comparison-card {
+        border-radius: 5px;
+        .card-header {
+          text-decoration: none;
+        }
+        .table {
+          th {
+            font-size: 0.7rem;
+          }
+        }
+      }
+      .package-card {
+        background-color: #fff;
+        border: 3px solid #ededed;
+        border-radius: 5px;
+        &:hover {
+          background-color: #fff;
+          border-color: $secondary-color;
+          .btn {
+            background-color: $secondary-color;
+            border-color: $secondary-color;
+          }
+        }
+        .text {
+          font-size: 1rem;
+        }
+        .heading {
+          font-size: 0.9rem;
+        }
+        .time,
+        .text-muted {
+          font-size: 0.9rem;
+        }
+        img {
+          width: 50px;
+        }
+        .fare-card {
+          table {
+            th {
+              font-size: 0.7rem;
+            }
+            tr {
+            }
+            td {
+              font-size: 0.7rem;
+              &.w-150-px {
+                width: 150px;
+              }
+              h6 {
+                font-size: 0.8rem;
+              }
+              .btn {
+                font-size: 0.7rem;
+                padding: 5px;
+              }
+            }
+          }
+        }
+        .flight-details-card {
+          border: 0;
+          .card-header {
+            background-color: #fff;
+            border-bottom: 0;
+          }
+          .nav-tabs {
+            .nav-item {
+              @include breakpoint(sm) {
+                width: 100%;
+              }
+              .nav-link {
+                color: $primary-color;
+                &.active {
+                  color: $secondary-color;
+                  @include breakpoint(sm) {
+                    border: 1px;
+                  }
+                }
+              }
+            }
+          }
+          .accordion {
+            .accordion-item {
+              border: 0;
+              padding: 5px 30px;
+            }
+            .accordion-button {
+              padding: 10px 5px;
+              &:not(.collapsed) {
+                color: unset;
+                background-color: transparent;
+              }
+              &:focus {
+                border-color: $primary-color;
+                box-shadow: unset;
+              }
+            }
+            .accordion-body {
+              padding: 10px 5px;
+              .alert {
+                font-size: 0.7rem;
+              }
+            }
+          }
+          .card-body {
+            .tab-pane {
+              .table-responsive {
+                padding: 10px;
+              }
+              table {
+                border: 1px solid $primary-color;
+                th,
+                td {
+                  font-size: 0.7rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+$timeline-color: $secondary-color;
+.legs-list {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 2px;
+    background-color: $timeline-color;
+    position: absolute;
+    left: -9px;
+    top: 5px;
+  }
+  &::after {
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-color: $timeline-color;
+    position: absolute;
+    top: 5px;
+    left: -2%;
+    @include breakpoint(sm) {
+      left: -2.8%;
+    }
+    @include breakpoint(xs) {
+      left: -6%;
+    }
+    border-radius: 45px;
+  }
+}
+.segment-card {
+  border-color: rgba(228, 214, 214, 0.473);
+  .card-body {
+    .d-flex {
+      @include breakpoint(sm) {
+        flex-direction: column;
+      }
+      .item {
+        border-left: 1px solid rgba(228, 214, 214, 0.473);
+        @include breakpoint(sm) {
+          border: 0;
+          border-bottom: 1px solid #35333360;
+        }
+        padding: 10px;
+        &:first-child {
+          border-left: 0;
+        }
+        p {
+          font-size: 0.7rem;
+        }
+        img {
+          height: 40px;
+          width: 40px;
+          object-fit: cover;
+          background-color: $timeline-color;
+          border-radius: 45px;
+          padding: 5px;
+        }
+        .underline {
+          &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: $primary-color;
+            @include breakpoint(sm) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    h6 {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+}
+.data-table {
+}
+.dataTables_paginate {
+  span {
+    .paginate_button {
+      background-color: $secondary-color !important;
+    }
+  }
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background: rgb(184, 184, 184) !important;
+  color: #fff !important;
+  border-color: rgb(250, 250, 250);
+}
+.segments-list {
+  list-style: none;
+  @include breakpoint(sm) {
+    padding: 0;
+  }
+  li {
+    margin-bottom: 10px;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      height: 20px;
+      width: 20px;
+      background-color: $timeline-color;
+      border-radius: 45px;
+      position: absolute;
+      top: 46%;
+      left: -4%;
+      @include breakpoint(sm) {
+        left: -6%;
+        display: none;
+      }
+      @include breakpoint(xs) {
+        left: -15%;
+      }
+      z-index: 999;
+    }
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 50px;
+      background-color: $timeline-color;
+      position: absolute;
+      left: -5.8%;
+      @include breakpoint(sm) {
+        left: -8.2%;
+        display: none;
+      }
+      @include breakpoint(xs) {
+        left: -21%;
+      }
+      top: 50%;
+    }
+    &.stay-list {
+      &::before {
+        display: none;
+        top: 30%;
+      }
+      &::after {
+        display: none;
+      }
+      .baggage-btns {
+        background-color: $primary-color;
+        color: #fff;
+        font-size: 11px;
+        padding: 5px 7px;
+        border-radius: 3px;
+      }
+    }
+    .stay {
+      background-color: #ffffff;
+      width: fit-content;
+      padding: 10px 30px;
+      border-radius: 5px;
+      color: #e95b5b;
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+.sidebar-toggler,
+.sidebar-toggler-close {
+  display: none;
+  width: 100%;
+  @include breakpoint(sm) {
+    display: block;
+  }
+}
+#sidebar {
+  @include breakpoint(sm) {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    z-index: 999;
+    height: 100vh;
+    overflow-y: auto;
+  }
+}
+.aside-details-card {
+  .card-header {
+    padding: 0;
+    background-color: $primary-color;
+    color: #fff;
+    .card-title {
+      margin-bottom: 0;
+    }
+  }
+  .card-body {
+    padding: 0;
+    font-size: 0.9rem;
+  }
+  .highlighted {
+    background-color: $secondary-color;
+    color: #fff;
+    &.total {
+      background-color: $primary-color;
+    }
+  }
+}
+.card {
+  border-color: rgb(250, 250, 250);
+  .card-header {
+    border-bottom-color: rgb(250, 250, 250);
+  }
+}
+.custom-accordion,
+.accordion {
+  @include breakpoint(sm) {
+    overflow: hidden;
+  }
+  .accordion-item {
+    .accordion-header {
+      .accordion-button {
+        width: 95%;
+        font-weight: bold;
+        color: $primary-color;
+        &:not(.collapsed) {
+          color: unset;
+          background-color: transparent;
+        }
+        &:focus {
+          border-color: $primary-color;
+          box-shadow: unset;
+        }
+        @include breakpoint(sm) {
+          width: 87%;
+        }
+      }
+    }
+    .accordion-body {
+      .package-card {
+        background-color: transparent !important;
+        border: 0;
+      }
+    }
+    border-color: rgb(250, 250, 250);
+  }
+  border-color: rgb(250, 250, 250);
+}
+
+//Terminal Screen
+.terminal_output_screen {
+  min-height: 400px;
+  height: 400px;
+  background-color: rgb(32, 32, 32);
+  color: #fff;
+  padding: 1rem;
+}
+.terminal_input_box {
+  .input {
+    width: 90%;
+    .form-control {
+      width: 95%;
+    }
+  }
+}
+/*
+##### Contact Page #####
+*/
+#contact-details {
+  .card {
+    width: 210px;
+    border: 2px solid $secondary-color;
+    border-radius: 10px;
+    @include breakpoint(sm) {
+      width: 180px;
+    }
+    @include breakpoint(xs) {
+      width: 60%;
+    }
+    .card-title {
+      font-size: 24px;
+      @include breakpoint(sm) {
+        font-size: 20px;
+      }
+    }
+    img {
+      width: 60px;
+      @include breakpoint(sm) {
+        width: 40px;
+      }
+    }
+  }
+  .form-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+#contact-form-section {
+  .form-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    @include breakpoint(sm) {
+      width: 80%;
+    }
+  }
+  input,
+  textarea {
+    border-radius: 5px;
+  }
+  button {
+    width: 89%;
+  }
+}
+/*
+##### About Page #####
+*/
+#about-3 {
+  .about-us-section-img {
+    background-image: url("/assets/img/about-3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 200px;
+  }
+}
+#services-3 {
+  color: #fff;
+  .section-title {
+    h2 {
+      color: #fff;
+    }
+  }
+  .services-border {
+    border-left: 1px solid $secondary-color;
+    @include breakpoint(xs) {
+      border: none;
+    }
+  }
+  .card {
+    width: 200px;
+    background-color: $secondary-color;
+
+    border: none;
+    img {
+      width: 60px;
+      filter: invert(65%) sepia(94%) saturate(1388%) hue-rotate(341deg)
+        brightness(0%) contrast(104%);
+    }
+    .card-title {
+      color: #000;
+    }
+  }
+}
+#fun-facts {
+  background-color: rgb(216, 216, 255);
+  .row {
+    min-height: 350px;
+  }
+  .card {
+    color: #000;
+    background-color: #ff9567;
+    border: none;
+    border-radius: 10px;
+    h2 {
+      font-size: 60px;
+      font-weight: bold;
+      color: #000;
+      @include breakpoint(sm) {
+        font-size: 40px;
+      }
+    }
+    p {
+      font-size: 20px;
+      @include breakpoint(sm) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+#testimonials {
+  .testimonial-carousel {
+    width: 50%;
+    @include breakpoint(sm) {
+      width: 80%;
+    }
+    .card {
+      border-radius: 10px;
+      img {
+        width: 50px;
+        border-radius: 100px;
+      }
+      .card-text {
+        font-size: 20px;
+        font-style: italic;
+      }
+    }
+  }
+}
+/*
+##### Flight Booking History Page #####
+*/
+#flight-history-section {
+  .container {
+    @include breakpoint(sm) {
+      width: auto;
+    }
+  }
+  table {
+    thead {
+      background-color: $primary-color;
+      color: #fff;
+      th {
+        padding: 15px;
+      }
+    }
+    tbody {
+      tr {
+        border-bottom: 1px solid #ededed;
+        &:nth-child(even) {
+          background-color: #f8f8f8;
+        }
+        .input-group {
+          input {
+            width: 60px;
+            height: 26px;
+          }
+          .table-dropdown {
+            .dropdown-toggle {
+              &:focus {
+                box-shadow: none;
+                background-color: $secondary-color;
+              }
+              i {
+                font-size: 12px;
+              }
+              padding: 2px 10px;
+              border-radius: 0px;
+              &::after {
+                display: none;
+              }
+            }
+            li {
+              width: auto;
+            }
+          }
+        }
+        select {
+          width: 80px;
+        }
+      }
+    }
+  }
+}
+/*
+##### Car Booking Page #####
+*/
+.car-booking {
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+  }
+  .card-title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .car-booking-summary {
+    .card-header {
+      background-color: $primary-color;
+      color: #fff;
+    }
+    .card-body {
+      .car-pricing {
+        .booking-price {
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+      .car-details {
+        table {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+/*
+##### Insurance Booking Page #####
+*/
+.insurance-booking {
+  .insurance-card {
+    border: 2px solid #ededed;
+    cursor: pointer;
+    &:hover,
+    &.active {
+      border-color: $secondary-color;
+      .card-header {
+        h5 {
+          color: $secondary-color;
+        }
+      }
+    }
+    .card-header {
+      background-color: $primary-color;
+      color: #fff;
+      h5 {
+        color: #fff;
+      }
+      .card-title {
+        .insurance-for {
+          color: $secondary-color;
+          font-size: 14px;
+        }
+      }
+    }
+    .card-body {
+      padding: 5px;
+      table {
+        td {
+          font-size: 13px;
+        }
+        tfoot {
+          tr {
+            td {
+              width: fit-content;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.faq_box {
+  padding: 1rem 1.5rem;
+  .question {
+    i {
+      margin-right: 1rem;
+      font-size: 1.2rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+  .answer {
+    margin-left: 2rem;
+  }
+}
+.waviy {
+  position: relative;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
+}

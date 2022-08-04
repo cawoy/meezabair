@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FS Bookings</title>
+    <meta name="description" content="" />
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="assets//plugins/bootstrap/css/bootstrap.css" />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <!--Fav Icon-->
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.css" />
+    <!--Select 2 Dropdown CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <!--jQuery UI-->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <!--Owl Carousel-->
+    <link
+      rel="stylesheet"
+      href="assets/plugins/owl-carousel/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/plugins/owl-carousel/dist/assets/owl.theme.default.min.css"
+    />
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="assets/style/style.css" />
+  </head>
+  <body class="loading">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <!--Preloader-->
+    <div class="preloader">
+      <div class="preloader-wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+    <!--End Preloader-->
+
+    <!--Topbar-->
+    <div id="topbar">
+      <div class="container">
+        <div class="row top-bar g-0">
+          <div class="col-md-6 d-flex align-items-center">
+            <ul class="icon-list d-flex">
+              <li>
+                <a href="#">
+                  <span>
+                    <i class="fa-solid fa-envelope"></i>
+                  </span>
+                  | info@website.com
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>
+                    <i class="fa-solid fa-phone"></i>
+                  </span>
+                  | +92 312 1234567
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 d-flex justify-content-end align-items-center">
+            <ul class="icon-list right d-flex justify-content-end">
+              <li>
+                <a href="#">
+                  English
+                  <span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  PKR
+                  <span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <ul class="social-media">
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Topbar-->
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/meezabair logo.png" alt="FS Bookings" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Our Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--End Navbar-->
+
+    <!--Herobox-->
+    <section
+      id="herobox"
+      class="herobox-3 pt-4 pb-4"
+      style="background-image: url(assets/img/hero5.jpg)"
+    >
+      <div class="container herobox-3">
+        <div class="row g-0">
+          <div class="col-lg-7 col-md-5 text-center my-auto">
+            <!-- <div class="owl-carousel banner-carousel owl-theme">
+              <div
+                class="banner me-sm-3"
+                style="background-image: url(assets/img/hero3.jpg)"
+              >
+                <div class="banner-text p-4">
+                  <h4 class="fw-bold">Book Your Ticket Now</h4>
+                  <h6>Meezab Air Providing All Airlines Tickets</h6>
+                </div>
+              </div>
+              <div
+                class="banner me-sm-3"
+                style="background-image: url(assets/img/hero3.jpg)"
+              >
+                <div class="banner-text p-4">
+                  <h4 class="fw-bold">Book Your Ticket Now</h4>
+                  <h6>Meezab Air Providing All Airlines Tickets</h6>
+                </div>
+              </div>
+              <div
+                class="banner me-sm-3"
+                style="background-image: url(assets/img/hero3.jpg)"
+              >
+                <div class="banner-text p-4">
+                  <h4 class="fw-bold">Book Your Ticket Now</h4>
+                  <h6>Meezab Air Providing All Airlines Tickets</h6>
+                </div>
+              </div>
+            </div> -->
+            <h2 class="hero-heading fw-bold">
+              Meezab Air Travel<br />
+              Management Company
+            </h2>
+          </div>
+          <div class="col-lg-5 col-md-7">
+            <div class="card">
+              <div class="card-body p-4 p-sm-5">
+                <form action="" method="POST" class="login-form">
+                  <div class="mb-3 text-center">
+                    <h3 class="fw-bold fs-4 login-form-title">Login Account</h3>
+                  </div>
+                  <div class="mt-4 mb-3">
+                    <label for="inputUsername" class="form-label"
+                      >Username</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputUsername"
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label for="inputPassword" class="form-label"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="inputPassword"
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <button
+                      type="submit"
+                      class="btn btn-lg btn-secondary login-btn fw-bold fs-6"
+                    >
+                      Login Account
+                    </button>
+                  </div>
+                  <div class="mb-3 text-center form-bottom">
+                    <a href="#">Fogotten Password?</a>
+                  </div>
+                  <div class="text-center form-bottom">
+                    <p>
+                      You don't have password?<a href="#"> Just Sign Up Now</a>
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Herobox-->
+
+    <!-- Main Content-->
+    <main>
+      <!-- About -->
+      <section id="about-2" class="bg-primary-color">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-md-7 about-text">
+              <div class="col-md-10 mx-auto section-title mb-4">
+                <h2>About Meezab Air</h2>
+              </div>
+              <div class="col-md-10 mx-auto">
+                <p>
+                  We are pleased to introduce ourselves to you as we are working
+                  in the field of designing since 1997 and later in 2009 seeing
+                  revolutionary changes in the market where all the business
+                  were involving IT in all respects we started a new branch for
+                  website development/designing.
+                </p>
+                <p>
+                  When we started our company our am was to be a successful
+                  company and our asset was our first client and now we are
+                  standing with more than 1700 clients all over Pakistan, we
+                  have some international clients as well. Still we have goals
+                  to achieve and our clients are always with us, we never left
+                  any of them behind as we care for them a lot
+                </p>
+              </div>
+              <div class="col-md-10 mx-auto text-start about-btn">
+                <a href="#" class="btn fw-bold mustard-btn section-btn flip"
+                  >Explore More...</a
+                >
+              </div>
+            </div>
+            <div class="col-md-5 about-img"></div>
+          </div>
+        </div>
+      </section>
+      <!-- End About -->
+      <!-- Destinations -->
+      <section id="destinations-2" class="bg-primary-color">
+        <div class="container">
+          <div class="row g-0">
+            <div class="col-md-12 text-center py-5">
+              <div class="section-title mb-5">
+                <h2>Point of disembarkation</h2>
+                <h2 class="small-title">
+                  The most searched countries in <span>march</span>
+                </h2>
+              </div>
+              <div class="row g-0">
+                <div class="col-md-3">
+                  <div class="card bg-primary-color px-2">
+                    <img
+                      src="assets/img/destinations/america.jpg"
+                      class="card-img-top"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Switzerland</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card bg-primary-color px-2">
+                    <img
+                      src="assets/img/destinations/isl.jpg"
+                      class="card-img-top"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Pakistan</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card bg-primary-color px-2">
+                    <img
+                      src="assets/img/destinations/eng.jpg"
+                      class="card-img-top"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">England</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card bg-primary-color px-2">
+                    <img
+                      src="assets/img/destinations/america.jpg"
+                      class="card-img-top"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">America</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Destinations -->
+      <!-- Services -->
+      <section id="services-2">
+        <div class="container">
+          <div class="row g-0">
+            <div class="col-md-12 text-center py-5">
+              <div class="section-title mb-5">
+                <h2>Servcies</h2>
+                <h2 class="small-title">
+                  Delivering excellence to all areas of our focus
+                </h2>
+              </div>
+              <div class="owl-carousel services-carousel owl-theme">
+                <div class="ms-2 me-2">
+                  <div class="card pt-4">
+                    <img
+                      src="assets/img/icons/home.png"
+                      alt=""
+                      class="card-img-top mx-auto mb-5"
+                    />
+                    <div class="card-body pt-5">
+                      <h5 class="card-title fw-bold">Home Pick Services</h5>
+                      <p class="card-text">
+                        With a strong and widespread international network
+                        coupled with an unmatched local experience and knowledge
+                        of the region.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-2 me-2">
+                  <div class="card pt-4">
+                    <img
+                      src="assets/img/icons/earth-globe.png"
+                      alt=""
+                      class="card-img-top mx-auto mb-5"
+                    />
+                    <div class="card-body pt-5">
+                      <h5 class="card-title fw-bold">Travel Tour Services</h5>
+                      <p class="card-text">
+                        With a strong and widespread international network
+                        coupled with an unmatched local experience and knowledge
+                        of the region.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-2 me-2">
+                  <div class="card pt-4">
+                    <img
+                      src="assets/img/icons/passport.png"
+                      alt=""
+                      class="card-img-top mx-auto mb-5"
+                    />
+                    <div class="card-body pt-5">
+                      <h5 class="card-title fw-bold">Hajj & Umrah</h5>
+                      <p class="card-text">
+                        With a strong and widespread international network
+                        coupled with an unmatched local experience and knowledge
+                        of the region.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-2 me-2">
+                  <div class="card pt-4">
+                    <img
+                      src="assets/img/icons/passport.png"
+                      alt=""
+                      class="card-img-top mx-auto mb-5"
+                    />
+                    <div class="card-body pt-5">
+                      <h5 class="card-title fw-bold">
+                        Visa Processing Services
+                      </h5>
+                      <p class="card-text">
+                        With a strong and widespread international network
+                        coupled with an unmatched local experience and knowledge
+                        of the region.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-2 me-2">
+                  <div class="card pt-4">
+                    <img
+                      src="assets/img/icons/home.png"
+                      alt=""
+                      class="card-img-top mx-auto mb-5"
+                    />
+                    <div class="card-body pt-5">
+                      <h5 class="card-title fw-bold">Home Pick Services</h5>
+                      <p class="card-text">
+                        With a strong and widespread international network
+                        coupled with an unmatched local experience and knowledge
+                        of the region.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Services -->
+
+      <!-- Call to Action -->
+      <section id="call-to-action bg-secondary-color ">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-md-12 text-center py-5 bg-secondary-color">
+              <div class="section-title mb-4">
+                <h2 class="text-white">Do you want our servcies / advertisement?</h2>
+                <h2 class="small-title">
+                  Contact us now at Professional Career Developer (+92) 321
+                  1234567 OR
+                </h2>
+              </div>
+              <div class="col-md-12 mx-auto">
+                <div class="row g-0">
+                  <div class="col-md-6 text-end ps-md-3 cta-btn-pos">
+                    <a href="#" class="btn fw-bold white-btn section-btn"
+                      >Call Us</a
+                    >
+                  </div>
+                  <div class="col-md-5 text-start ps-md-3 cta-btn-pos">
+                    <a href="#" class="btn fw-bold black-btn section-btn"
+                      >Email Us</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Call to Action -->
+    </main>
+    <!--End Main Content-->
+
+    <!--Footer-->
+    <footer class="footer-2">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2">
+              <h2>Meezab Air</h2>
+              <ul class="menu-list">
+                <li>
+                  <a href="#">Mobile App</a>
+                </li>
+                <li>
+                  <a href="#">Customer</a>
+                </li>
+                <li>
+                  <a href="#">Support</a>
+                </li>
+                <li>
+                  <a href="#">Advertising</a>
+                </li>
+                <li>
+                  <a href="#">Jobs</a>
+                </li>
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#">Terms of Use</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              <h2>Explore</h2>
+              <ul class="menu-list">
+                <li>
+                  <a href="#">Countries</a>
+                </li>
+                <li>
+                  <a href="#">Regions</a>
+                </li>
+                <li>
+                  <a href="#">Cities</a>
+                </li>
+                <li>
+                  <a href="#">Districs</a>
+                </li>
+                <li>
+                  <a href="#">Airports</a>
+                </li>
+                <li>
+                  <a href="#">Hotels</a>
+                </li>
+                <li>
+                  <a href="#">Places of Interest</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-2 px-md-0">
+              <h2>Book</h2>
+              <ul class="menu-list">
+                <li>
+                  <a href="#">Apartments</a>
+                </li>
+                <li>
+                  <a href="#">Resorts</a>
+                </li>
+                <li>
+                  <a href="#">Villas</a>
+                </li>
+                <li>
+                  <a href="#">Hostels</a>
+                </li>
+                <li>
+                  <a href="#">B&amp;Bs</a>
+                </li>
+                <li>
+                  <a href="#">Guest houses</a>
+                </li>
+                <li>
+                  <a href="#">Hostel Chains</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-5 text-md-end px-md-0">
+              <h2>Contact Us</h2>
+              <ul class="menu-list">
+                <li>
+                  <a href="#">info@website.com</a>
+                </li>
+                <li>
+                  <a href="#">0344-2322-424</a>
+                </li>
+                <li>
+                  <a href="#">invoice@website.com</a>
+                </li>
+                <li>
+                  <a href="#">0335-2322-424</a>
+                </li>
+              </ul>
+              <ul class="social-media">
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom py-md-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 mx-auto text-center">
+              Copyrights 2020 &copy; Designed and Developed by Brandsup
+              Solutions
+              <br />
+              All Rights Reserved
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--End Footer-->
+
+    <!--Scripts-->
+    <!--Bootstrap Script-->
+    <script
+      src="assets/plugins/bootstrap/js/bootstrap.min.js"
+      async
+      defer
+    ></script>
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--jQuery UI-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!--Select 2-->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!--Owl Carousel-->
+    <script src="assets/plugins/owl-carousel/dist/owl.carousel.min.js"></script>
+
+    <!--Custom Script-->
+    <script src="assets/script/script.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".services-carousel").owlCarousel({
+          autoplay: true,
+          autoplayhoverpause: true,
+          autoplaytimeout: 200,
+          items: 4,
+          loop: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            728: {
+              items: 2,
+            },
+            960: {
+              items: 3,
+            },
+            1200: {
+              items: 4,
+            },
+          },
+        });
+      });
+      $(document).ready(function () {
+        $(".banner-carousel").owlCarousel({
+          autoplay: true,
+          autoplayhoverpause: true,
+          autoplaytimeout: 200,
+          items: 1,
+          loop: true,
+        });
+      });
+    </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/628cb1c37b967b117990f255/1g3qpcpp5";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
+  </body>
+</html>
