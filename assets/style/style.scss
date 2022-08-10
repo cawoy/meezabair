@@ -1,6 +1,7 @@
 $primary-color: #28377d;
 $secondary-color: #e55f25;
 $grey-heading: #5b5b5b;
+$primary-light-color: #c5daff;
 
 $primary-text-color: #fff;
 
@@ -43,8 +44,8 @@ $secondary_font: "Nunito", sans-serif;
     background-color: #fff;
     color: $primary-color;
     &:hover {
-      background-color: #000;
-      color: $secondary-color;
+      background-color: $secondary-color;
+      color: #fff;
     }
   } @else if $class==black-btn {
     background-color: #000;
@@ -196,6 +197,9 @@ h6 {
 .row-bg {
   background-color: #f8f8f8;
 }
+.bg-primary-light-color {
+  background-color: #e6efff;
+}
 /*
 ##### List #####
 */
@@ -263,11 +267,28 @@ ul.black {
   filter: brightness(0) invert(1) !important;
 }
 /*
+###### Image Box Shadow ######
+*/
+.img-shadow {
+  box-shadow: 20px 20px $primary-light-color;
+}
+/*
+###### Heading Underline ######
+*/
+.heading-underline {
+  width: 170px;
+  color: $secondary-color;
+  border: 1px solid $secondary-color;
+  opacity: 100;
+}
+
+/*
 ### Buttons ###
 */
 .btn-primary {
   background-color: $primary-color;
   border-color: $primary-color;
+  border-radius: 0px;
   color: #fff;
   &:hover {
     background-color: $secondary-color;
@@ -278,6 +299,7 @@ ul.black {
   background-color: $secondary-color;
   color: #fff;
   border-color: $secondary-color;
+  border-radius: 0px;
   &:hover {
     background-color: $primary-color;
   }
@@ -296,7 +318,7 @@ ul.black {
 }
 .section-btn {
   font-weight: bold;
-  border-radius: 20px;
+  border-radius: 0px;
   padding: 8px 25px;
 }
 
@@ -676,41 +698,31 @@ section {
   }
 }
 .herobox-3 {
+  background-image: url("/assets/img/login-hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: bottom right;
   .hero-heading {
     color: #fff;
     font-size: 60px;
   }
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
   .container {
     @include breakpoint(xs) {
       width: auto;
     }
   }
-  .banner {
-    min-height: 520px;
-    background-size: cover;
-    @include breakpoint(xs) {
-      min-height: 400px;
-    }
-    border-radius: 10px;
-    .banner-text {
-      position: absolute;
-      bottom: 0;
-    }
-  }
   .card {
-    background-color: $primary-color;
+    box-shadow: 3px 3px 10px #28387d3e;
     border-radius: 10px;
-    color: #fff;
+    color: #000;
     label {
-      color: #fff;
+      color: #000;
       text-transform: uppercase;
     }
     input {
-      width: 90%;
+      width: 93%;
       height: 40px;
+      border-radius: 0px;
       @include breakpoint(sm) {
         width: 90%;
         font-size: 1rem;
@@ -721,7 +733,7 @@ section {
       }
     }
     .login-form-title {
-      color: #fff;
+      color: #000;
       text-transform: uppercase;
     }
     .login-btn {
@@ -729,7 +741,12 @@ section {
       color: #fff;
       text-transform: uppercase;
       padding: 15px 25px;
-      width: 83%;
+      border-radius: 0px;
+      width: 86%;
+      &:hover {
+        background-color: $primary-color;
+        color: #fff;
+      }
       @include breakpoint(sm) {
         width: 81%;
       }
@@ -738,7 +755,7 @@ section {
       font-size: 15px;
       a {
         text-decoration: none;
-        color: #fff;
+        color: $secondary-color;
       }
     }
   }
@@ -763,11 +780,17 @@ section {
   }
 }
 .general-herobox {
-  .row {
+  .container-fluid {
     background-color: rgba(1, 10, 71, 0.5);
-    min-height: 400px;
+    min-height: 350px;
     @include breakpoint(sm) {
       min-height: 250px;
+    }
+    .container, .row {
+      min-height: 350px;
+      @include breakpoint(sm) {
+        min-height: 250px;
+      }
     }
     h2 {
       color: #fff;
@@ -779,16 +802,17 @@ section {
   }
 }
 .contact-herobox {
-  background-image: url("../img/contact.jpg");
+  background-image: url("../img/contact-herobox.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
 }
 .about-herobox {
-  background-image: url("../img/aboutHero.jpg");
+  background-image: url("../img/about-herobox.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
   background-attachment: fixed;
 }
 .service-card {
@@ -1607,7 +1631,7 @@ footer {
       background-color: $primary-color;
       padding: 30px 0;
       h2 {
-        color: $secondary-color;
+        color: #fff;
         font-size: 1.5rem;
         font-weight: 700;
       }
@@ -1633,6 +1657,18 @@ footer {
           padding-left: 0;
         }
         li {
+          background-color: #fff;
+          padding: 10px;
+          &:hover {
+            background-color: $secondary-color;
+            a{
+              color: #fff;
+            }
+          }
+          a {
+            font-size: 1rem;
+            color: $secondary-color;
+          }
           @include breakpoint(sm) {
             margin-left: 0;
             margin-right: 10px;
@@ -1641,7 +1677,9 @@ footer {
       }
     }
     .footer-bottom {
-      background-color: $secondary-color;
+      background-color: $primary-color;
+      color: #fff;
+      border-top: 1px solid #3750c0;
       padding: 10px 40px 10px 0px;
       font-size: 0.8rem;
     }
@@ -1766,10 +1804,9 @@ footer {
     }
   }
   .about-img {
-    background-image: url(../img/build.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 500px;
+    object-fit: cover;
+    object-position: center;
     @include breakpoint(xs) {
       height: 200px;
     }
@@ -1811,18 +1848,15 @@ footer {
     }
   }
   .card {
-    background-color: $secondary-color;
-
     border-width: 0px;
-    border-radius: 10px;
-    background-image: linear-gradient(
-      180deg,
-      $secondary-color 20%,
-      #f5f5f5 40%
-    );
+    border-radius: 0px;
+    box-shadow: 3px 3px 5px rgb(230, 230, 230);
+    border: 1px solid rgb(238, 238, 238);
   }
   .card-img-top {
-    width: 80px;
+    width: 40px;
+    background-color: $secondary-color;
+    border-radius: 10px;
   }
 }
 #destinations-2 {
@@ -1834,20 +1868,32 @@ footer {
   .section-title {
     h2 {
       &:first-child {
-        color: #fff;
         text-transform: capitalize;
       }
     }
   }
   .card {
-    border: 1px solid $primary-color;
+    border: 1px solid #e6efff;
+    background-color: #e6efff;
     .card-img-top {
-      border-radius: 15px;
+      border-radius: 0px;
     }
     .card-body {
+      margin-top: -30px;
+      margin-left: 20px;
+      margin-right: 20px;
+      background-color: #fff;
       .card-title {
-        color: #fff;
         font-weight: bold;
+        background-color: none;
+        border: 3px solid $secondary-color;
+        margin-top: -20px;
+        margin-right: -20px;
+        &:hover {
+          margin-top: -25px;
+          margin-right: -25px;
+          transition: all 0.4s ease-in-out;
+        }
       }
     }
   }
@@ -1860,7 +1906,6 @@ footer {
   .container {
     @include breakpoint(xs) {
       width: auto;
-      width: 100px;
     }
   }
   .background-overlay {
@@ -1870,21 +1915,12 @@ footer {
     h2 {
       color: #fff;
       &:first-child {
-        font-size: 30px;
+        font-size: 35px;
         text-transform: capitalize;
       }
     }
     .small-title {
-      font-size: 20px;
-    }
-  }
-  .bg-secondary-color {
-    border-radius: 20px;
-  }
-  .cta-btn-pos {
-    @include breakpoint(xs) {
-      text-align: center !important;
-      padding-top: 10px;
+      font-size: 18px;
     }
   }
 }
@@ -2879,10 +2915,6 @@ $timeline-color: $secondary-color;
       width: 80%;
     }
   }
-  input,
-  textarea {
-    border-radius: 20px;
-  }
   button {
     width: 89%;
   }
@@ -2900,12 +2932,6 @@ $timeline-color: $secondary-color;
   }
 }
 #services-3 {
-  color: #fff;
-  .section-title {
-    h2 {
-      color: #fff;
-    }
-  }
   .services-border {
     border-left: 1px solid $secondary-color;
     @include breakpoint(xs) {
@@ -2913,34 +2939,58 @@ $timeline-color: $secondary-color;
     }
   }
   .card {
-    width: 200px;
-    background-color: $secondary-color;
-
+    width: 250px;
+    background-color: #fff;
     border: none;
+    border-radius: 0px;
+    box-shadow: 3px 3px 5px rgb(230, 230, 230);
+    .left-img {
+      background-color: $secondary-color;
+      padding: 10px;
+      border-radius: 5px;
+    }
     img {
-      width: 60px;
+      width: 50px;
+      height: 50px;
       filter: invert(65%) sepia(94%) saturate(1388%) hue-rotate(341deg)
         brightness(0%) contrast(104%);
     }
     .card-title {
       color: #000;
+      font-size: 20px;
     }
   }
 }
 #fun-facts {
-  background-color: rgb(216, 216, 255);
+  background-image: url("/assets/img/fun-facts-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   .row {
     min-height: 350px;
+    background-color: rgba(0, 0, 0, 0.3);
   }
   .card {
-    color: #000;
-    background-color: #ff9567;
+    color: #fff;
     border: none;
-    border-radius: 10px;
+    border-radius: 0px;
+    background-color: rgba(255, 255, 255, 0.245);
+    &:hover {
+      .card-body {
+        margin-top: -35px;
+        margin-right: -35px;
+        transition: all 0.3s ease;
+      }
+    }
+    .card-body {
+      border: 3px solid $secondary-color;
+      margin-top: -30px;
+      margin-right: -30px;
+    }
     h2 {
       font-size: 60px;
       font-weight: bold;
-      color: #000;
+      color: #fff;
       @include breakpoint(sm) {
         font-size: 40px;
       }
@@ -2955,14 +3005,14 @@ $timeline-color: $secondary-color;
 }
 #testimonials {
   .testimonial-carousel {
-    width: 50%;
-    border: 3px solid $primary-color;
+    width: 80%;
     border-radius: 2px;
     @include breakpoint(sm) {
       width: 80%;
     }
     .card {
-      border-radius: 10px;
+      border-radius: 0px;
+      box-shadow: 5px 5px 5px rgb(230, 230, 230);
       img {
         width: 50px;
         border-radius: 100px;
@@ -3114,10 +3164,11 @@ $timeline-color: $secondary-color;
   .question {
     i {
       margin-right: 1rem;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
+      color: $secondary-color;
     }
     h3 {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
   }
   .answer {
