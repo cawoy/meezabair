@@ -4,11 +4,10 @@ $grey-heading: #5b5b5b;
 
 $primary-text-color: #fff;
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-$primary_font: 'Nunito', sans-serif;
-$secondary_font: 'Nunito', sans-serif;
-
+$primary_font: "Nunito", sans-serif;
+$secondary_font: "Nunito", sans-serif;
 
 @mixin breakpoint($class) {
   @if $class==xs {
@@ -260,7 +259,7 @@ ul.black {
 /*
 ####### IMAGE WHITE FILTER #######
 */
-.img-white{
+.img-white {
   filter: brightness(0) invert(1) !important;
 }
 /*
@@ -1805,6 +1804,7 @@ footer {
   }
 }
 #services-2 {
+  padding: 0;
   .container {
     @include breakpoint(xs) {
       width: auto;
@@ -1812,11 +1812,12 @@ footer {
   }
   .card {
     background-color: $secondary-color;
+
     border-width: 0px;
     border-radius: 10px;
     background-image: linear-gradient(
       180deg,
-      $secondary-color 40%,
+      $secondary-color 20%,
       #f5f5f5 40%
     );
   }
@@ -1852,15 +1853,22 @@ footer {
   }
 }
 #call-to-action {
+  background-image: url(/assets/img/call-to.jpg);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
   .container {
     @include breakpoint(xs) {
       width: auto;
       width: 100px;
     }
   }
+  .background-overlay {
+    background-color: rgba(0, 0, 0, 0.397);
+  }
   .section-title {
     h2 {
-      color: #000;
+      color: #fff;
       &:first-child {
         font-size: 30px;
         text-transform: capitalize;
@@ -2832,8 +2840,9 @@ $timeline-color: $secondary-color;
 #contact-details {
   .card {
     width: 210px;
-    border: 2px solid $secondary-color;
-    border-radius: 10px;
+    background-color: $secondary-color;
+    color: #fff;
+
     @include breakpoint(sm) {
       width: 180px;
     }
@@ -2842,6 +2851,8 @@ $timeline-color: $secondary-color;
     }
     .card-title {
       font-size: 24px;
+      color: #fff;
+
       @include breakpoint(sm) {
         font-size: 20px;
       }
@@ -2863,13 +2874,14 @@ $timeline-color: $secondary-color;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+
     @include breakpoint(sm) {
       width: 80%;
     }
   }
   input,
   textarea {
-    border-radius: 5px;
+    border-radius: 20px;
   }
   button {
     width: 89%;
@@ -2944,6 +2956,8 @@ $timeline-color: $secondary-color;
 #testimonials {
   .testimonial-carousel {
     width: 50%;
+    border: 3px solid $primary-color;
+    border-radius: 2px;
     @include breakpoint(sm) {
       width: 80%;
     }

@@ -2142,6 +2142,10 @@ footer.footer-3 .footer-bottom {
   }
 }
 
+#services-2 {
+  padding: 0;
+}
+
 @media (max-width: 767px) {
   #services-2 .container {
     width: auto;
@@ -2152,8 +2156,8 @@ footer.footer-3 .footer-bottom {
   background-color: #e55f25;
   border-width: 0px;
   border-radius: 10px;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #e55f25), color-stop(40%, #f5f5f5));
-  background-image: linear-gradient(180deg, #e55f25 40%, #f5f5f5 40%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #e55f25), color-stop(40%, #f5f5f5));
+  background-image: linear-gradient(180deg, #e55f25 20%, #f5f5f5 40%);
 }
 
 #services-2 .card-img-top {
@@ -2184,6 +2188,16 @@ footer.footer-3 .footer-bottom {
   font-weight: bold;
 }
 
+#call-to-action {
+  background-image: url(/assets/img/call-to.jpg);
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+}
+
 @media (max-width: 767px) {
   #call-to-action .container {
     width: auto;
@@ -2191,8 +2205,12 @@ footer.footer-3 .footer-bottom {
   }
 }
 
+#call-to-action .background-overlay {
+  background-color: rgba(0, 0, 0, 0.397);
+}
+
 #call-to-action .section-title h2 {
-  color: #000;
+  color: #fff;
 }
 
 #call-to-action .section-title h2:first-child {
@@ -3323,8 +3341,8 @@ footer.footer-3 .footer-bottom {
 */
 #contact-details .card {
   width: 210px;
-  border: 2px solid #e55f25;
-  border-radius: 10px;
+  background-color: #e55f25;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -3341,6 +3359,7 @@ footer.footer-3 .footer-bottom {
 
 #contact-details .card .card-title {
   font-size: 24px;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -3378,7 +3397,7 @@ footer.footer-3 .footer-bottom {
 
 #contact-form-section input,
 #contact-form-section textarea {
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 #contact-form-section button {
@@ -3469,6 +3488,8 @@ footer.footer-3 .footer-bottom {
 
 #testimonials .testimonial-carousel {
   width: 50%;
+  border: 3px solid #28377d;
+  border-radius: 2px;
 }
 
 @media (max-width: 768px) {
@@ -3667,4 +3688,3 @@ footer.footer-3 .footer-bottom {
             transform: rotateY(360deg);
   }
 }
-/*# sourceMappingURL=style.css.map */
