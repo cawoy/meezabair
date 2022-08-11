@@ -37,15 +37,8 @@
 
     <!--Preloader-->
     <div class="preloader">
-        <div class="preloader-wrapper">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="shadow"></div>
-            <div class="shadow"></div>
-            <div class="shadow"></div>
-            <span>Loading...</span>
-        </div>
+        <div class="preloader-wrapper"></div>
+        <span>Loading...</span>
     </div>
     <!--End Preloader-->
 
@@ -220,36 +213,36 @@
             <marquee>This text will scroll from right to left</marquee>
         </div>
         <!--Search Form-->
-        <section id="searchform" class="f-search-form-1 mb-5">
+        <section id="searchform" class="f-search-form-1 mb-5 mt-5">
             <form action="" method="">
                 <div class="container formContainer">
                     <div class="row g-0">
-                        <div class="col-md-6 p-0">
+                        <div class="col-lg-6 col-md-12 p-0">
                             <div class="card nav-items-card">
                                 <div class="card-body p-1">
                                     <div id="options" class="d-flex justify-content-between">
                                         <a href="#" class="active" data-card="flights">
-                                            <i class="fa-solid fa-plane"></i>
+                                            <i class="fa-solid fa-plane-departure"></i>
                                             <span class="text">Flights</span>
                                         </a>
                                         <a href="#" data-card="hotels">
-                                            <i class="fa-solid fa-hotel"></i>
+                                            <i class="fa-solid fa-map-pin"></i>
                                             <span class="text">Hotels</span>
                                         </a>
                                         <a href="#" data-card="cars">
-                                            <i class="fa-solid fa-car"></i>
+                                            <i class="fa-solid fa-car-side"></i>
                                             <span class="text">Cars</span>
                                         </a>
                                         <a href="#" data-card="insurance">
-                                            <i class="fa-solid fa-shield"></i>
+                                            <i class="fa-solid fa-user-shield"></i>
                                             <span class="text">Insurance</span>
                                         </a>
                                         <a href="#" data-card="">
-                                            <i class="fa-solid fa-bus-simple"></i>
+                                            <i class="fa-solid fa-suitcase-rolling"></i>
                                             <span class="text">Travel</span>
                                         </a>
                                         <a href="#" data-card="">
-                                            <i class="fa-brands fa-cc-visa"></i>
+                                            <i class="fa-solid fa-passport"></i>
                                             <span class="text">Visa</span>
                                         </a>
                                     </div>
@@ -260,7 +253,7 @@
                     <div class="row g-0">
                         <input type="hidden" name="trip-types" id="trip-types" value="oneway">
                         <div class="card main-content-card">
-                            <div id="flights" class="card-body form pt-5" style="display: block;">
+                            <div id="flights" class="card-body form pt-3" style="display: block;">
                                 <input type="hidden" id="json" name="json" value="">
                                 <div class="col-md-12 p-0">
                                     <div class="trip-types p-1">
@@ -523,7 +516,7 @@
                                                                 Class
                                                             </h3>
                                                             <div class="flightClass">
-                                                                <span class="badge bg-warning"
+                                                                <span class="badge bg-primary-color"
                                                                     data-class="economy">Economy</span>
                                                                 <span class="badge" 
                                                                     data-class="premium-economy">Premium</span>
@@ -574,7 +567,7 @@
                                                                 Nonstop Flight
                                                             </h3>
                                                             <div class="flightType">
-                                                                <span class="badge bg-warning" data-val="yes">Yes</span>
+                                                                <span class="badge bg-primary-color" data-val="yes">Yes</span>
                                                                 <span class="badge" data-val="no">No</span>
                                                             </div>
                                                         </div>
@@ -613,12 +606,11 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4 p-0 text-end">
-                                        <button type="submit" class="btn btn-primary btn-round">Search Flights <i
-                                                class="fa-solid fa-magnifying-glass"></i></button>
+                                        <button type="submit" class="btn btn-secondary">Search Flights</button>
                                     </div>
                                 </div>
                             </div>
-                            <div id="hotels" class="card-body form pt-5">
+                            <div id="hotels" class="card-body form pt-3">
                                 <input type="hidden" id="json" name="json" value="">
                                 <div class="col-md-12 p-0">
                                     <div class="card my-3">
@@ -827,12 +819,11 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4 p-0 text-end">
-                                        <button type="submit" class="btn btn-primary btn-round">Search Hotels <i
-                                                class="fa-solid fa-magnifying-glass"></i></button>
+                                        <button type="submit" class="btn btn-secondary">Search Hotels</button>
                                     </div>
                                 </div>
                             </div>
-                            <div id="cars" class="card-body form pt-5">
+                            <div id="cars" class="card-body form pt-3">
                                 <input type="hidden" id="json" name="json" value="">
                                 <div class="col-md-12 p-0">
                                     <div class="card my-3">
@@ -1118,12 +1109,11 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4 p-0 text-end">
-                                        <button type="submit" class="btn btn-primary btn-round">Search Cars <i
-                                                class="fa-solid fa-magnifying-glass"></i></button>
+                                        <button type="submit" class="btn btn-secondary">Search Cars</button>
                                     </div>
                                 </div>
                             </div>
-                            <div id="insurance" class="card-body form pt-5">
+                            <div id="insurance" class="card-body form pt-3">
                                 <input type="hidden" id="json" name="json" value="">
                                 <div class="col-md-12 p-0">
                                     <div class="card my-3">
@@ -1434,8 +1424,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4 p-0 text-end">
-                                        <button type="submit" class="btn btn-primary btn-round">Search Insurance <i
-                                                class="fa-solid fa-magnifying-glass"></i></button>
+                                        <button type="submit" class="btn btn-secondary">Search Insurance</button>
                                     </div>
                                 </div>
                             </div>
@@ -1457,6 +1446,7 @@
             <div class="row g-0">
                 <div class="col-md-12">
                     <h3>Advertisement</h3>
+                    <hr class="heading-underline">
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -1495,6 +1485,7 @@
             <div class="row g-0">
                 <div class="col-md-12">
                     <h3>Recent Searches</h3>
+                    <hr class="heading-underline">
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="card m-3">
@@ -1627,9 +1618,9 @@
         <div class="footer-top pt-5">
             <div class="container">
                 <div class="row g-0">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <a href="#" class="brand-logo">
-                            <img src="assets/img/logo-white-text.png" alt="FS Bookings">
+                            <img src="assets/img/logo-white-text.png" alt="Meezab Air">
                         </a>
                         <p class="mt-5">Curabitur vitae sodales ligula. Sed dictum metus et dolor
                             malesuada ornare. Aliquam congue, lacus ultrices
@@ -1687,7 +1678,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <h2>Contact</h2>
                         <ul class="menu-list">
                             <li>
@@ -1729,7 +1720,7 @@
                             </li>
                         </ul>
                         <h2 class="mt-5">Follow us on</h2>
-                        <ul class="social-media">
+                        <ul class="social-media mt-3">
                             <li>
                                 <a href="#">
                                     <i class="fa-brands fa-twitter"></i>
@@ -1769,7 +1760,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 mx-auto text-center">
-                        FS Bookings &copy; | All Rights Reserved | Powered by Brandsup
+                        Meezab Air &copy; | All Rights Reserved<br>Powered by Brandsup
                     </div>
                 </div>
             </div>

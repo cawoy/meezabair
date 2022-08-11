@@ -225,15 +225,15 @@ $(document).ready(function () {
       }
     });
     $(".flightClass .badge").click(function(){
-      $(".flightClass span").removeClass('bg-warning');
+      $(".flightClass span").removeClass('bg-primary-color');
       var val = $(this).data('class');
-      $(this).addClass('bg-warning');
+      $(this).addClass('bg-primary-color');
       $("#class").val(val);
     });
     $(".flightType .badge").click(function(){
-      $(".flightType span").removeClass('bg-warning');
+      $(".flightType span").removeClass('bg-primary-color');
       var val = $(this).data('val');
-      $(this).addClass('bg-warning');
+      $(this).addClass('bg-primary-color');
       $("#flightType").val(val);
     });
 

@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FS Bookings</title>
+    <title>Meezab Air</title>
     <meta name="description" content="">
 
     <!--Bootstrap CSS-->
@@ -37,19 +37,14 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+    
     <!--Preloader-->
     <div class="preloader">
-        <div class="preloader-wrapper">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="shadow"></div>
-            <div class="shadow"></div>
-            <div class="shadow"></div>
-            <span>Loading...</span>
-        </div>
+        <div class="preloader-wrapper"></div>
+        <span>Loading...</span>
     </div>
     <!--End Preloader-->
+
     <!--Topbar-->
     <div id="topbar" class="bg-primary">
         <div class="container">
@@ -216,8 +211,11 @@
     <!--Herobox-->
     <section id="herobox" class="herobox-4 pt-4 pb-4">
         <div class="container">
-            <div class="row g-0">
+            <div class="row g-0 align-items-center">
                 <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>Flights</h2>
+                    </div>
                     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -282,7 +280,7 @@
                                         </label>
                                     </div>
                                     <div class="flights-form-toggler">
-                                        <button type="button" class="btn btn-primary align-self-center">Search Flight <i
+                                        <button type="button" class="btn btn-secondary align-self-center">Search Flight <i
                                             class="fa-solid fa-chevron-down"></i></button>
                                     </div>
         <!--Search Form-->
@@ -554,7 +552,7 @@
                                                                 Class
                                                             </h3>
                                                             <div class="flightClass">
-                                                                <span class="badge bg-warning"
+                                                                <span class="badge bg-primary-color"
                                                                     data-class="economy">Economy</span>
                                                                 <span class="badge" 
                                                                     data-class="premium-economy">Premium</span>
@@ -605,7 +603,7 @@
                                                                 Nonstop Flight
                                                             </h3>
                                                             <div class="flightType">
-                                                                <span class="badge bg-warning" data-val="yes">Yes</span>
+                                                                <span class="badge bg-primary-color" data-val="yes">Yes</span>
                                                                 <span class="badge" data-val="no">No</span>
                                                             </div>
                                                         </div>
@@ -644,8 +642,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4 p-0 text-end">
-                                        <button type="submit" class="btn btn-primary btn-round">Search Flights <i
-                                                class="fa-solid fa-magnifying-glass"></i></button>
+                                        <button type="submit" class="btn btn-secondary">Search Flights</button>
                                     </div>
                                 </div>
                             </div>
@@ -668,161 +665,7 @@
     <!-- Main Content-->
     <main class="listing-wrapper mt-3 mb-5">
         <div class="container">
-            <div class="row g-0">
-                <div class="col-lg-3 col-md-12">
-                    <div class="sidebar-toggler mb-2">
-                        <button class="btn btn-dark sidebar-toggler-btn">
-                            <i class="fas fa-filter"></i> Search Filters
-                        </button>
-                    </div>
-                    <div id="sidebar" class="sidebar border p-4 bg-white rounded-2">
-                        <div class="sidebar-toggler-close text-end">
-                            <button class="btn btn-dark sidebar-toggler-btn">
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </div>
-                        <form action="" id="flights-filter-form">
-                            <h6 class="fw-bold mb-3">Refine your search</h6>
-                            <button type="submit" id="search-flights-btn" class="btn btn-primary">Searh flights</button>
-                            <button type="button" id="clear-filters-btn" class="btn btn-primary">Clear filters</button>
-                            <div class="price mt-4 mb-4 pt-3 border-top">
-                                <h6 class="fw-bold mb-3">Price</h6>
-                                <input type="hidden" id="price_range" class="flat-slider" />
-                            </div>
-                            <div class="flight-filter1 mb-4">
-                                <h6 class="fw-bold">Departure</h6>
-                                <p>Lahore, PK to Cluj Napoca, Rou</p>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter1-1">
-                                    <label class="form-check-label" for="flight-filter1-1">
-                                        Early Morning (before 8:00)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter1-2">
-                                    <label class="form-check-label" for="flight-filter1-2">
-                                        Morning (8:00-11:00)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter1-3">
-                                    <label class="form-check-label" for="flight-filter1-3">
-                                        Midday (11:00-2:00)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter1-4">
-                                    <label class="form-check-label" for="flight-filter1-4">
-                                        Afternoon (2:00-5:00)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter1-5">
-                                    <label class="form-check-label" for="flight-filter1-5">
-                                        Evening (5:00-9:00)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter1-6">
-                                    <label class="form-check-label" for="flight-filter1-6">
-                                        Night (after 9:00)
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="flight-filter2 mb-4">
-                                <h6 class="fw-bold">Arrival</h6>
-                                <p>Lahore, PK to Cluj Napoca, Rou</p>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter2-1">
-                                    <label class="form-check-label" for="flight-filter2-1">
-                                        Early Morning (before 8:00)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter2-2">
-                                    <label class="form-check-label" for="flight-filter2-2">
-                                        Morning (8:00-11:00)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter2-3">
-                                    <label class="form-check-label" for="flight-filter2-3">
-                                        Midday (11:00-2:00)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter2-4">
-                                    <label class="form-check-label" for="flight-filter2-4">
-                                        Afternoon (2:00-5:00)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter2-5">
-                                    <label class="form-check-label" for="flight-filter2-5">
-                                        Evening (5:00-9:00)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter2-6">
-                                    <label class="form-check-label" for="flight-filter2-6">
-                                        Night (after 9:00)
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="flight-filter3 mb-4">
-                                <h6 class="fw-bold">Duration</h6>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter3-1">
-                                    <label class="form-check-label" for="flight-filter3-1">
-                                        Under 15hrs
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="flight-filter4 mb-4">
-                                <h6 class="fw-bold">Stops</h6>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter4-1">
-                                    <label class="form-check-label" for="flight-filter4-1">
-                                        Nonstop
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter4-2">
-                                    <label class="form-check-label" for="flight-filter4-2">
-                                        1 Stop
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter4-3">
-                                    <label class="form-check-label" for="flight-filter4-3">
-                                        2 Stops
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter4-4">
-                                    <label class="form-check-label" for="flight-filter4-4">
-                                        3 Stops
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="flight-filter5 mb-4">
-                                <h6 class="fw-bold">Advisory</h6>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter5-1">
-                                    <label class="form-check-label" for="flight-filter5-1">
-                                        Long stay
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter5-2">
-                                    <label class="form-check-label" for="flight-filter5-2">
-                                        Overnight flights
-                                    </label>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            <div class="row g-0 flex-lg-row flex-column flex-column-reverse">
                 <div class="col-lg-9 col-md-12">
                     <div class="content mx-lg-3 mx-md-0 rounded-2">
                         <div class="card price-comparison-card border mb-4">
@@ -941,7 +784,7 @@
                                                 <div class="d-flex flex-column flex-md-row justify-content-between align-items-stretch pb-3">
                                                     <div class="item ps-3">
                                                         <div class="">
-                                                            <img src="assets/img/air.png" alt="" width="70px">
+                                                            <i class="fa-solid fa-plane-departure ms-3" style="color: #e55f25"></i>
                                                         </div>
                                                         <img src="assets/img/Turkish air line LOGO PNG.png" alt=""
                                                             width="100px">
@@ -968,7 +811,7 @@
                                                 <div class="d-flex flex-column flex-md-row justify-content-between align-items-stretch pt-3">
                                                     <div class="item ps-3">
                                                         <div class="">
-                                                            <img src="assets/img/air.png" alt="" width="70px">
+                                                            <i class="fa-solid fa-plane-departure ms-3" style="color: #e55f25"></i>
                                                         </div>
                                                         <img src="assets/img/Turkish air line LOGO PNG.png" alt=""
                                                             width="100px">
@@ -1000,7 +843,7 @@
                                                     <span class="currency">PKR</span>
                                                     130,000
                                                 </p>
-                                                <a href="#" class="btn btn-primary px-lg-5">Book Now</a>
+                                                <a href="#" class="btn btn-secondary px-lg-5">Book Now</a>
                                             </div>
                                         </div>
                                         <div class="icon-btns row g-0 align-middle">
@@ -1068,7 +911,7 @@
                                                               <td>Get complimentary meals</td>
                                                               <td class="w-150-px">
                                                                   <p class="fw-bold mb-1">PKR. 10,000</p>
-                                                                  <a href="#" class="btn btn-primary btn-round">Book Now</a>
+                                                                  <a href="#" class="btn btn-secondary">Book Now</a>
                                                               </td>
                                                           </tr>
                                                           <tr>
@@ -1083,7 +926,7 @@
                                                             <td>Get complimentary meals</td>
                                                             <td class="w-150-px">
                                                                 <p class="fw-bold mb-1">PKR. 10,000</p>
-                                                                <a href="#" class="btn btn-primary btn-round">Book Now</a>
+                                                                <a href="#" class="btn btn-secondary">Book Now</a>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1098,7 +941,7 @@
                                                             <td>Get complimentary meals</td>
                                                             <td class="w-150-px">
                                                                 <p class="fw-bold mb-1">PKR. 10,000</p>
-                                                                <a href="#" class="btn btn-primary btn-round">Book Now</a>
+                                                                <a href="#" class="btn btn-secondary">Book Now</a>
                                                             </td>
                                                         </tr>
                                                       </tbody>
@@ -1143,7 +986,7 @@
                                                                             <div class="card-body">
                                                                                 <div class="d-flex justify-content-between">
                                                                                     <div class="item">
-                                                                                        <img src="assets/img/air.png" alt="">
+                                                                                        <i class="fa-solid fa-plane-departure mt-3" style="color: #e55f25"></i>
                                                                                     </div>
                                                                                     <div class="item">
                                                                                         <h6 class="mb-1">British Airways p.l.c</h6>
@@ -1172,7 +1015,7 @@
                                                                         </div>
                                                                     </li>
                                                                     <li class="stay-list d-flex flex-wrap justify-content-between">
-                                                                        <div class="stay shadow-sm mb-3">
+                                                                        <div class="stay mb-3">
                                                                             <p class="mb-0">Change of Planes | 5mins layover in Doha (DOH)</p>
                                                                         </div>
                                                                         <div class="baggage-details d-flex flex-wrap align-items-center">
@@ -1196,7 +1039,7 @@
                                                                             <div class="card-body">
                                                                                 <div class="d-flex justify-content-between">
                                                                                     <div class="item">
-                                                                                        <img src="assets/img/air.png" alt="">
+                                                                                        <i class="fa-solid fa-plane-departure mt-3" style="color: #e55f25"></i>
                                                                                     </div>
                                                                                     <div class="item">
                                                                                         <h6 class="mb-1">British Airways p.l.c</h6>
@@ -1257,7 +1100,7 @@
                                                                             <div class="card-body">
                                                                                 <div class="d-flex justify-content-between">
                                                                                     <div class="item">
-                                                                                        <img src="assets/img/air.png" alt="">
+                                                                                        <i class="fa-solid fa-plane-departure mt-3" style="color: #e55f25"></i>
                                                                                     </div>
                                                                                     <div class="item">
                                                                                         <h6 class="mb-1">British Airways p.l.c</h6>
@@ -1286,7 +1129,7 @@
                                                                         </div>
                                                                     </li>
                                                                     <li class="stay-list d-flex flex-wrap justify-content-between">
-                                                                        <div class="stay shadow-sm">
+                                                                        <div class="stay">
                                                                             <p class="mb-0">Change of Planes | 5mins layover in Doha (DOH)</p>
                                                                         </div>
                                                                         <div class="baggage-details d-flex flex-wrap align-items-center">
@@ -1310,7 +1153,7 @@
                                                                             <div class="card-body">
                                                                                 <div class="d-flex justify-content-between">
                                                                                     <div class="item">
-                                                                                        <img src="assets/img/air.png" alt="">
+                                                                                        <i class="fa-solid fa-plane-departure mt-3" style="color: #e55f25"></i>
                                                                                     </div>
                                                                                     <div class="item">
                                                                                         <h6 class="mb-1">British Airways p.l.c</h6>
@@ -1473,7 +1316,7 @@
                                                               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                                 <div class="accordion-body">
                                                                     <div class="table-responsive">
-                                                                        <table class="table table-bordered border-primary">
+                                                                        <table class="table table-bordered">
                                                                             <thead>
                                                                                 <tr>
                                                                                     <th>Time frame (From Scheduled flight departure)</th>
@@ -1509,7 +1352,7 @@
                                                               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                                                 <div class="accordion-body">
                                                                     <div class="table-responsive">
-                                                                        <table class="table table-bordered border-primary">
+                                                                        <table class="table table-bordered">
                                                                             <thead>
                                                                                 <tr>
                                                                                     <th>Time frame (From Scheduled flight departure)</th>
@@ -1572,6 +1415,160 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-3 col-md-12">
+                    <div class="sidebar-toggler mb-2">
+                        <button class="btn btn-secondary sidebar-toggler-btn">
+                            <i class="fas fa-filter"></i> Search Filters
+                        </button>
+                    </div>
+                    <div id="sidebar" class="sidebar border p-4 bg-white rounded-2">
+                        <div class="sidebar-toggler-close text-end">
+                            <button class="btn btn-dark sidebar-toggler-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <form action="" id="flights-filter-form">
+                            <h6 class="fw-bold mb-3">Refine your search</h6>
+                            <button type="submit" id="search-flights-btn" class="btn btn-primary">Searh flights</button>
+                            <button type="button" id="clear-filters-btn" class="btn btn-primary">Clear filters</button>
+                            <div class="price mt-4 mb-4 pt-3 border-top">
+                                <h6 class="fw-bold mb-3">Price</h6>
+                                <input type="hidden" id="price_range" class="flat-slider" />
+                            </div>
+                            <div class="flight-filter1 mb-4">
+                                <h6 class="fw-bold">Departure</h6>
+                                <p>Lahore, PK to Cluj Napoca, Rou</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter1-1">
+                                    <label class="form-check-label" for="flight-filter1-1">
+                                        Early Morning (before 8:00)
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter1-2">
+                                    <label class="form-check-label" for="flight-filter1-2">
+                                        Morning (8:00-11:00)
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter1-3">
+                                    <label class="form-check-label" for="flight-filter1-3">
+                                        Midday (11:00-2:00)
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter1-4">
+                                    <label class="form-check-label" for="flight-filter1-4">
+                                        Afternoon (2:00-5:00)
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter1-5">
+                                    <label class="form-check-label" for="flight-filter1-5">
+                                        Evening (5:00-9:00)
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter1-6">
+                                    <label class="form-check-label" for="flight-filter1-6">
+                                        Night (after 9:00)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="flight-filter2 mb-4">
+                                <h6 class="fw-bold">Arrival</h6>
+                                <p>Lahore, PK to Cluj Napoca, Rou</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter2-1">
+                                    <label class="form-check-label" for="flight-filter2-1">
+                                        Early Morning (before 8:00)
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter2-2">
+                                    <label class="form-check-label" for="flight-filter2-2">
+                                        Morning (8:00-11:00)
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter2-3">
+                                    <label class="form-check-label" for="flight-filter2-3">
+                                        Midday (11:00-2:00)
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter2-4">
+                                    <label class="form-check-label" for="flight-filter2-4">
+                                        Afternoon (2:00-5:00)
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter2-5">
+                                    <label class="form-check-label" for="flight-filter2-5">
+                                        Evening (5:00-9:00)
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter2-6">
+                                    <label class="form-check-label" for="flight-filter2-6">
+                                        Night (after 9:00)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="flight-filter3 mb-4">
+                                <h6 class="fw-bold">Duration</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter3-1">
+                                    <label class="form-check-label" for="flight-filter3-1">
+                                        Under 15hrs
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="flight-filter4 mb-4">
+                                <h6 class="fw-bold">Stops</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter4-1">
+                                    <label class="form-check-label" for="flight-filter4-1">
+                                        Nonstop
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter4-2">
+                                    <label class="form-check-label" for="flight-filter4-2">
+                                        1 Stop
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter4-3">
+                                    <label class="form-check-label" for="flight-filter4-3">
+                                        2 Stops
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter4-4">
+                                    <label class="form-check-label" for="flight-filter4-4">
+                                        3 Stops
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="flight-filter5 mb-4">
+                                <h6 class="fw-bold">Advisory</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter5-1">
+                                    <label class="form-check-label" for="flight-filter5-1">
+                                        Long stay
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flight-filter5-2">
+                                    <label class="form-check-label" for="flight-filter5-2">
+                                        Overnight flights
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1583,9 +1580,9 @@
         <div class="footer-top pt-5">
             <div class="container">
                 <div class="row g-0">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <a href="#" class="brand-logo">
-                            <img src="assets/img/logo-white-text.png" alt="FS Bookings">
+                            <img src="assets/img/logo-white-text.png" alt="Meezab Air">
                         </a>
                         <p class="mt-5">Curabitur vitae sodales ligula. Sed dictum metus et dolor
                             malesuada ornare. Aliquam congue, lacus ultrices
@@ -1643,7 +1640,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <h2>Contact</h2>
                         <ul class="menu-list">
                             <li>
@@ -1685,7 +1682,7 @@
                             </li>
                         </ul>
                         <h2 class="mt-5">Follow us on</h2>
-                        <ul class="social-media">
+                        <ul class="social-media mt-3">
                             <li>
                                 <a href="#">
                                     <i class="fa-brands fa-twitter"></i>
@@ -1725,7 +1722,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 mx-auto text-center">
-                        FS Bookings &copy; | All Rights Reserved | Powered by Brandsup
+                        Meezab Air &copy; | All Rights Reserved<br>Powered by Brandsup
                     </div>
                 </div>
             </div>
