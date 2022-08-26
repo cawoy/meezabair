@@ -4,617 +4,698 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Meezab Air</title>
-        <meta name="description" content="">
-        
-        <!--Bootstrap CSS-->
-        <link rel="stylesheet" href="assets//plugins/bootstrap/css/bootstrap.css">
-        <!--Google Fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
-        <!--Fav Icon-->
-        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-        <!--FontAwesome-->
-        <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.css">
-        <!--Select 2 Dropdown CSS-->
-        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-        <!--jQuery UI-->
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meezab Air</title>
+    <meta name="description" content="" />
 
-        <!--Custom CSS-->
-        <link rel="stylesheet" href="assets/style/style.css">
-    </head>
-    <body class="bg-dark-grey loading">
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="assets//plugins/bootstrap/css/bootstrap.css" />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--Fav Icon-->
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.css" />
+    <!--Select 2 Dropdown CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <!--jQuery UI-->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
 
-        <!--Preloader-->
-        <div class="preloader">
-            <div class="preloader-wrapper"></div>
-            <span>Loading...</span>
-        </div>
-        <!--End Preloader-->
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="assets/style/style.css" />
+  </head>
+  <body class="bg-dark-grey loading">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
 
-        <!--Topbar-->
+    <!--Preloader-->
+    <div class="preloader">
+      <div class="preloader-wrapper"></div>
+      <span>Loading...</span>
+    </div>
+    <!--End Preloader-->
+
+    <!--Topbar-->
     <div id="topbar" class="bg-primary">
-        <div class="container">
-            <div class="row top-bar g-0">
-                <div class="col-md-6 d-flex align-items-center">
-                    <ul class="icon-list d-flex">
-                        <li>
-                            <a href="#">
-                                <span>
-                                    <i class="fa-solid fa-envelope"></i>
-                                </span>
-                                | info@website.com
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>
-                                    <i class="fa-solid fa-phone"></i>
-                                </span>
-                                | +92 312 1234567
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-6 d-flex justify-content-end align-items-center">
-                    <ul class="icon-list right d-flex justify-content-end">
-                        <li>
-                            <a href="#">
-                                English
-                                <span>
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                PKR
-                                <span>
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="social-media">
-                        <li>
-                            <a href="#">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row top-bar g-0">
+          <div class="col-md-6 d-flex align-items-center">
+            <ul class="icon-list d-flex">
+              <li>
+                <a href="#">
+                  <span>
+                    <i class="fa-solid fa-envelope"></i>
+                  </span>
+                  | info@website.com
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>
+                    <i class="fa-solid fa-phone"></i>
+                  </span>
+                  | +92 312 1234567
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 d-flex justify-content-end align-items-center">
+            <ul class="icon-list right d-flex justify-content-end">
+              <li>
+                <a href="#">
+                  English
+                  <span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  PKR
+                  <span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <ul class="social-media">
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
     <!--End Topbar-->
 
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" alt="FS Bookings">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/logo.png" alt="FS Bookings" />
+        </a>
+        <ul class="navbar-nav mb-2 mb-lg-0 mobile-menu">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">
+              <i class="fa-solid fa-message"></i>
+              <span class="count">10</span>
             </a>
-            <ul class="navbar-nav mb-2 mb-lg-0 mobile-menu">
-                <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="#">
-                        <i class="fa-solid fa-message"></i>
-                        <span class="count">10</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="#">
-                        <i class="fa-solid fa-bell"></i>
-                        <span class="count">10</span>
-                    </a>
-                </li>
-            </ul>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Our Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Testimonials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Careers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact us</a>
-                    </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">
+              <i class="fa-solid fa-bell"></i>
+              <span class="count">10</span>
+            </a>
+          </li>
+        </ul>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Our Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact us</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item msg-item">
+                <a class="nav-link" aria-current="page" href="#">
+                  <i class="fa-solid fa-message"></i>
+                  <span class="count">10</span>
+                </a>
+              </li>
+              <li class="nav-item notif-item">
+                <a class="nav-link" aria-current="page" href="#">
+                  <i class="fa-solid fa-bell"></i>
+                  <span class="count">10</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">PKR 14,000</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-solid fa-user"></i> Username
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fa-solid fa-user"></i> Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fa-solid fa-lock"></i> Change Password</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                      Logout</a
+                    >
+                  </li>
                 </ul>
-                <div class="d-flex">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item msg-item">
-                            <a class="nav-link " aria-current="page" href="#">
-                                <i class="fa-solid fa-message"></i>
-                                <span class="count">10</span>
-                            </a>
-                        </li>
-                        <li class="nav-item notif-item">
-                            <a class="nav-link " aria-current="page" href="#">
-                                <i class="fa-solid fa-bell"></i>
-                                <span class="count">10</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="#">PKR 14,000</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa-solid fa-user"></i> Username
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li>
-                                    <a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i> Profile</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"><i class="fa-solid fa-lock"></i> Change
-                                        Password</a>
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"><i
-                                            class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </nav>
     <!--End Navbar-->
 
-        <!--Flight Confirmation Head-->
-        <div class="mt-5 mb-3 flight-confirm-head">
-            <div class="container">
-                <div class="row g-0 mb-4">
-                    <div class="col-md-12">
-                        <div class="d-flex flex-wrap flex-md-row flex-column-reverse justify-content-between align-items-center">
-                            <div>
-                                <h3 class="fw-bold mt-3">Flight Confirmation</h3>
-                                <hr class="heading-underline mx-md-0 mx-auto">
-                            </div>
-                            <img src="assets/img/logo.png" alt="" class="logo-bar">
-                        </div>
-                        </div>
-                </div>
+    <!--Flight Confirmation Head-->
+    <div class="mt-5 mb-3 flight-confirm-head">
+      <div class="container">
+        <div class="row g-0 mb-4">
+          <div class="col-md-12">
+            <div
+              class="d-flex flex-wrap flex-md-row flex-column-reverse justify-content-between align-items-center"
+            >
+              <div>
+                <h3 class="fw-bold mt-3">Flight Confirmation</h3>
+                <hr class="heading-underline mx-md-0 mx-auto" />
+              </div>
+              <img src="assets/img/logo.png" alt="" class="logo-bar" />
             </div>
+          </div>
         </div>
-        <!--End Flight Confirmation Head-->
+      </div>
+    </div>
+    <!--End Flight Confirmation Head-->
 
-        <!--Trip Details-->
-        <div class="trip-details mb-3">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-md-12">
-                        <div class="card border booking-card">
-                            <div class="card-header fw-bold fs-5">
+    <!--Trip Details-->
+    <div class="trip-details mb-3">
+      <div class="container">
+        <div class="row g-0">
+          <div class="col-md-12">
+            <div class="card border booking-card">
+              <!-- <div class="card-header fw-bold fs-5">
                               Trip
-                            </div>
-                            <div class="card-body m-lg-3 text-center">
-                              <h4 class="fw-bold mb-3">Trip - Islamabad To Karachi</h4>
-                              <div class="d-flex flex-wrap justify-content-center links">
-                                  <a href="#" class="px-2 py-1 mx-1 mb-1">Email itinerary</a>
-                                  <a href="#" class="px-2 py-1 mx-1 mb-1">Fare Rules</a>
-                                  <a href="#" class="px-2 py-1 mx-1 mb-1">Download itinerary</a>
-                                  <a href="#" class="px-2 py-1 mx-1 mb-1">Print itinerary</a>
-                              </div>
-                              <h6 class="onhold-text fw-bold my-3">Reservation is onhold</h6>
-                              <h6 class="due-date fw-bold mb-3">To avoid cancellation, pay before <span>14 Oct 2021, 11:03 GMT</span></h6>
-                              <div class="d-flex flex-wrap justify-content-center">
-                                  <a href="#" class="btn btn-secondary section-btn me-2">Issue offline ticket</a>
-                                  <a href="#" class="btn btn-secondary section-btn ms-2 mt-2 mt-lg-0">Cancel PNR</a>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--End Trip Details-->
+                            </div> -->
+              <div class="card-body m-lg-3 text-center">
+                <div class="row g-0 justify-content-center align-items-center">
+                  <div class="col-lg-6 col-md-12">
+                    <h4 class="fw-bold mb-3">Trip - Islamabad To Karachi</h4>
 
-        <!--Booking Info-->
-        <div class="booking-info mb-3">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-md-12">
-                        <div class="card border booking-card">
-                            <div class="card-header fw-bold fs-5">
-                              Booking Information
-                            </div>
-                            <div class="card-body table-responsive">
-                              <table class="table mb-2 table-borderless table-row-border">
-                                  <tbody>
-                                      <tr>
-                                          <th scope="row">Trip ID</th>
-                                          <td>AGY-237472y61922</td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">Booking Date</th>
-                                        <td>Wed, 13 Oct 21, 07:00</td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">Status</th>
-                                        <td class="text-success">FS - Booking Success/Confirmed</td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">Supplier PNR</th>
-                                        <td>782NG93</td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">Total</th>
-                                        <td>PKR. 12,450.50</td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">Payment Mode</th>
-                                        <td>Credit</td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--End Booking Info-->
-        
-        <!--Flight Details-->
-        <div class="flight-details mb-3">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-md-12">
-                        <div class="card border booking-card">
-                            <div class="card-header fw-bold fs-5">
-                              Flight Details
-                            </div>
-                            <div class="card-body m-lg-3 p-0 border">
-                                <div class="d-flex justify-content-between border-bottom p-3 flight-route">
-                                    <div class="d-flex flex-wrap align-items-center">
-                                        <i class="fa fa-plane-departure me-3"></i>
-                                        <h5 class="mb-0 flight-from-to">Islamabad to Karachi</h5>
-                                    </div>
-                                    <p class="mb-0 ps-3 border-start">Nonstop</p>
-                                </div>
-                                <div class="row g-0 py-4 px-3">
-                                  <div class="col-lg-2 col-md-12 align-self-center">
-                                      <img src="assets/img/brand-logos/expedia.png" alt="" class="flight-logo">
-                                      <p class="flight-name mt-2 mb-0">Pakistan International</p>
-                                      <p class="flight-code">TU-124</p>
-                                  </div>
-                                  <div class="col-lg-2 col-md-3 col-3 my-3 my-md-0 align-self-center text-start">
-                                      <p class="mb-0">10:00</p>
-                                      <h5>ISB</h5>
-                                      <p class="mb-0">18 Nov 21, Thu</p>
-                                      <p>Terminal N/A</p>
-                                  </div>
-                                  <div class="col-lg-3 col-md-3 col-5 my-3 my-md-0 align-self-center">
-                                      <img src="assets/img/icons/dotted-line.png" class="arrow-img">
-                                  </div>
-                                  <div class="col-lg-2 col-md-3 col-3 my-3 my-md-0 align-self-center text-end pe-3">
-                                    <p class="mb-0">11:55</p>
-                                    <h5>KHI</h5>
-                                    <p class="mb-0">18 Nov 21, Thu</p>
-                                    <p>Terminal N/A</p>
-                                </div>
-                                  <div class="col-lg-2 col-md-2 align-self-center border-start ps-3">
-                                      <p>Cabin: <span>Economy</span></p>
-                                      <p>RBD: <span>N</span></p>
-                                      <p>Airline PNR: <span>782NG93</span></p>
-                                      <p>Status: <span>Confirmed (FS)</span></p>
-                                  </div>
-                                </div>
-                              </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--End Flight Details-->
+                    <div class="d-flex flex-wrap justify-content-center links">
+                      <a href="#" class="px-2 py-1 mx-1 mb-1"
+                        >Email itinerary</a
+                      >
+                      <div class="vl"></div>
+                      <a href="#" class="px-2 py-1 mx-1 mb-1">Fare Rules</a>
+                      <div class="vl"></div>
+                      <a href="#" class="px-2 py-1 mx-1 mb-1"
+                        >Download itinerary</a
+                      >
 
-        <!--Passenger Details-->
-        <div class="passenger-details mb-3">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-md-12">
-                        <div class="card border booking-card">
-                            <div class="card-header fw-bold fs-5 d-flex flex-wrap justify-content-between">
-                              Passengers
-                              <p class="pax-btn px-2 py-1 mb-0">Pax Breakup</p>
-                            </div>
-                            <div class="card-body m-lg-3 table-responsive-md">
-                              <table class="table inner-table border">
-                                  <thead>
-                                      <th>Name</th>
-                                      <th>Type</th>
-                                      <th>E-Ticket number</th>
-                                      <th>Status</th>
-                                  </thead>
-                                  <tbody>
-                                      <td>Mr Muhammad Rizwan</td>
-                                      <td>ADT</td>
-                                      <td>N/A</td>
-                                      <td>N/A</td>
-                                  </tbody>
-                              </table>
-                            </div>
-                        </div>
+                      <a href="#" class="px-2 py-1 mx-1 mb-1"
+                        >Print itinerary</a
+                      >
                     </div>
+                  </div>
+                  <div class="col-lg-6 col-md-12">
+                    <h6 class="onhold-text fw-bold my-3">
+                      Reservation is onhold
+                    </h6>
+                    <h6 class="due-date fw-bold mb-3">
+                      To avoid cancellation, pay before
+                      <span>14 Oct 2021, 11:03 GMT</span>
+                    </h6>
+                    <div class="d-flex flex-wrap justify-content-center">
+                      <a href="#" class="btn btn-secondary section-btn me-2"
+                        >Issue offline ticket</a
+                      >
+                      <a
+                        href="#"
+                        class="btn btn-secondary section-btn ms-2 mt-2 mt-lg-0"
+                        >Cancel PNR</a
+                      >
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <!--End Passenger Details-->
+      </div>
+    </div>
+    <!--End Trip Details-->
 
-        <!--Baggage Details-->
-        <div class="baggage-details mb-5">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-md-12">
-                        <div class="card border booking-card">
-                            <div class="card-header fw-bold fs-5">
-                              Baggage Details
-                            </div>
-                            <div class="card-body m-lg-3 table-responsive-md">
-                                <div class="d-flex flex-wrap align-items-center border p-2 flight-route">
-                                    <i class="fa fa-plane-departure me-3"></i>
-                                    <h5 class="mb-0  flight-from-to">Islamabad to Karachi</h5>
-                                </div>
-                                <table class="table inner-table border">
-                                    <thead>
-                                        <th>Pax</th>
-                                        <th>Check In</th>
-                                        <th>cabin</th>
-                                    </thead>
-                                    <tbody>
-                                        <td>
-                                            <div class="d-flex flex-wrap align-items-center">
-                                                <i class="fa fa-person me-2"></i>
-                                                <p class="mb-0">ADT</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex flex-wrap align-items-center">
-                                                <i class="fa fa-suitcase me-2"></i>
-                                                <p class="mb-0">40 KG</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex flex-wrap align-items-center">
-                                                <i class="fa fa-suitcase me-2"></i>
-                                                <p class="mb-0">7 KG</p>
-                                            </div>
-                                        </td>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!--Booking Info-->
+    <div class="booking-info mb-3">
+      <div class="container">
+        <div class="row g-0">
+          <div class="col-md-12">
+            <div class="card border booking-card">
+              <div class="card-header fw-bold fs-5">Booking Information</div>
+              <div class="card-body table-responsive">
+                <table class="table mb-2 table-borderless table-row-border">
+                  <tbody>
+                    <tr>
+                      <th scope="row">Trip ID</th>
+                      <td>AGY-237472y61922</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Booking Date</th>
+                      <td>Wed, 13 Oct 21, 07:00</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Status</th>
+                      <td class="text-success">
+                        FS - Booking Success/Confirmed
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Supplier PNR</th>
+                      <td>782NG93</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Total</th>
+                      <td>PKR. 12,450.50</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Payment Mode</th>
+                      <td>Credit</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
+          </div>
         </div>
-        <!--End Passenger & Baggage Details-->
+      </div>
+    </div>
+    <!--End Booking Info-->
+
+    <!--Flight Details-->
+    <div class="flight-details mb-3">
+      <div class="container">
+        <div class="row g-0">
+          <div class="col-md-12">
+            <div class="card border booking-card">
+              <div class="card-header fw-bold fs-5">Flight Details</div>
+              <div class="card-body m-lg-3 p-0 border">
+                <div
+                  class="d-flex justify-content-between border-bottom p-3 flight-route"
+                >
+                  <div class="d-flex flex-wrap align-items-center">
+                    <i class="fa fa-plane-departure me-3"></i>
+                    <h5 class="mb-0 flight-from-to">Islamabad to Karachi</h5>
+                  </div>
+                  <p class="mb-0 ps-3 border-start">Nonstop</p>
+                </div>
+                <div class="row g-0 py-4 px-3">
+                  <div class="col-lg-2 col-md-12 align-self-center">
+                    <img
+                      src="assets/img/brand-logos/expedia.png"
+                      alt=""
+                      class="flight-logo"
+                    />
+                    <p class="flight-name mt-2 mb-0">Pakistan International</p>
+                    <p class="flight-code">TU-124</p>
+                  </div>
+                  <div
+                    class="col-lg-2 col-md-3 col-3 my-3 my-md-0 align-self-center text-start"
+                  >
+                    <p class="mb-0">10:00</p>
+                    <h5>ISB</h5>
+                    <p class="mb-0">18 Nov 21, Thu</p>
+                    <p>Terminal N/A</p>
+                  </div>
+                  <div
+                    class="col-lg-3 col-md-3 col-5 my-3 my-md-0 align-self-center"
+                  >
+                    <img
+                      src="assets/img/icons/dotted-line.png"
+                      class="arrow-img"
+                    />
+                  </div>
+                  <div
+                    class="col-lg-2 col-md-3 col-3 my-3 my-md-0 align-self-center text-end pe-3"
+                  >
+                    <p class="mb-0">11:55</p>
+                    <h5>KHI</h5>
+                    <p class="mb-0">18 Nov 21, Thu</p>
+                    <p>Terminal N/A</p>
+                  </div>
+                  <div
+                    class="col-lg-2 col-md-2 align-self-center border-start ps-3"
+                  >
+                    <p>Cabin: <span>Economy</span></p>
+                    <p>RBD: <span>N</span></p>
+                    <p>Airline PNR: <span>782NG93</span></p>
+                    <p>Status: <span>Confirmed (FS)</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Flight Details-->
+
+    <!--Passenger Details-->
+    <div class="passenger-details mb-3">
+      <div class="container">
+        <div class="row g-0">
+          <div class="col-md-12">
+            <div class="card border booking-card">
+              <div
+                class="card-header fw-bold fs-5 d-flex flex-wrap justify-content-between"
+              >
+                Passengers
+                <p class="pax-btn px-2 py-1 mb-0">Pax Breakup</p>
+              </div>
+              <div class="card-body m-lg-3 table-responsive-md">
+                <table class="table inner-table border">
+                  <thead>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>E-Ticket number</th>
+                    <th>Status</th>
+                  </thead>
+                  <tbody>
+                    <td>Mr Muhammad Rizwan</td>
+                    <td>ADT</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Passenger Details-->
+
+    <!--Baggage Details-->
+    <div class="baggage-details mb-5">
+      <div class="container">
+        <div class="row g-0">
+          <div class="col-md-12">
+            <div class="card border booking-card">
+              <div class="card-header fw-bold fs-5">Baggage Details</div>
+              <div class="card-body m-lg-3 table-responsive-md">
+                <div
+                  class="d-flex flex-wrap align-items-center border p-2 flight-route"
+                >
+                  <i class="fa fa-plane-departure me-3"></i>
+                  <h5 class="mb-0 flight-from-to">Islamabad to Karachi</h5>
+                </div>
+                <table class="table inner-table border">
+                  <thead>
+                    <th>Pax</th>
+                    <th>Check In</th>
+                    <th>cabin</th>
+                  </thead>
+                  <tbody>
+                    <td>
+                      <div class="d-flex flex-wrap align-items-center">
+                        <i class="fa fa-person me-2"></i>
+                        <p class="mb-0">ADT</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex flex-wrap align-items-center">
+                        <i class="fa fa-suitcase me-2"></i>
+                        <p class="mb-0">40 KG</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex flex-wrap align-items-center">
+                        <i class="fa fa-suitcase me-2"></i>
+                        <p class="mb-0">7 KG</p>
+                      </div>
+                    </td>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Passenger & Baggage Details-->
 
     <!--Footer-->
     <footer class="footer-3">
-        <div class="footer-top pt-5">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-md-3">
-                        <a href="#" class="brand-logo">
-                            <img src="assets/img/logo-white-text.png" alt="Meezab Air">
-                        </a>
-                        <p class="mt-5">Curabitur vitae sodales ligula. Sed dictum metus et dolor
-                            malesuada ornare. Aliquam congue, lacus ultrices
-                            moles</p>
-                    </div>
-                    <div class="col-md-2">
-                        <h2>Quick Links</h2>
-                        <ul class="menu-list">
-                            <li>
-                                <a href="#">Countries</a>
-                            </li>
-                            <li>
-                                <a href="#">Regions</a>
-                            </li>
-                            <li>
-                                <a href="#">Cities</a>
-                            </li>
-                            <li>
-                                <a href="#">Districs</a>
-                            </li>
-                            <li>
-                                <a href="#">Airports</a>
-                            </li>
-                            <li>
-                                <a href="#">Hotels</a>
-                            </li>
-                            <li>
-                                <a href="#">Places of Interest</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2">
-                        <h2>Customer Care</h2>
-                        <ul class="menu-list">
-                            <li>
-                                <a href="#">Apartments</a>
-                            </li>
-                            <li>
-                                <a href="#">Resorts</a>
-                            </li>
-                            <li>
-                                <a href="#">Villas</a>
-                            </li>
-                            <li>
-                                <a href="#">Hostels</a>
-                            </li>
-                            <li>
-                                <a href="#">B&amp;Bs</a>
-                            </li>
-                            <li>
-                                <a href="#">Guest houses</a>
-                            </li>
-                            <li>
-                                <a href="#">Hostel Chains</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-5">
-                        <h2>Contact</h2>
-                        <ul class="menu-list">
-                            <li>
-                                <a href="mailto:info@website.com">
-                                    <div class="d-flex">
-                                        <span class="icon">
-                                            <i class="fa fa-phone"></i>
-                                        </span>
-                                        <span class="text">
-                                            info@website.com
-                                        </span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="tel:0344-2322-424">
-                                    <div class="d-flex">
-                                        <span class="icon">
-                                            <i class="fa fa-envelope"></i>
-                                        </span>
-                                        <span class="text">
-                                            0344-2322-424
-                                        </span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="d-flex">
-                                        <span class="icon">
-                                            <i class="fa fa-house"></i>
-                                        </span>
-                                        <span class="text">
-                                            23-7, Arcidium spectrum near Cluj arena, CFR Road,
-                                            Cluj Napoca,Romania
-                                        </span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <h2 class="mt-5">Follow us on</h2>
-                        <ul class="social-media mt-3">
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-whatsapp"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-youtube"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-linkedin-in"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="footer-top pt-5">
+        <div class="container">
+          <div class="row g-0">
+            <div class="col-md-3">
+              <a href="#" class="brand-logo">
+                <img src="assets/img/logo-white-text.png" alt="Meezab Air" />
+              </a>
+              <p class="mt-5">
+                Curabitur vitae sodales ligula. Sed dictum metus et dolor
+                malesuada ornare. Aliquam congue, lacus ultrices moles
+              </p>
             </div>
-        </div>
-        <div class="footer-bottom py-md-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 mx-auto text-center">
-                        Meezab Air &copy; | All Rights Reserved<br>Powered by Brandsup
-                    </div>
-                </div>
+            <div class="col-md-2">
+              <h2>Quick Links</h2>
+              <ul class="menu-list">
+                <li>
+                  <a href="#">Countries</a>
+                </li>
+                <li>
+                  <a href="#">Regions</a>
+                </li>
+                <li>
+                  <a href="#">Cities</a>
+                </li>
+                <li>
+                  <a href="#">Districs</a>
+                </li>
+                <li>
+                  <a href="#">Airports</a>
+                </li>
+                <li>
+                  <a href="#">Hotels</a>
+                </li>
+                <li>
+                  <a href="#">Places of Interest</a>
+                </li>
+              </ul>
             </div>
+            <div class="col-md-2">
+              <h2>Customer Care</h2>
+              <ul class="menu-list">
+                <li>
+                  <a href="#">Apartments</a>
+                </li>
+                <li>
+                  <a href="#">Resorts</a>
+                </li>
+                <li>
+                  <a href="#">Villas</a>
+                </li>
+                <li>
+                  <a href="#">Hostels</a>
+                </li>
+                <li>
+                  <a href="#">B&amp;Bs</a>
+                </li>
+                <li>
+                  <a href="#">Guest houses</a>
+                </li>
+                <li>
+                  <a href="#">Hostel Chains</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-5">
+              <h2>Contact</h2>
+              <ul class="menu-list">
+                <li>
+                  <a href="mailto:info@website.com">
+                    <div class="d-flex">
+                      <span class="icon">
+                        <i class="fa fa-phone"></i>
+                      </span>
+                      <span class="text"> info@website.com </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:0344-2322-424">
+                    <div class="d-flex">
+                      <span class="icon">
+                        <i class="fa fa-envelope"></i>
+                      </span>
+                      <span class="text"> 0344-2322-424 </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="d-flex">
+                      <span class="icon">
+                        <i class="fa fa-house"></i>
+                      </span>
+                      <span class="text">
+                        23-7, Arcidium spectrum near Cluj arena, CFR Road, Cluj
+                        Napoca,Romania
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <h2 class="mt-5">Follow us on</h2>
+              <ul class="social-media mt-3">
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="footer-bottom py-md-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 mx-auto text-center">
+              Meezab Air &copy; | All Rights Reserved<br />Powered by Brandsup
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
     <!--End Footer-->
 
-        <!--Scripts-->
-        <!--Bootstrap Script-->
-        <script src="assets/plugins/bootstrap/js/bootstrap.min.js" async defer></script>
-        <!--jQuery-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <!--jQuery UI-->
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <!--Select 2-->
-        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-        
-        <!--Custom Script-->
-        <script src="assets/script/script.js"></script>
+    <!--Scripts-->
+    <!--Bootstrap Script-->
+    <script
+      src="assets/plugins/bootstrap/js/bootstrap.min.js"
+      async
+      defer
+    ></script>
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--jQuery UI-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!--Select 2-->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
-        <!--Start of Tawk.to Script-->
-        <script type="text/javascript">
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/628cb1c37b967b117990f255/1g3qpcpp5';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-            })();
-        </script>
-        <!--End of Tawk.to Script-->
+    <!--Custom Script-->
+    <script src="assets/script/script.js"></script>
 
-    </body>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/628cb1c37b967b117990f255/1g3qpcpp5";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
+  </body>
 </html>
