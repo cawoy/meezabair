@@ -2066,6 +2066,7 @@ footer {
   width: 200px;
 }
 .eticket-head {
+  background-color: red;
   .eticket-qrcode {
     p {
       font-size: 10px;
@@ -2784,6 +2785,7 @@ footer {
               }
             }
           }
+
           .accordion {
             .accordion-item {
               border: 0;
@@ -3167,6 +3169,7 @@ $timeline-color: $secondary-color;
 /*
 ##### About Page #####
 */
+
 #about-3 {
   .about-us-section-img {
     background-image: url("/assets/img/about-3.jpg");
@@ -3473,8 +3476,10 @@ $timeline-color: $secondary-color;
 }
 
 .faq_box {
-  padding: 1rem 1.5rem;
+  padding: 1rem 9.5rem;
+
   .question {
+    background-color: greenyellow;
     i {
       margin-right: 1rem;
       font-size: 1.5rem;
@@ -3595,5 +3600,8 @@ $timeline-color: $secondary-color;
   margin-top: 0;
 }
 .sorting_1 {
+  background-color: red;
+}
+.ticket-card {
   background-color: red;
 }
