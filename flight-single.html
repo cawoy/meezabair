@@ -4,948 +4,1101 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Meezab Air</title>
-    <meta name="description" content="">
+    <meta name="description" content="" />
 
     <!--Bootstrap CSS-->
-    <link rel="stylesheet" href="assets//plugins/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="assets//plugins/bootstrap/css/bootstrap.css" />
     <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!--Fav Icon-->
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
     <!--FontAwesome-->
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.css" />
     <!--Select 2 Dropdown CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
     <!--jQuery UI-->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
 
     <!--Custom CSS-->
-    <link rel="stylesheet" href="assets/style/style.css">
-</head>
+    <link rel="stylesheet" href="assets/style/style.css" />
+  </head>
 
-<body class="bg-dark-grey loading">
+  <body class="bg-dark-grey loading">
     <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
 
-        <!--Preloader-->
-        <div class="preloader">
-            <div class="preloader-wrapper"></div>
-            <span>Loading...</span>
-        </div>
-        <!--End Preloader-->
+    <!--Preloader-->
+    <div class="preloader">
+      <div class="preloader-wrapper"></div>
+      <span>Loading...</span>
+    </div>
+    <!--End Preloader-->
 
     <!--Topbar-->
     <div id="topbar" class="bg-primary">
-        <div class="container">
-            <div class="row top-bar g-0">
-                <div class="col-md-6 d-flex align-items-center">
-                    <ul class="icon-list d-flex">
-                        <li>
-                            <a href="#">
-                                <span>
-                                    <i class="fa-solid fa-envelope"></i>
-                                </span>
-                                | info@website.com
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>
-                                    <i class="fa-solid fa-phone"></i>
-                                </span>
-                                | +92 312 1234567
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-6 d-flex justify-content-end align-items-center">
-                    <ul class="icon-list right d-flex justify-content-end">
-                        <li>
-                            <a href="#">
-                                English
-                                <span>
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                PKR
-                                <span>
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="social-media">
-                        <li>
-                            <a href="#">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row top-bar g-0">
+          <div class="col-md-6 d-flex align-items-center">
+            <ul class="icon-list d-flex">
+              <li>
+                <a href="#">
+                  <span>
+                    <i class="fa-solid fa-envelope"></i>
+                  </span>
+                  | info@website.com
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>
+                    <i class="fa-solid fa-phone"></i>
+                  </span>
+                  | +92 312 1234567
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 d-flex justify-content-end align-items-center">
+            <ul class="icon-list right d-flex justify-content-end">
+              <li>
+                <a href="#">
+                  English
+                  <span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  PKR
+                  <span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <ul class="social-media">
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
     <!--End Topbar-->
 
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" alt="FS Bookings">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/logo.png" alt="FS Bookings" />
+        </a>
+        <ul class="navbar-nav mb-2 mb-lg-0 mobile-menu">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">
+              <i class="fa-solid fa-message"></i>
+              <span class="count">10</span>
             </a>
-            <ul class="navbar-nav mb-2 mb-lg-0 mobile-menu">
-                <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="#">
-                        <i class="fa-solid fa-message"></i>
-                        <span class="count">10</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="#">
-                        <i class="fa-solid fa-bell"></i>
-                        <span class="count">10</span>
-                    </a>
-                </li>
-            </ul>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Our Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Testimonials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Careers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact us</a>
-                    </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">
+              <i class="fa-solid fa-bell"></i>
+              <span class="count">10</span>
+            </a>
+          </li>
+        </ul>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Our Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact us</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item msg-item">
+                <a class="nav-link" aria-current="page" href="#">
+                  <i class="fa-solid fa-message"></i>
+                  <span class="count">10</span>
+                </a>
+              </li>
+              <li class="nav-item notif-item">
+                <a class="nav-link" aria-current="page" href="#">
+                  <i class="fa-solid fa-bell"></i>
+                  <span class="count">10</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">PKR 14,000</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-solid fa-user"></i> Username
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fa-solid fa-user"></i> Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fa-solid fa-lock"></i> Change Password</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                      Logout</a
+                    >
+                  </li>
                 </ul>
-                <div class="d-flex">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item msg-item">
-                            <a class="nav-link " aria-current="page" href="#">
-                                <i class="fa-solid fa-message"></i>
-                                <span class="count">10</span>
-                            </a>
-                        </li>
-                        <li class="nav-item notif-item">
-                            <a class="nav-link " aria-current="page" href="#">
-                                <i class="fa-solid fa-bell"></i>
-                                <span class="count">10</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="#">PKR 14,000</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa-solid fa-user"></i> Username
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li>
-                                    <a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i> Profile</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"><i class="fa-solid fa-lock"></i> Change
-                                        Password</a>
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"><i
-                                            class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </nav>
     <!--End Navbar-->
 
     <!--Herobox-->
     <section id="herobox" class="herobox-4 pt-4 pb-4">
-        <div class="container">
-            <div class="row g-0 align-items-center">
-                <div class="col-md-12">
-                    <div class="section-title">
-                        <h2>Single Flight</h2>
-                    </div>
-                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Flights</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Single Flight</li>
-                        </ol>
-                    </nav>
-                </div>
+      <div class="container">
+        <div class="row g-0 align-items-center">
+          <div class="col-md-12">
+            <div class="section-title">
+              <h2>Single Flight</h2>
             </div>
+            <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Flights</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Single Flight
+                </li>
+              </ol>
+            </nav>
+          </div>
         </div>
+      </div>
     </section>
     <!--End Herobox-->
 
     <!-- Main Content-->
     <main class="listing-wrapper mt-5 mb-5">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-lg-9 col-md-12">
-                    <div class="accordion custom-accordion mb-3" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    Islamabad to Toronto - Thu,19 May --- Toronto to Islamabad - Thu,19 May
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body p-0">
-                                    <div class="card package-card m-2">
-                                        <div class="card-body tab-content p-lg-3 py-3 ps-3 pe-0">
-                                            <div id="tab-1" class="tab-pane active p-2" data-tab="1">
-                                                <div class="card-title">
-                                                    <div class="d-flex align-items-center">
-                                                        <h6>Islamabad (ISB) to Toronto (YYZ)&nbsp;</h6>
-                                                        <p class="px-1">—</p>
-                                                        <h6><span>&nbsp;Thu, 19 May</span></h6>
-                                                    </div>
-                                                </div>
-                                                <hr>
-                                                <ul class="legs-list timeline border-bottom mb-4">
-                                                    <li class="mb-3">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6>Islamabad (ISB) to London (LGW)&nbsp;</h6>
-                                                            <p class="px-1">—</p>
-                                                            <h6><span>&nbsp;Thu, 19 May</span></h6>
-                                                        </div>
-                                                        <ul class="segments-list">
-                                                            <li>
-                                                                <div class="card segment-card">
-                                                                    <div class="card-body">
-                                                                        <div class="d-flex justify-content-between">
-                                                                            <div class="item">
-                                                                                <i class="fa-solid fa-plane-departure mt-3" style="color: #e55f25"></i>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <h6 class="mb-1">British Airways p.l.c</h6>
-                                                                                    <p class="mb-0 text-danger">777</p>
-                                                                                    <p class="mb-0 text-danger">Economy(V)</p>
-                                                                                    <p class="mb-0">BA-2260 (9 Seat(s))</p>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <p class="time mb-1 fw-bold">00:40</p>
-                                                                                <p>Thu, 19 May, 2022</p>
-                                                                                <p>International'></p>
-                                                                                <p>Islamabad, Pakistan</p>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <p class="underline">9h 5m</p>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <p class="time mb-1 fw-bold">05:45</p>
-                                                                                <p>Thu, 19 May, 2022</p>
-                                                                                <p>Gatwick</p>
-                                                                                <p>London United kingdom</p>
-                                                                            </div>
-                                                                            
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="stay-list d-flex flex-wrap justify-content-between">
-                                                                <div class="stay mb-3">
-                                                                    <p class="mb-0">Change of Planes | 5mins layover in Doha (DOH)</p>
-                                                                </div>
-                                                                <div class="baggage-details d-flex flex-wrap align-items-center">
-                                                                    <i class="fa fa-suitcase"></i>
-                                                                    <p class="baggage-btns mx-1 mt-1 mb-0">ADT: 2 Pieces</p>
-                                                                    <p class="baggage-btns mx-1 mt-1 mb-0">CHD: 0Nil</p>
-                                                                    <p class="baggage-btns mx-1 mt-1 mb-0">INF: 0Nil</p>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="mb-3">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6>London (LGW) to Toronto (YYZ)&nbsp;</h6>
-                                                            <p class="px-1">—</p>
-                                                            <h6><span>&nbsp;Thu, 19 May</span></h6>
-                                                        </div>
-                                                        <ul class="segments-list">
-                                                            <li>
-                                                                <div class="card segment-card">
-                                                                    <div class="card-body">
-                                                                        <div class="d-flex justify-content-between">
-                                                                            <div class="item">
-                                                                                <i class="fa-solid fa-plane-departure mt-3" style="color: #e55f25"></i>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <h6 class="mb-1">British Airways p.l.c</h6>
-                                                                                    <p class="mb-0 text-danger">777</p>
-                                                                                    <p class="mb-0 text-danger">Economy(V)</p>
-                                                                                    <p class="mb-0">BA-2260 (9 Seat(s))</p>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <p class="time mb-1 fw-bold">05:45</p>
-                                                                                <p>Thu, 19 May, 2022</p>
-                                                                                <p>Gatwick</p>
-                                                                                <p>London United kingdom</p>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <p class="underline">9h 5m</p>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <p class="time mb-1 fw-bold">00:40</p>
-                                                                                <p>Thu, 19 May, 2022</p>
-                                                                                <p>International'></p>
-                                                                                <p>Toronto, Canada</p>
-                                                                            </div>
-                                                                            
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="stay-list d-flex flex-wrap justify-content-between">
-                                                                
-                                                                <div class="baggage-details d-flex flex-wrap align-items-center">
-                                                                    <i class="fa fa-suitcase"></i>
-                                                                    <p class="baggage-btns mx-1 mt-1 mb-0">ADT: 2 Pieces</p>
-                                                                    <p class="baggage-btns mx-1 mt-1 mb-0">CHD: 0Nil</p>
-                                                                    <p class="baggage-btns mx-1 mt-1 mb-0">INF: 0Nil</p>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <div class="card-title">
-                                                    <div class="d-flex align-items-center">
-                                                        <h6>Toronto (YYZ) to Islamabad (ISB)&nbsp;</h6>
-                                                        <p class="px-1">—</p>
-                                                        <h6><span>&nbsp;Thu, 19 May</span></h6>
-                                                    </div>
-                                                </div>
-                                                <hr>
-                                                <ul class="legs-list timeline border-bottom mb-4">
-                                                    <li class="mb-3">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6>Toronto (YYZ) to London (LGW)&nbsp;</h6>
-                                                            <p class="px-1">—</p>
-                                                            <h6><span>&nbsp;Thu, 19 May</span></h6>
-                                                        </div>
-                                                        <ul class="segments-list">
-                                                            <li>
-                                                                <div class="card segment-card">
-                                                                    <div class="card-body">
-                                                                        <div class="d-flex justify-content-between">
-                                                                            <div class="item">
-                                                                                <i class="fa-solid fa-plane-departure mt-3" style="color: #e55f25"></i>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <h6 class="mb-1">British Airways p.l.c</h6>
-                                                                                    <p class="mb-0 text-danger">777</p>
-                                                                                    <p class="mb-0 text-danger">Economy(V)</p>
-                                                                                    <p class="mb-0">BA-2260 (9 Seat(s))</p>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <p class="time mb-1 fw-bold">00:40</p>
-                                                                                <p>Thu, 19 May, 2022</p>
-                                                                                <p>International'></p>
-                                                                                <p>Toronto, Canada</p>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <p class="underline">9h 5m</p>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <p class="time mb-1 fw-bold">05:45</p>
-                                                                                <p>Thu, 19 May, 2022</p>
-                                                                                <p>Gatwick</p>
-                                                                                <p>London United kingdom</p>
-                                                                            </div>
-                                                                            
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="stay-list d-flex flex-wrap justify-content-between">
-                                                                <div class="stay">
-                                                                    <p class="mb-0">Change of Planes | 5mins layover in Doha (DOH)</p>
-                                                                </div>
-                                                                <div class="baggage-details d-flex flex-wrap align-items-center">
-                                                                    <i class="fa fa-suitcase"></i>
-                                                                    <p class="baggage-btns mx-1 mt-1 mb-0">ADT: 2 Pieces</p>
-                                                                    <p class="baggage-btns mx-1 mt-1 mb-0">CHD: 0Nil</p>
-                                                                    <p class="baggage-btns mx-1 mt-1 mb-0">INF: 0Nil</p>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="mb-3">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6>London (LGW) to Islamabad (ISB)&nbsp;</h6>
-                                                            <p class="px-1">—</p>
-                                                            <h6><span>&nbsp;Thu, 19 May</span></h6>
-                                                        </div>
-                                                        <ul class="segments-list">
-                                                            <li>
-                                                                <div class="card segment-card">
-                                                                    <div class="card-body">
-                                                                        <div class="d-flex justify-content-between">
-                                                                            <div class="item">
-                                                                                <i class="fa-solid fa-plane-departure mt-3" style="color: #e55f25"></i>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <h6 class="mb-1">British Airways p.l.c</h6>
-                                                                                    <p class="mb-0 text-danger">777</p>
-                                                                                    <p class="mb-0 text-danger">Economy(V)</p>
-                                                                                    <p class="mb-0">BA-2260 (9 Seat(s))</p>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <p class="time mb-1 fw-bold">05:45</p>
-                                                                                <p>Thu, 19 May, 2022</p>
-                                                                                <p>Gatwick</p>
-                                                                                <p>London United kingdom</p>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <p class="underline">9h 5m</p>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <p class="time mb-1 fw-bold">00:40</p>
-                                                                                <p>Thu, 19 May, 2022</p>
-                                                                                <p>International'></p>
-                                                                                <p>Islamabad, Pakistan</p>
-                                                                            </div>
-                                                                            
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="stay-list d-flex flex-wrap justify-content-between">
-                                                                
-                                                                <div class="baggage-details d-flex flex-wrap align-items-center">
-                                                                    <i class="fa fa-suitcase"></i>
-                                                                    <p class="baggage-btns mx-1 mt-1 mb-0">ADT: 2 Pieces</p>
-                                                                    <p class="baggage-btns mx-1 mt-1 mb-0">CHD: 0Nil</p>
-                                                                    <p class="baggage-btns mx-1 mt-1 mb-0">INF: 0Nil</p>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
+      <div class="container">
+        <div class="row g-0">
+          <div class="col-lg-9 col-md-12">
+            <div class="accordion custom-accordion mb-3" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="false"
+                    aria-controls="collapseOne"
+                  >
+                    Islamabad to Toronto - Thu,19 May --- Toronto to Islamabad -
+                    Thu,19 May
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body p-0">
+                    <div class="card package-card m-2">
+                      <div class="card-body tab-content p-lg-3 py-3 ps-3 pe-0">
+                        <div
+                          id="tab-1"
+                          class="tab-pane active p-2"
+                          data-tab="1"
+                        >
+                          <div class="card-title">
+                            <div class="d-flex align-items-center">
+                              <h6>Islamabad (ISB) to Toronto (YYZ)&nbsp;</h6>
+                              <p class="px-1">—</p>
+                              <h6><span>&nbsp;Thu, 19 May</span></h6>
                             </div>
+                          </div>
+                          <hr />
+                          <ul class="legs-list timeline border-bottom mb-4">
+                            <li class="mb-3">
+                              <div class="d-flex align-items-center">
+                                <h6>Islamabad (ISB) to London (LGW)&nbsp;</h6>
+                                <p class="px-1">—</p>
+                                <h6><span>&nbsp;Thu, 19 May</span></h6>
+                              </div>
+                              <ul class="segments-list">
+                                <li>
+                                  <div class="card segment-card">
+                                    <div class="card-body">
+                                      <div
+                                        class="d-flex justify-content-between"
+                                      >
+                                        <div class="item">
+                                          <i
+                                            class="fa-solid fa-plane-departure mt-3"
+                                            style="color: #e55f25"
+                                          ></i>
+                                        </div>
+                                        <div class="item">
+                                          <h6 class="mb-1">
+                                            British Airways p.l.c
+                                          </h6>
+                                          <p class="mb-0 text-danger">777</p>
+                                          <p class="mb-0 text-danger">
+                                            Economy(V)
+                                          </p>
+                                          <p class="mb-0">
+                                            BA-2260 (9 Seat(s))
+                                          </p>
+                                        </div>
+                                        <div class="item">
+                                          <p class="time mb-1 fw-bold">00:40</p>
+                                          <p>Thu, 19 May, 2022</p>
+                                          <p>International'></p>
+                                          <p>Islamabad, Pakistan</p>
+                                        </div>
+                                        <div class="item">
+                                          <p class="underline">9h 5m</p>
+                                        </div>
+                                        <div class="item">
+                                          <p class="time mb-1 fw-bold">05:45</p>
+                                          <p>Thu, 19 May, 2022</p>
+                                          <p>Gatwick</p>
+                                          <p>London United kingdom</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li
+                                  class="stay-list d-flex flex-wrap justify-content-between"
+                                >
+                                  <div class="stay mb-3">
+                                    <p class="mb-0">
+                                      Change of Planes | 5mins layover in Doha
+                                      (DOH)
+                                    </p>
+                                  </div>
+                                  <div
+                                    class="baggage-details d-flex flex-wrap align-items-center"
+                                  >
+                                    <i class="fa fa-suitcase"></i>
+                                    <p class="baggage-btns mx-1 mt-1 mb-0">
+                                      ADT: 2 Pieces
+                                    </p>
+                                    <p class="baggage-btns mx-1 mt-1 mb-0">
+                                      CHD: 0Nil
+                                    </p>
+                                    <p class="baggage-btns mx-1 mt-1 mb-0">
+                                      INF: 0Nil
+                                    </p>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="mb-3">
+                              <div class="d-flex align-items-center">
+                                <h6>London (LGW) to Toronto (YYZ)&nbsp;</h6>
+                                <p class="px-1">—</p>
+                                <h6><span>&nbsp;Thu, 19 May</span></h6>
+                              </div>
+                              <ul class="segments-list">
+                                <li>
+                                  <div class="card segment-card">
+                                    <div class="card-body">
+                                      <div
+                                        class="d-flex justify-content-between"
+                                      >
+                                        <div class="item">
+                                          <i
+                                            class="fa-solid fa-plane-departure mt-3"
+                                            style="color: #e55f25"
+                                          ></i>
+                                        </div>
+                                        <div class="item">
+                                          <h6 class="mb-1">
+                                            British Airways p.l.c
+                                          </h6>
+                                          <p class="mb-0 text-danger">777</p>
+                                          <p class="mb-0 text-danger">
+                                            Economy(V)
+                                          </p>
+                                          <p class="mb-0">
+                                            BA-2260 (9 Seat(s))
+                                          </p>
+                                        </div>
+                                        <div class="item">
+                                          <p class="time mb-1 fw-bold">05:45</p>
+                                          <p>Thu, 19 May, 2022</p>
+                                          <p>Gatwick</p>
+                                          <p>London United kingdom</p>
+                                        </div>
+                                        <div class="item">
+                                          <p class="underline">9h 5m</p>
+                                        </div>
+                                        <div class="item">
+                                          <p class="time mb-1 fw-bold">00:40</p>
+                                          <p>Thu, 19 May, 2022</p>
+                                          <p>International'></p>
+                                          <p>Toronto, Canada</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li
+                                  class="stay-list d-flex flex-wrap justify-content-between"
+                                >
+                                  <div
+                                    class="baggage-details d-flex flex-wrap align-items-center"
+                                  >
+                                    <i class="fa fa-suitcase"></i>
+                                    <p class="baggage-btns mx-1 mt-1 mb-0">
+                                      ADT: 2 Pieces
+                                    </p>
+                                    <p class="baggage-btns mx-1 mt-1 mb-0">
+                                      CHD: 0Nil
+                                    </p>
+                                    <p class="baggage-btns mx-1 mt-1 mb-0">
+                                      INF: 0Nil
+                                    </p>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                          <div class="card-title">
+                            <div class="d-flex align-items-center">
+                              <h6>Toronto (YYZ) to Islamabad (ISB)&nbsp;</h6>
+                              <p class="px-1">—</p>
+                              <h6><span>&nbsp;Thu, 19 May</span></h6>
+                            </div>
+                          </div>
+                          <hr />
+                          <ul class="legs-list timeline border-bottom mb-4">
+                            <li class="mb-3">
+                              <div class="d-flex align-items-center">
+                                <h6>Toronto (YYZ) to London (LGW)&nbsp;</h6>
+                                <p class="px-1">—</p>
+                                <h6><span>&nbsp;Thu, 19 May</span></h6>
+                              </div>
+                              <ul class="segments-list">
+                                <li>
+                                  <div class="card segment-card">
+                                    <div class="card-body">
+                                      <div
+                                        class="d-flex justify-content-between"
+                                      >
+                                        <div class="item">
+                                          <i
+                                            class="fa-solid fa-plane-departure mt-3"
+                                            style="color: #e55f25"
+                                          ></i>
+                                        </div>
+                                        <div class="item">
+                                          <h6 class="mb-1">
+                                            British Airways p.l.c
+                                          </h6>
+                                          <p class="mb-0 text-danger">777</p>
+                                          <p class="mb-0 text-danger">
+                                            Economy(V)
+                                          </p>
+                                          <p class="mb-0">
+                                            BA-2260 (9 Seat(s))
+                                          </p>
+                                        </div>
+                                        <div class="item">
+                                          <p class="time mb-1 fw-bold">00:40</p>
+                                          <p>Thu, 19 May, 2022</p>
+                                          <p>International'></p>
+                                          <p>Toronto, Canada</p>
+                                        </div>
+                                        <div class="item">
+                                          <p class="underline">9h 5m</p>
+                                        </div>
+                                        <div class="item">
+                                          <p class="time mb-1 fw-bold">05:45</p>
+                                          <p>Thu, 19 May, 2022</p>
+                                          <p>Gatwick</p>
+                                          <p>London United kingdom</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li
+                                  class="stay-list d-flex flex-wrap justify-content-between"
+                                >
+                                  <div class="stay">
+                                    <p class="mb-0">
+                                      Change of Planes | 5mins layover in Doha
+                                      (DOH)
+                                    </p>
+                                  </div>
+                                  <div
+                                    class="baggage-details d-flex flex-wrap align-items-center"
+                                  >
+                                    <i class="fa fa-suitcase"></i>
+                                    <p class="baggage-btns mx-1 mt-1 mb-0">
+                                      ADT: 2 Pieces
+                                    </p>
+                                    <p class="baggage-btns mx-1 mt-1 mb-0">
+                                      CHD: 0Nil
+                                    </p>
+                                    <p class="baggage-btns mx-1 mt-1 mb-0">
+                                      INF: 0Nil
+                                    </p>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="mb-3">
+                              <div class="d-flex align-items-center">
+                                <h6>London (LGW) to Islamabad (ISB)&nbsp;</h6>
+                                <p class="px-1">—</p>
+                                <h6><span>&nbsp;Thu, 19 May</span></h6>
+                              </div>
+                              <ul class="segments-list">
+                                <li>
+                                  <div class="card segment-card">
+                                    <div class="card-body">
+                                      <div
+                                        class="d-flex justify-content-between"
+                                      >
+                                        <div class="item">
+                                          <i
+                                            class="fa-solid fa-plane-departure mt-3"
+                                            style="color: #e55f25"
+                                          ></i>
+                                        </div>
+                                        <div class="item">
+                                          <h6 class="mb-1">
+                                            British Airways p.l.c
+                                          </h6>
+                                          <p class="mb-0 text-danger">777</p>
+                                          <p class="mb-0 text-danger">
+                                            Economy(V)
+                                          </p>
+                                          <p class="mb-0">
+                                            BA-2260 (9 Seat(s))
+                                          </p>
+                                        </div>
+                                        <div class="item">
+                                          <p class="time mb-1 fw-bold">05:45</p>
+                                          <p>Thu, 19 May, 2022</p>
+                                          <p>Gatwick</p>
+                                          <p>London United kingdom</p>
+                                        </div>
+                                        <div class="item">
+                                          <p class="underline">9h 5m</p>
+                                        </div>
+                                        <div class="item">
+                                          <p class="time mb-1 fw-bold">00:40</p>
+                                          <p>Thu, 19 May, 2022</p>
+                                          <p>International'></p>
+                                          <p>Islamabad, Pakistan</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li
+                                  class="stay-list d-flex flex-wrap justify-content-between"
+                                >
+                                  <div
+                                    class="baggage-details d-flex flex-wrap align-items-center"
+                                  >
+                                    <i class="fa fa-suitcase"></i>
+                                    <p class="baggage-btns mx-1 mt-1 mb-0">
+                                      ADT: 2 Pieces
+                                    </p>
+                                    <p class="baggage-btns mx-1 mt-1 mb-0">
+                                      CHD: 0Nil
+                                    </p>
+                                    <p class="baggage-btns mx-1 mt-1 mb-0">
+                                      INF: 0Nil
+                                    </p>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
                         </div>
+                      </div>
                     </div>
-                    <form action="" class="flight-booking-form" method="POST">
-                        <!-- Passenger 1 -->
-                        <div class="card mb-5">
-                            <div class="card-header">
-                                <div class="card-title">
-                                    Passenger 1
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="row g-0 mb-4">
-                                    <div class="col-md-4 mb-2">
-                                        <label for="title">Title</label>
-                                        <select name="title" id="title" class="form-control select-2">
-                                            <option value="mr">Mr</option>
-                                            <option value="mrs">Mrs</option>
-                                            <option value="ms">Ms</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4 mb-2">
-                                        <label for="first_name">First Name</label>
-                                        <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name">
-                                    </div>
-                                    <div class="col-md-4 mb-2">
-                                        <label for="last_name">Last Name</label>
-                                        <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name">
-                                    </div>
-                                </div>
-                                <div class="row g-0 mb-4">
-                                    <div class="col-md-4 mb-2">
-                                        <label for="gender">Gender</label>
-                                        <select name="gender" id="gender" class="form-control select-2">
-                                            <option value="male">Male</option>
-                                            <option value="female">Female</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4 mb-2">
-                                        <label for="nationality">Nationality</label>
-                                        <select name="nationality" id="nationality" class="form-control select-2">
-                                            <option value="pakistani">Pakistani</option>
-                                            <option value="american">American</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4 mb-2">
-                                        <label for="dob">Date of birth</label>
-                                        <input type="date" id="dob" name="dob" class="form-control" placeholder="Date of birth">
-                                    </div>
-                                </div>
-                                <div class="row g-0 mb-4">
-                                    <div class="col-md-4 mb-2">
-                                        <label for="passport_no">Passport No. / NIC No.</label>
-                                        <input type="text" name="passport_now" id="passport_no" class="form-control" placeholder="Enter Passport No.">
-                                    </div>
-                                    <div class="col-md-4 mb-2">
-                                        <label for="document_expiry">Document Expiry</label>
-                                        <input type="date" name="document_expiry" id="document_expiry" class="form-control" placeholder="Enter Passport No.">
-                                    </div>
-                                    <div class="col-md-4 mb-2">
-                                        <label for="frequent_flyer">Frequest Flyer</label>
-                                        <select name="frequent_flyer" id="frequent_flyer" class="form-control">
-                                            <option value="yes">Yes</option>
-                                            <option value="no">No</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="row g-0">
-                                    <div class="col-md-4 mb-2">
-                                        <label>Wheel Chair</label> <br>
-                                        <div class="form-check form-check-inline ms-2">
-                                            <input class="form-check-input" type="radio" name="wheel_chair" id="wc_yes" value="yes">
-                                            <label class="form-check-label" for="wc_yes">Yes</label>
-                                        </div>
-                                        <div class="form-check form-check-inline ms-2">
-                                            <input class="form-check-input" type="radio" name="wheel_chair" id="wc_no" value="no">
-                                            <label class="form-check-label" for="wc_no">No</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mb-2">
-                                        <label for="select_meal">Select Meal</label>
-                                        <select name="select_meal" id="select_meal" class="form-control select-2">
-                                            <option value="yes">Yes</option>
-                                            <option value="no">No</option>
-                                        </select>
-                                    </div>
-                                    <div class="col">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Passenger 1 -->
-                        <!-- Confirm Booking -->
-                        <div class="card my-4">
-                            <div class="card-header">
-                                <div class="card-title">
-                                    Contact Information
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="row g-0 mb-4">
-                                    <div class="col-md-4 mb-2">
-                                        <label for="email">Email</label>
-                                        <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email">
-                                    </div>
-                                    <div class="col-md-8 mb-2">
-                                        <label for="phone">Phone</label>
-                                        <div class="row">
-                                            <div class="col-2 mb-2">
-                                                <select name="country_code" id="country_code" class="form-control select-2">
-                                                    <option value="+92">+92</option>
-                                                    <option value="+97">+97</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-1 mb-2">
-                                                <input type="text" name="phone_2" class="form-control" width="5%" id="phone_2" placeholder="333">
-                                            </div>
-                                            <div class="col mb-2">
-                                                <input type="text" name="phone_3" class="form-control" id="phone_3" placeholder="7849348">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mb-4">
-                                    <div class="col">
-                                        <label for="refrence">Reference</label>
-                                        <input type="text" name="reference" class="form-control" id="reference" placeholder="Reference">
-                                    </div>
-                                </div>
-                                <div class="text-end">
-                                    <button class="btn btn-secondary">Book Now</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Confirm Booking -->
-                    </form>
+                  </div>
                 </div>
-                <div class="col-lg-3 col-md-12">
-                    <!-- Fare Breakup -->
-                    <div class="card aside-details-card m-2 mt-0">
-                        <div class="card-header">
-                            <div class="card-title p-2">
-                                Fare Breakup
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <!-- Adults -->
-                            <div class="adults">
-                                <div class="highlighted p-2">
-                                    Adults x 2
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="item">
-                                        Base fare:
-                                    </div>
-                                    <div class="item">
-                                        PKR 22,000
-                                    </div>
-                                </div>
-                                <hr class="m-0">
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="item">
-                                        - Surcharges
-                                    </div>
-                                    <div class="item">
-                                        PKR 22,000
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="item">
-                                        Charges
-                                    </div>
-                                    <div class="item">
-                                        PKR 22,000
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="item">
-                                        Charges
-                                    </div>
-                                    <div class="item">
-                                        PKR 22,000
-                                    </div>
-                                </div>
-                                <div class="highlighted total p-2">
-                                    <div class="d-flex justify-content-between p-2">
-                                        <div class="item">
-                                            <span class="fw-bold">Total</span>
-                                        </div>
-                                        <div class="item fw-bold">
-                                            PKR 22,000
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Adults-->
-                            <!-- Adults -->
-                            <div class="adults">
-                                <div class="highlighted p-2">
-                                    Adults x 2
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="item">
-                                        Base fare:
-                                    </div>
-                                    <div class="item">
-                                        PKR 22,000
-                                    </div>
-                                </div>
-                                <hr class="m-0">
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="item">
-                                        - Surcharges
-                                    </div>
-                                    <div class="item">
-                                        PKR 22,000
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="item">
-                                        Charges
-                                    </div>
-                                    <div class="item">
-                                        PKR 22,000
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="item">
-                                        Charges
-                                    </div>
-                                    <div class="item">
-                                        PKR 22,000
-                                    </div>
-                                </div>
-                                <div class="highlighted total p-2">
-                                    <div class="d-flex justify-content-between p-2">
-                                        <div class="item">
-                                            <span class="fw-bold">Total</span>
-                                        </div>
-                                        <div class="item fw-bold">
-                                            PKR 22,000
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Adults-->
-                            <!-- Adults -->
-                            <div class="adults">
-                                <div class="highlighted p-2">
-                                    Adults x 2
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="item">
-                                        Base fare:
-                                    </div>
-                                    <div class="item">
-                                        PKR 22,000
-                                    </div>
-                                </div>
-                                <hr class="m-0">
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="item">
-                                        - Surcharges
-                                    </div>
-                                    <div class="item">
-                                        PKR 22,000
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="item">
-                                        Charges
-                                    </div>
-                                    <div class="item">
-                                        PKR 22,000
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="item">
-                                        Charges
-                                    </div>
-                                    <div class="item">
-                                        PKR 22,000
-                                    </div>
-                                </div>
-                                <div class="highlighted total p-2">
-                                    <div class="d-flex justify-content-between p-2">
-                                        <div class="item">
-                                            <span class="fw-bold">Total</span>
-                                        </div>
-                                        <div class="item fw-bold">
-                                            PKR 22,000
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Adults-->
-                        </div>
-                    </div>
-                    <!-- End Fare Breakup -->
-                </div>
+              </div>
             </div>
+            <form action="" class="flight-booking-form" method="POST">
+              <!-- Passenger 1 -->
+              <div class="card mb-5">
+                <div class="card-header">
+                  <div class="card-title">Passenger 1</div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-0 mb-4">
+                    <div class="col-md-4 mb-2">
+                      <label for="title">Title</label>
+                      <select
+                        name="title"
+                        id="title"
+                        class="form-control select-2"
+                      >
+                        <option value="mr">Mr</option>
+                        <option value="mrs">Mrs</option>
+                        <option value="ms">Ms</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                      <label for="first_name">First Name</label>
+                      <input
+                        type="text"
+                        name="first_name"
+                        id="first_name"
+                        class="form-control"
+                        placeholder="First Name"
+                      />
+                    </div>
+                    <div class="col-md-4 mb-2">
+                      <label for="last_name">Last Name</label>
+                      <input
+                        type="text"
+                        name="last_name"
+                        id="last_name"
+                        class="form-control"
+                        placeholder="Last Name"
+                      />
+                    </div>
+                  </div>
+                  <div class="row g-0 mb-4">
+                    <div class="col-md-4 mb-2">
+                      <label for="gender">Gender</label>
+                      <select
+                        name="gender"
+                        id="gender"
+                        class="form-control select-2"
+                      >
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                      <label for="nationality">Nationality</label>
+                      <select
+                        name="nationality"
+                        id="nationality"
+                        class="form-control select-2"
+                      >
+                        <option value="pakistani">Pakistani</option>
+                        <option value="american">American</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                      <label for="dob">Date of birth</label>
+                      <input
+                        type="date"
+                        id="dob"
+                        name="dob"
+                        class="form-control"
+                        placeholder="Date of birth"
+                      />
+                    </div>
+                  </div>
+                  <div class="row g-0 mb-4">
+                    <div class="col-md-4 mb-2">
+                      <label for="passport_no">Passport No. / NIC No.</label>
+                      <input
+                        type="text"
+                        name="passport_now"
+                        id="passport_no"
+                        class="form-control"
+                        placeholder="Enter Passport No."
+                      />
+                    </div>
+                    <div class="col-md-4 mb-2">
+                      <label for="document_expiry">Document Expiry</label>
+                      <input
+                        type="date"
+                        name="document_expiry"
+                        id="document_expiry"
+                        class="form-control"
+                        placeholder="Enter Passport No."
+                      />
+                    </div>
+                    <div class="col-md-4 mb-2">
+                      <label for="frequent_flyer">Frequest Flyer</label>
+                      <select
+                        name="frequent_flyer"
+                        id="frequent_flyer"
+                        class="form-control"
+                      >
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row g-0">
+                    <div class="col-md-4 mb-2">
+                      <label>Wheel Chair</label> <br />
+                      <div class="form-check form-check-inline ms-2">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="wheel_chair"
+                          id="wc_yes"
+                          value="yes"
+                        />
+                        <label class="form-check-label" for="wc_yes">Yes</label>
+                      </div>
+                      <div class="form-check form-check-inline ms-2">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="wheel_chair"
+                          id="wc_no"
+                          value="no"
+                        />
+                        <label class="form-check-label" for="wc_no">No</label>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                      <label for="select_meal">Select Meal</label>
+                      <select
+                        name="select_meal"
+                        id="select_meal"
+                        class="form-control select-2"
+                      >
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </select>
+                    </div>
+                    <div class="col"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Passenger 1 -->
+              <!-- Confirm Booking -->
+              <div class="card my-4">
+                <div class="card-header">
+                  <div class="card-title">Contact Information</div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-0 mb-4">
+                    <div class="col-md-4 mb-2">
+                      <label for="email">Email</label>
+                      <input
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Enter Email"
+                      />
+                    </div>
+                    <div class="col-md-8 mb-2">
+                      <label for="phone">Phone</label>
+                      <div class="row">
+                        <div class="col-2 mb-2">
+                          <select
+                            name="country_code"
+                            id="country_code"
+                            class="form-control select-2"
+                          >
+                            <option value="+92">+92</option>
+                            <option value="+97">+97</option>
+                          </select>
+                        </div>
+                        <div class="col-1 mb-2">
+                          <input
+                            type="text"
+                            name="phone_2"
+                            class="form-control"
+                            width="5%"
+                            id="phone_2"
+                            placeholder="333"
+                          />
+                        </div>
+                        <div class="col mb-2">
+                          <input
+                            type="text"
+                            name="phone_3"
+                            class="form-control"
+                            id="phone_3"
+                            placeholder="7849348"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col">
+                      <label for="refrence">Reference</label>
+                      <input
+                        type="text"
+                        name="reference"
+                        class="form-control"
+                        id="reference"
+                        placeholder="Reference"
+                      />
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <button class="btn btn-secondary">Book Now</button>
+                  </div>
+                </div>
+              </div>
+              <!-- End Confirm Booking -->
+            </form>
+          </div>
+          <div class="col-lg-3 col-md-12">
+            <!-- Fare Breakup -->
+            <div class="card aside-details-card m-2 mt-0">
+              <div class="card-header">
+                <div class="card-title p-2">Fare Breakup</div>
+              </div>
+              <div class="card-body">
+                <!-- Adults -->
+                <div class="adults">
+                  <div class="highlighted p-2">Adults x 2</div>
+                  <div class="d-flex justify-content-between p-2">
+                    <div class="item">Base fare:</div>
+                    <div class="item">PKR 22,000</div>
+                  </div>
+                  <hr class="m-0" />
+                  <div class="d-flex justify-content-between p-2">
+                    <div class="item">- Surcharges</div>
+                    <div class="item">PKR 22,000</div>
+                  </div>
+                  <div class="d-flex justify-content-between p-2">
+                    <div class="item">Charges</div>
+                    <div class="item">PKR 22,000</div>
+                  </div>
+                  <div class="d-flex justify-content-between p-2">
+                    <div class="item">Charges</div>
+                    <div class="item">PKR 22,000</div>
+                  </div>
+                  <div class="highlighted total p-2">
+                    <div class="d-flex justify-content-between p-2">
+                      <div class="item">
+                        <span class="fw-bold">Total</span>
+                      </div>
+                      <div class="item fw-bold">PKR 22,000</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Adults-->
+                <!-- Adults -->
+                <div class="adults">
+                  <div class="highlighted p-2">Adults x 2</div>
+                  <div class="d-flex justify-content-between p-2">
+                    <div class="item">Base fare:</div>
+                    <div class="item">PKR 22,000</div>
+                  </div>
+                  <hr class="m-0" />
+                  <div class="d-flex justify-content-between p-2">
+                    <div class="item">- Surcharges</div>
+                    <div class="item">PKR 22,000</div>
+                  </div>
+                  <div class="d-flex justify-content-between p-2">
+                    <div class="item">Charges</div>
+                    <div class="item">PKR 22,000</div>
+                  </div>
+                  <div class="d-flex justify-content-between p-2">
+                    <div class="item">Charges</div>
+                    <div class="item">PKR 22,000</div>
+                  </div>
+                  <div class="highlighted total p-2">
+                    <div class="d-flex justify-content-between p-2">
+                      <div class="item">
+                        <span class="fw-bold">Total</span>
+                      </div>
+                      <div class="item fw-bold">PKR 22,000</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Adults-->
+                <!-- Adults -->
+                <div class="adults">
+                  <div class="highlighted p-2">Adults x 2</div>
+                  <div class="d-flex justify-content-between p-2">
+                    <div class="item">Base fare:</div>
+                    <div class="item">PKR 22,000</div>
+                  </div>
+                  <hr class="m-0" />
+                  <div class="d-flex justify-content-between p-2">
+                    <div class="item">- Surcharges</div>
+                    <div class="item">PKR 22,000</div>
+                  </div>
+                  <div class="d-flex justify-content-between p-2">
+                    <div class="item">Charges</div>
+                    <div class="item">PKR 22,000</div>
+                  </div>
+                  <div class="d-flex justify-content-between p-2">
+                    <div class="item">Charges</div>
+                    <div class="item">PKR 22,000</div>
+                  </div>
+                  <div class="highlighted total p-2">
+                    <div class="d-flex justify-content-between p-2">
+                      <div class="item">
+                        <span class="fw-bold">Total</span>
+                      </div>
+                      <div class="item fw-bold">PKR 22,000</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Adults-->
+              </div>
+            </div>
+            <!-- End Fare Breakup -->
+          </div>
         </div>
-
+      </div>
     </main>
     <!--End Main Content-->
 
     <!--Footer-->
     <footer class="footer-3">
-        <div class="footer-top pt-5">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-md-3">
-                        <a href="#" class="brand-logo">
-                            <img src="assets/img/logo-white-text.png" alt="Meezab Air">
-                        </a>
-                        <p class="mt-5">Curabitur vitae sodales ligula. Sed dictum metus et dolor
-                            malesuada ornare. Aliquam congue, lacus ultrices
-                            moles</p>
-                    </div>
-                    <div class="col-md-2">
-                        <h2>Quick Links</h2>
-                        <ul class="menu-list">
-                            <li>
-                                <a href="#">Countries</a>
-                            </li>
-                            <li>
-                                <a href="#">Regions</a>
-                            </li>
-                            <li>
-                                <a href="#">Cities</a>
-                            </li>
-                            <li>
-                                <a href="#">Districs</a>
-                            </li>
-                            <li>
-                                <a href="#">Airports</a>
-                            </li>
-                            <li>
-                                <a href="#">Hotels</a>
-                            </li>
-                            <li>
-                                <a href="#">Places of Interest</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2">
-                        <h2>Customer Care</h2>
-                        <ul class="menu-list">
-                            <li>
-                                <a href="#">Apartments</a>
-                            </li>
-                            <li>
-                                <a href="#">Resorts</a>
-                            </li>
-                            <li>
-                                <a href="#">Villas</a>
-                            </li>
-                            <li>
-                                <a href="#">Hostels</a>
-                            </li>
-                            <li>
-                                <a href="#">B&amp;Bs</a>
-                            </li>
-                            <li>
-                                <a href="#">Guest houses</a>
-                            </li>
-                            <li>
-                                <a href="#">Hostel Chains</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-5">
-                        <h2>Contact</h2>
-                        <ul class="menu-list">
-                            <li>
-                                <a href="mailto:info@website.com">
-                                    <div class="d-flex">
-                                        <span class="icon">
-                                            <i class="fa fa-phone"></i>
-                                        </span>
-                                        <span class="text">
-                                            info@website.com
-                                        </span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="tel:0344-2322-424">
-                                    <div class="d-flex">
-                                        <span class="icon">
-                                            <i class="fa fa-envelope"></i>
-                                        </span>
-                                        <span class="text">
-                                            0344-2322-424
-                                        </span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="d-flex">
-                                        <span class="icon">
-                                            <i class="fa fa-house"></i>
-                                        </span>
-                                        <span class="text">
-                                            23-7, Arcidium spectrum near Cluj arena, CFR Road,
-                                            Cluj Napoca,Romania
-                                        </span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <h2 class="mt-5">Follow us on</h2>
-                        <ul class="social-media mt-3">
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-whatsapp"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-youtube"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-linkedin-in"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="footer-top pt-5">
+        <div class="container">
+          <div class="row g-0">
+            <div class="col-md-3">
+              <a href="#" class="brand-logo">
+                <img src="assets/img/logo-white-text.png" alt="Meezab Air" />
+              </a>
+              <p class="mt-5">
+                Curabitur vitae sodales ligula. Sed dictum metus et dolor
+                malesuada ornare. Aliquam congue, lacus ultrices moles
+              </p>
             </div>
-        </div>
-        <div class="footer-bottom py-md-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 mx-auto text-center">
-                        Meezab Air &copy; | All Rights Reserved<br>Powered by Brandsup
-                    </div>
-                </div>
+            <div class="col-md-2">
+              <h2>Quick Links</h2>
+              <ul class="menu-list">
+                <li>
+                  <a href="#">Countries</a>
+                </li>
+                <li>
+                  <a href="#">Regions</a>
+                </li>
+                <li>
+                  <a href="#">Cities</a>
+                </li>
+                <li>
+                  <a href="#">Districs</a>
+                </li>
+                <li>
+                  <a href="#">Airports</a>
+                </li>
+                <li>
+                  <a href="#">Hotels</a>
+                </li>
+                <li>
+                  <a href="#">Places of Interest</a>
+                </li>
+              </ul>
             </div>
+            <div class="col-md-2">
+              <h2>Customer Care</h2>
+              <ul class="menu-list">
+                <li>
+                  <a href="#">Apartments</a>
+                </li>
+                <li>
+                  <a href="#">Resorts</a>
+                </li>
+                <li>
+                  <a href="#">Villas</a>
+                </li>
+                <li>
+                  <a href="#">Hostels</a>
+                </li>
+                <li>
+                  <a href="#">B&amp;Bs</a>
+                </li>
+                <li>
+                  <a href="#">Guest houses</a>
+                </li>
+                <li>
+                  <a href="#">Hostel Chains</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-5">
+              <h2>Contact</h2>
+              <ul class="menu-list">
+                <li>
+                  <a href="mailto:info@website.com">
+                    <div class="d-flex">
+                      <span class="icon">
+                        <i class="fa fa-phone"></i>
+                      </span>
+                      <span class="text"> info@website.com </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:0344-2322-424">
+                    <div class="d-flex">
+                      <span class="icon">
+                        <i class="fa fa-envelope"></i>
+                      </span>
+                      <span class="text"> 0344-2322-424 </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="d-flex">
+                      <span class="icon">
+                        <i class="fa fa-house"></i>
+                      </span>
+                      <span class="text">
+                        23-7, Arcidium spectrum near Cluj arena, CFR Road, Cluj
+                        Napoca,Romania
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <h2 class="mt-5">Follow us on</h2>
+              <ul class="social-media mt-3">
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="footer-bottom py-md-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 mx-auto text-center">
+              Meezab Air &copy; | All Rights Reserved<br />Powered by Brandsup
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
     <!--End Footer-->
 
     <!--Scripts-->
     <!--Bootstrap Script-->
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js" async defer></script>
+    <script
+      src="assets/plugins/bootstrap/js/bootstrap.min.js"
+      async
+      defer
+    ></script>
     <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--jQuery UI-->
@@ -956,25 +1109,25 @@
     <!--Custom Script-->
     <script src="assets/script/script.js"></script>
     <script>
-        $(document).ready(function(){
-            $('.select-2').select2();
-        });
+      $(document).ready(function () {
+        $(".select-2").select2();
+      });
     </script>
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/628cb1c37b967b117990f255/1g3qpcpp5';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-        })();
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/628cb1c37b967b117990f255/1g3qpcpp5";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
     </script>
     <!--End of Tawk.to Script-->
-
-</body>
-
+  </body>
 </html>

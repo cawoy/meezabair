@@ -982,6 +982,7 @@ section {
   }
   .flight-form-card {
     border: 0;
+
     @include breakpoint(md) {
       position: unset;
     }
@@ -1478,6 +1479,9 @@ section {
   cursor: pointer;
   &.active {
     background-color: $secondary-color;
+  }
+  &.active2 {
+    background-color: $primary-color;
   }
   &:hover {
     color: #fff;
@@ -2066,7 +2070,6 @@ footer {
   width: 200px;
 }
 .eticket-head {
-  background-color: red;
   .eticket-qrcode {
     p {
       font-size: 10px;
@@ -2111,7 +2114,7 @@ footer {
   .card-header {
     color: $primary-color;
     background-color: #fff;
-    border-bottom: 2px solid $secondary-color !important;
+    // border-bottom: 2px solid $secondary-color !important;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
   }
@@ -2524,7 +2527,9 @@ footer {
   }
 }
 .booking-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.02);
   border-radius: 4px;
+
   .card-header {
     color: $primary-color;
     background-color: #fff;
@@ -2536,16 +2541,18 @@ footer {
     font-size: 13px;
     .links {
       a {
-        color: #fff;
-        background-color: $primary-color;
-        border-radius: 5px;
+        color: #000;
+        background-color: #f3eae6f6;
         text-decoration: none;
+        width: 100px;
+        height: 40px;
       }
     }
   }
   .table-row-border {
     tr {
       border-bottom: 1px solid #ededed;
+      box-shadow: 0 2px 4px 0 rgba(139, 132, 132, 0.2);
     }
   }
 }
@@ -2581,6 +2588,11 @@ footer {
       background-color: $primary-color;
       color: #fff;
     }
+    tbody {
+      td {
+        box-shadow: 0 0.5px 0.5px 0 rgba(139, 132, 132, 0.09);
+      }
+    }
   }
 }
 .trip-details,
@@ -2593,7 +2605,7 @@ footer {
     width: auto;
   }
   .flight-route {
-    background-color: #ffefe9;
+    background-color: #f3eae6f6;
   }
 }
 /*
@@ -2694,7 +2706,7 @@ footer {
       .card {
         border-radius: 5px;
         -webkit-box-shadow: 4px 2px 11px 0px #000000;
-        box-shadow: 4px 2px 11px 0px #000000;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.02);
         .card-body {
           padding: 0;
           .card-title {
@@ -2711,20 +2723,23 @@ footer {
           text-decoration: none;
         }
         .table {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.02);
           th {
             font-size: 0.7rem;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.02);
           }
         }
       }
       .package-card {
         background-color: #fff;
+
         border: 3px solid #ededed;
         border-radius: 5px;
         &:hover {
           background-color: #fff;
           border-color: $secondary-color;
           .btn {
-            background-color: $primary-color;
+            background-color: $secondary-color;
             border-color: $primary-color;
           }
         }
@@ -2745,8 +2760,10 @@ footer {
           table {
             th {
               font-size: 0.7rem;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.02);
             }
             tr {
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.02);
             }
             td {
               font-size: 0.7rem;
@@ -2792,10 +2809,8 @@ footer {
               padding: 5px 30px;
             }
             .accordion-button {
-              padding: 10px 5px;
               &:not(.collapsed) {
                 color: unset;
-                background-color: transparent;
               }
               &:focus {
                 border-color: $primary-color;
@@ -3010,7 +3025,7 @@ $timeline-color: $secondary-color;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: red;
+
     z-index: 999;
     height: 100vh;
     overflow-y: auto;
@@ -3045,6 +3060,7 @@ $timeline-color: $secondary-color;
     border-bottom-color: rgb(250, 250, 250);
   }
 }
+// accordian of faq,s
 .custom-accordion,
 .accordion {
   @include breakpoint(sm) {
@@ -3052,7 +3068,13 @@ $timeline-color: $secondary-color;
   }
   .accordion-item {
     .accordion-header {
+      .accordion-button:hover {
+        background-color: #ebefff;
+        transition: 0.5s;
+      }
+
       .accordion-button {
+        box-shadow: 4px 4px 4px rgb(247, 244, 244);
         width: 95%;
         font-weight: bold;
         color: $primary-color;
@@ -3072,6 +3094,7 @@ $timeline-color: $secondary-color;
     .accordion-body {
       .package-card {
         background-color: transparent !important;
+
         border: 0;
       }
     }
@@ -3310,20 +3333,25 @@ $timeline-color: $secondary-color;
   table {
     thead {
       background-color: $secondary-color;
+
       color: #fff;
       th {
         padding: 15px;
+        background-color: $primary-color;
+        box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.3);
       }
     }
     tbody {
       tr {
         border-bottom: 1px solid #ededed;
+        box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+
         a {
           color: $secondary-color;
           text-decoration: none;
         }
         &:nth-child(even) {
-          background-color: #f8f8f8;
+          // background-color: #f8f8f8;
         }
         .input-group {
           input {
@@ -3363,17 +3391,32 @@ $timeline-color: $secondary-color;
 .car-booking {
   .container {
     width: auto;
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.02);
+      .card-header {
+        color: $secondary-color;
+        border-bottom: 2px solid $primary-color !important;
+      }
+    }
+
+    .nameofpassenger {
+      border: 2px solid #e7a385;
+    }
+    .car-card {
+      box-shadow: 0px 10px -14px 14px #fff;
+    }
   }
   a {
     color: $secondary-color;
     text-decoration: none;
   }
+
   .card-title {
     font-size: 20px;
     font-weight: 600;
   }
   .car-pricing {
-    border: 2px solid $secondary-color;
+    border: 2px solid $primary-color;
     .car-name {
       font-size: 18px;
       font-weight: 700;
@@ -3382,7 +3425,7 @@ $timeline-color: $secondary-color;
   .car-booking-summary {
     .card-header {
       background-color: #fff;
-      border-bottom: 2px solid $secondary-color !important;
+      border-bottom: 2px solid $primary-color !important;
     }
     .card-body {
       .car-pricing {
@@ -3408,7 +3451,6 @@ $timeline-color: $secondary-color;
               }
               &:nth-child(2) {
                 p {
-                  border-left: 1px solid $secondary-color;
                   padding-left: 8px;
                 }
               }
@@ -3479,7 +3521,6 @@ $timeline-color: $secondary-color;
   padding: 1rem 9.5rem;
 
   .question {
-    background-color: greenyellow;
     i {
       margin-right: 1rem;
       font-size: 1.5rem;
@@ -3511,9 +3552,7 @@ $timeline-color: $secondary-color;
     transform: rotateY(360deg);
   }
 }
-.tbt {
-  background-color: red;
-}
+
 .menu {
   position: relative;
   top: 40px;
@@ -3599,9 +3638,33 @@ $timeline-color: $secondary-color;
 .stars-row {
   margin-top: 0;
 }
-.sorting_1 {
-  background-color: red;
+
+.eticket-head .image-div img {
+  width: 30%;
 }
-.ticket-card {
-  background-color: red;
+
+.eticket-head .section1 {
+  display: flex;
+  justify-content: center;
+}
+
+.card-header {
+  background-color: #28377d !important;
+  color: white !important;
+}
+
+.card-body .main-section {
+  display: flex;
+  justify-content: center;
+}
+
+.card-body .main-section .section1 {
+  display: flex;
+  justify-content: space-between;
+}
+.voucher-accomodation-details tbody tr td:hover,
+.voucher-service-details tbody tr td:hover {
+  background-color: #ebefff;
+  transition: 1s;
+  color: rgb(36, 33, 33);
 }
