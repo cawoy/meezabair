@@ -940,18 +940,18 @@ section .section-title h2.small-title {
 
 @media (max-width: 767px) {
   .herobox-4 {
-    min-height: 180px !important;
+    min-height: 80px !important;
   }
   .herobox-4 .container {
     width: auto;
   }
   .herobox-4 .row {
-    min-height: 180px !important;
+    min-height: 80px !important;
   }
 }
 
 .herobox-4 .row {
-  min-height: 250px;
+  min-height: 50px;
 }
 
 .herobox-4 .section-title h2 {
@@ -2318,7 +2318,7 @@ footer.footer-3 .footer-bottom {
 */
 #about-2 {
   color: black;
-  background-color: #fff;
+  background-color: yellow;
 }
 
 @media (max-width: 767px) {
@@ -2500,7 +2500,7 @@ footer.footer-3 .footer-bottom {
 @media (max-width: 767px) {
   .eticket-head .head-col-1,
   .eticket-head .head-col-2 {
-    width: 50%;
+    width: 40%;
   }
 }
 
@@ -2697,6 +2697,7 @@ footer.footer-3 .footer-bottom {
 .hotel-box3 {
   width: 130px;
   height: 130px;
+  margin: 1rem;
   background-color: #ebefff;
   border-radius: 5px;
   display: -webkit-box;
@@ -2708,6 +2709,14 @@ footer.footer-3 .footer-bottom {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 767px) {
+  .hotel-box3 {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .hotel-features .features-heading {
@@ -2726,11 +2735,11 @@ footer.footer-3 .footer-bottom {
 }
 
 .hotel-features .features .item p {
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .hotel-features .features .hotel-box2 {
-  padding: 5px 20px;
+  padding: 10px 25px;
   background-color: #ebefff;
   border-radius: 5px;
   display: -webkit-box;
@@ -2742,6 +2751,8 @@ footer.footer-3 .footer-bottom {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 10px;
+  margin-bottom: 1rem;
 }
 
 /*
@@ -2805,22 +2816,23 @@ footer.footer-3 .footer-bottom {
   #hotel-listings .listings .hotel-box .hotel-card .hotel-img,
   #hotel-listings .listings .hotel-box .hotel-rooms .hotel-img {
     width: 100%;
-    height: 200px;
+    height: 750px;
+    background-size: cover;
   }
 }
 
 @media (max-width: 767px) {
   #hotel-listings .listings .hotel-box .hotel-card .hotel-img,
   #hotel-listings .listings .hotel-box .hotel-rooms .hotel-img {
-    width: 90%;
-    height: 270px;
+    width: 100%;
+    height: 400px;
   }
 }
 
 #hotel-listings .listings .hotel-box .hotel-card .cars-img,
 #hotel-listings .listings .hotel-box .hotel-rooms .cars-img {
   width: 100%;
-  height: 250px;
+  height: 150px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2831,7 +2843,7 @@ footer.footer-3 .footer-bottom {
   #hotel-listings .listings .hotel-box .hotel-card .cars-img,
   #hotel-listings .listings .hotel-box .hotel-rooms .cars-img {
     width: 95%;
-    height: 200px;
+    height: 90px;
   }
 }
 
@@ -2839,7 +2851,7 @@ footer.footer-3 .footer-bottom {
   #hotel-listings .listings .hotel-box .hotel-card .cars-img,
   #hotel-listings .listings .hotel-box .hotel-rooms .cars-img {
     width: 90%;
-    height: 200px;
+    height: 90px;
   }
 }
 
@@ -3247,6 +3259,10 @@ footer.footer-3 .footer-bottom {
 /*
 ##### End Star Rating #####
 */
+.listing-wrapper p {
+  margin-bottom: 4px;
+}
+
 @media (max-width: 768px) {
   .listing-wrapper .container {
     width: auto;
@@ -3356,28 +3372,35 @@ footer.footer-3 .footer-bottom {
 }
 
 .listing-wrapper .container .content .package-card .flight-details-card .card-header {
-  background-color: #fff;
+  background-color: #28377d;
   border-bottom: 0;
+}
+
+.listing-wrapper .container .content .package-card .flight-details-card .nav-tabs {
+  border-bottom: 0px;
+}
+
+.listing-wrapper .container .content .package-card .flight-details-card .nav-tabs .nav-item {
+  background-color: #e2865f;
+  color: #fff;
+  border: none;
 }
 
 @media (max-width: 768px) {
   .listing-wrapper .container .content .package-card .flight-details-card .nav-tabs .nav-item {
     width: 100%;
+    text-align: center;
   }
 }
 
 .listing-wrapper .container .content .package-card .flight-details-card .nav-tabs .nav-item .nav-link {
-  color: #28377d;
+  color: #fff;
+  border: none;
 }
 
 .listing-wrapper .container .content .package-card .flight-details-card .nav-tabs .nav-item .nav-link.active {
-  color: #e55f25;
-}
-
-@media (max-width: 768px) {
-  .listing-wrapper .container .content .package-card .flight-details-card .nav-tabs .nav-item .nav-link.active {
-    border: 1px;
-  }
+  background-color: #e55f25;
+  color: #fff;
 }
 
 .listing-wrapper .container .content .package-card .flight-details-card .accordion .accordion-item {
@@ -3860,6 +3883,7 @@ footer.footer-3 .footer-bottom {
   background-color: #fff;
   border: none;
   border-radius: 0px;
+  margin-right: 2rem;
   -webkit-box-shadow: 3px 3px 5px #e6e6e6;
           box-shadow: 3px 3px 5px #e6e6e6;
 }
@@ -4357,15 +4381,6 @@ footer.footer-3 .footer-bottom {
 
 .eticket-head .image-div img {
   width: 30%;
-}
-
-.eticket-head .section1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .card-header {
