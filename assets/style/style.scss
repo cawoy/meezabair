@@ -875,6 +875,7 @@ section {
     margin: 20px 0;
   }
   .formContainer {
+    // background-color: red;
     @include breakpoint(sm) {
       padding: 0;
     }
