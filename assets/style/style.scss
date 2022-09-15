@@ -68,6 +68,7 @@ body {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
+  // background-color: red;
 }
 
 /* Preloader */
@@ -941,6 +942,9 @@ section {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
+    // background-color: red;
+    width: 98%;
+
     border: 0;
     @include breakpoint(md) {
       position: unset;
@@ -1932,7 +1936,7 @@ footer {
 */
 #about-2 {
   color: black;
-  background-color: yellow;
+
   .section-title {
     @include breakpoint(xs) {
       text-align: center;
@@ -2074,7 +2078,15 @@ footer {
   .eticket-qrcode {
     p {
       font-size: 10px;
+      // background-color: red;
     }
+  }
+  .head-col-1 {
+  }
+  .r2 {
+    // background-color: yellow;
+    display: flex;
+    justify-content: space-between;
   }
   .head-col-1,
   .head-col-2 {
@@ -2358,12 +2370,17 @@ footer {
           border-radius: 0px;
           @include breakpoint(sm) {
             width: 100%;
-            height: 750px;
+            height: 250px;
             background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
           }
           @include breakpoint(xs) {
             width: 100%;
-            height: 400px;
+            height: 200px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
           }
         }
         // For cars listings image
@@ -2376,11 +2393,11 @@ footer {
           border-radius: 5px;
           @include breakpoint(sm) {
             width: 95%;
-            height: 90px;
+            height: 650px;
           }
           @include breakpoint(xs) {
             width: 90%;
-            height: 90px;
+            height: 145px;
           }
         }
         // End cars lastings image
@@ -2746,6 +2763,40 @@ footer {
         }
       }
       .package-card {
+        .card-body {
+          .row {
+            .col-lg-6 {
+              @include breakpoint(sm) {
+                margin-top: 2rem;
+              }
+
+              .flight-parent {
+                display: flex;
+                flex-direction: row;
+                // justify-content: space-between;
+                // align-items: space-between;
+                justify-content: space-around;
+                @include breakpoint(xs) {
+                  flex-direction: column;
+                  margin-top: 0.5rem;
+                  border-right: 0px;
+                }
+                @include breakpoint(sm) {
+                  border-right: 0px;
+                }
+              }
+              .flight-parent-2 {
+                border-right: 1px solid rgb(192, 177, 177);
+                @include breakpoint(xs) {
+                  border-right: none;
+                }
+                @include breakpoint(sm) {
+                  border-right: none;
+                }
+              }
+            }
+          }
+        }
         background-color: #fff;
 
         border: 3px solid #ededed;
@@ -2889,20 +2940,46 @@ $timeline-color: $secondary-color;
     width: 20px;
     background-color: $timeline-color;
     position: absolute;
-    top: 5px;
-    left: -2%;
+    top: 2px;
+    left: -2.5%;
     @include breakpoint(sm) {
-      left: -2.8%;
+      left: -3%;
     }
     @include breakpoint(xs) {
-      left: -6%;
+      left: -8%;
     }
     border-radius: 45px;
   }
   .segments-list {
     li {
       &::after {
-        left: -5.8% !important;
+        left: -7.8% !important;
+        @include breakpoint(xs) {
+          left: 4% !important;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+    &::after {
+      left: -2%;
+
+      @include breakpoint(sm) {
+        background-color: green;
+      }
+    }
+    .segments-list {
+      li {
+        &::after {
+          left: -6.6% !important;
+          @include breakpoint(xs) {
+            left: 10% !important;
+          }
+        }
       }
     }
   }
@@ -3244,8 +3321,8 @@ $timeline-color: $secondary-color;
       border-radius: 5px;
     }
     img {
-      width: 50px;
-      height: 50px;
+      width: 45px;
+      height: 45px;
       filter: invert(65%) sepia(94%) saturate(1388%) hue-rotate(341deg)
         brightness(0%) contrast(104%);
     }
